@@ -588,7 +588,6 @@ class GetCategoryNews(GenericAPIView):
     def get(
         self, request, category
     ):  # can bt one of the following stocks, crypto, currencies, arts, real estate,wold economy, pub_1524778c92e3df5c784193332a4a5fba4158c
-        NEWSDATA_API_KEY = config("NEWSDATA_API_KEY")
         api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
         specific = category
 
