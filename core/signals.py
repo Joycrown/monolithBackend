@@ -41,7 +41,7 @@ def update_user(sender, instance, created, **kwargs):
         else:
            month = "December"
         user.day = now.day
-        user.month == month
+        user.month = month
         user.year = now.year
         user.created = date(day=now.day, month=now.month, year=now.year)
         user.save()
