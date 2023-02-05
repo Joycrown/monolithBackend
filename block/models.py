@@ -113,8 +113,8 @@ class Block(models.Model):
         upload_to=block_for, blank=True, null=True, max_length=100000
     )
     name = models.CharField(max_length=250, unique=True)
-    desc = models.TextField(blank=True, null=True)
-    about = models.TextField(blank=True, null=True)
+    desc = models.TextField(blank=True, null=True, max_length=100000)
+    about = models.TextField(blank=True, null=True, max_length=100000)
     category = models.CharField(max_length=1000, null=True, blank=True)
     block_type = models.CharField(max_length=100, null=True, blank=True)
     subscribers = models.ManyToManyField(
@@ -194,7 +194,7 @@ class Post(models.Model):
     )
     created = models.DateTimeField(auto_now_add=True)
     link = models.URLField(blank=True, null=True, max_length=2000)
-    text = models.TextField(blank=True, null=True)
+    text = models.TextField(blank=True, null=True, max_length=100000)
     post_type = models.CharField(max_length=300, blank=True, null=True)
     parent = models.ForeignKey(
         "self", blank=True, null=True, on_delete=models.CASCADE, related_name="alt"
@@ -278,7 +278,7 @@ class Comment(models.Model):
         User, related_name="comment_saved", blank=True, default=None
     )
     created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField(blank=True, null=True)
+    text = models.TextField(blank=True, null=True, max_length=100000)
     is_deleted = models.BooleanField(default=False)
     saved_count = models.IntegerField(blank=True, null=True, default=0)
     report_count = models.IntegerField(blank=True, null=True, default=0)
