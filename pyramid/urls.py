@@ -7,7 +7,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("babla/", admin.site.urls),
     path("chat/", include("chat.api.urls")),
     path("block/", include("block.api.urls")),
     path("core/", include("core.api.urls")),
