@@ -15,17 +15,11 @@ def post_save_block(sender, created, instance, **kwargs):
     block = instance
     creator = block.creator
     if created:
+        block.moderators.add(creator)
         block.subscribers.add(creator)
         block.subscriber_count =+ 1
         block.save()
-
-@receiver(post_save, sender=Block)
-def post_save_block(sender, created, instance, **kwargs):
-    block = instance
-    creator = block.creator
-    if created:
-        block.moderators.add(creator)
-        block.save()        
+       
         
 @receiver(post_save, sender=Block)
 def update_user(sender, instance, created, **kwargs):
