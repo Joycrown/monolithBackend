@@ -13,33 +13,33 @@ from .models import User
 def update_user(sender, instance, created, **kwargs):
     user = instance
     now = date.today()
-    month = "month"
+    month = ""
                             
     if created:
         if now.month == 1:
-           month == "January"
+           month = "January"
         elif now.month == 2: 
-           month == "February"
+           month = "February"
         elif now.month == 3: 
-           month == "March"
+           month = "March"
         elif now.month == 4: 
-           month == "April"   
+           month = "April"   
         elif now.month == 5: 
-           month == "May"
+           month = "May"
         elif now.month == 6: 
-           month == "June" 
+           month = "June" 
         elif now.month == 7: 
-           month == "July"
+           month = "July"
         elif now.month == 8:
-           month == "August"   
+           month = "August"   
         elif now.month == 9:
-           month == "September" 
+           month = "September" 
         elif now.month == 10: 
-           month == "October"
+           month = "October"
         elif now.month == 11: 
-           month == "November" 
+           month = "November" 
         else:
-           month == "December"
+           month = "December"
         user.day = now.day
         user.month == month
         user.year = now.year
