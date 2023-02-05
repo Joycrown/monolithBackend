@@ -28,7 +28,7 @@ LOGGING = {
         "file": {
             "level": min_level,
             "class": "logging.FileHandler",
-            "filename": path.join(BASE_DIR, "logging/app.log"),
+            "filename": path.join(BASE_DIR, "utils/app.log"),
             "formatter": "verbose",
         }
     },
