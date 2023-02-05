@@ -34,7 +34,7 @@ urlpatterns = [
     path('get-crypto-news', GetCryptoNews.as_view(), name='get-crypto-news'),
     path('get-stock-news', GetStockNews.as_view(), name='get-stock-news'),
     path('get-business-news', GetBusinessNews.as_view(), name='get-business-news'),
-    path('get-category-news/<str:category>/at/<int:page>', GetCategoryNews.as_view(), name='get-category-news'),
+    path('get-category-news/<str:category>/', GetCategoryNews.as_view(), name='get-category-news'),
     #LOGO
     path('get-logo', GetLogo.as_view(), name='get-logo'),
     #CLOCK

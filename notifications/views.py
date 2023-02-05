@@ -42,22 +42,17 @@ def NotificationView(request):
     
 class NotificationSeen(APIView):
     permission_classes = (AllowAny, )
-
-    def get(self, request):
-        notify_list = Notification.objects.filter(
-            to_user=request.user,
-            user_has_seen=False
-        )
-        for i in notify_list:
-            i.user_has_seen = True
-            i.save()
-        Notification.objects.filter(
-            Q(notification_type='C',
-              to_user=request.user,
-              ) 
-        ).delete()
-        return Response({"user_seen": True})
     
+    def post(self,request):
+        data = request.data
+        notification = get_object_or_404(Notification,id=data.get('notify_id'))
+        if notification.to_user == request.user:
+            notification.user_has_seen =  True
+            return Response({"notification_deleted": True})
+    
+class NotificationDelete(APIView):
+    permission_classes = (AllowAny, )
+
     def post(self,request):
         data = request.data
         notification = get_object_or_404(Notification,id=data.get('notify_id'))
@@ -65,4 +60,3 @@ class NotificationSeen(APIView):
             notification.user_has_seen =  True
             notification.delete()
             return Response({"notification_deleted": True})
-

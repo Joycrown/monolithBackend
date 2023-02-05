@@ -17,7 +17,12 @@ from django.conf import settings
 from django.contrib import auth
 from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import smart_str, force_str, smart_bytes, DjangoUnicodeDecodeError
+from django.utils.encoding import (
+    smart_str,
+    force_str,
+    smart_bytes,
+    DjangoUnicodeDecodeError,
+)
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template.loader import get_template
@@ -39,6 +44,7 @@ from rest_framework import viewsets, exceptions
 from rest_framework.response import Response
 from rest_framework.generics import *
 from rest_framework.permissions import *
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
 from rest_framework.views import APIView
@@ -51,10 +57,10 @@ from rest_framework.generics import (
     ListAPIView,
     UpdateAPIView,
     RetrieveAPIView,
-    DestroyAPIView
+    DestroyAPIView,
 )
 
-#TODO Notifications automatically from the block you are part of, on comments on your posts
+# TODO Notifications automatically from the block you are part of, on comments on your posts
 
 
 class CreateBlockView(CreateAPIView):
@@ -63,45 +69,42 @@ class CreateBlockView(CreateAPIView):
     serializer_class = BlockSerializer
 
     def create(self, request, *args, **kwargs):
-        name = request.data.get('name')       
-        block_type = request.data.get('block_type')
-        category = request.data.get('category')
+        name = request.data.get("name")
+        block_type = request.data.get("block_type")
+        category = request.data.get("category")
         creator = self.request.user
 
         with transaction.atomic():
             block = Block.objects.create(
-                creator=creator,
-                name=name,
-                block_type=block_type,
-                category=category
+                creator=creator, name=name, block_type=block_type, category=category
             )
         d = BlockSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
 class BlockDetailView(RetrieveAPIView):
-    lookup_field = "name"    
+    lookup_field = "name"
     permission_classes = (AllowAny,)
-    serializer_class = BlockSerializer
+    serializer_class = BlockDetailSerializer
     queryset = Block.objects.all()
 
 
 class BlockUpdateView(UpdateAPIView):
-    lookup_field = "name"    
+    lookup_field = "name"
     permission_classes = (AllowAny,)
     serializer_class = BlockSerializer
     queryset = Block.objects.all()
+    parser_classes = (FormParser, MultiPartParser)
 
 
 class BlockDeleteView(DestroyAPIView):
-    lookup_field = "name"    
+    lookup_field = "name"
     permission_classes = (AllowAny,)
     serializer_class = BlockSerializer
     queryset = Block.objects.all()
 
 
-
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_creator_block(request):
     if request.method == "POST":
@@ -111,10 +114,15 @@ def user_creator_block(request):
             creator = True
         else:
             creator = False
-        return Response({ 'creator': creator, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "creator": creator,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_joined_block(request):
     if request.method == "POST":
@@ -124,10 +132,15 @@ def user_joined_block(request):
             joined = True
         else:
             joined = False
-        return Response({ 'joined': joined, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "joined": joined,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def join_block(request):
     if request.method == "POST":
@@ -143,60 +156,77 @@ def join_block(request):
             block.subscribers.add(request.user)
             block.subscriber_count = block.subscriber_count + 1
             block.save()
-        return Response({ 'joined': joined, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "joined": joined,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
-    
+
 class ListBlocksUserJoined(ListAPIView):
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination
-    serializer_class = BlockSerializer 
-    
+    serializer_class = BlockSerializer
+
     def get(self, request, username):
-        blocks = Block.objects.all()
+        # blocks = Block.objects.all()
         user = get_object_or_404(User, username=username)
-        for block in blocks:
-            if user in block.subscribers.all():
-                serializer = self.serializer_class(block, many=True)
-                return Response(data=serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response({ "there are no blocks user joined" }, status=status.HTTP_200_OK)    
-    
+        block = user.subscribers.all()
+
+        if block > 0:
+            serializer = self.serializer_class(block, many=True)
+            return Response(data=serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(
+                {"message": "there are no blocks user joined"},
+                status=status.HTTP_200_OK,
+            )
+
+        # for block in blocks:
+        #     if user in block.subscribers.all():
+        #         serializer = self.serializer_class(block, many=True)
+        #         return Response(data=serializer.data, status=status.HTTP_200_OK)
+        #     else:
+        #         return Response(
+        #             {"message": "there are no blocks user joined"},
+        #             status=status.HTTP_200_OK,
+        #         )
+
 
 class ListLinksOfBlock(ListAPIView):
     permission_classes = (AllowAny,)
-    serializer_class = LinkSerializer 
+    serializer_class = LinkSerializer
+    queryset = Link.objects.all()
 
     def get(self, request, name):
-        link = Link.objects.filter(block=name)
-        serializer = self.serializer_class(block, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+        # link = get_object_or_404(Link, block__name=name)
+        link = Link.objects.filter(block__name=name)
+        serializer = LinkSerializer(link, many=True)
+        return Response(serializer.data)
 
 
 class CreateLinkView(CreateAPIView):
     permission_classes = (AllowAny,)
     renderer_classes = (JSONRenderer,)
     serializer_class = LinkSerializer
+    parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
-        name = request.data.get('name')
-        title = request.data.get('title')
-        image = request.data.get('image')        
-        url = request.data.get('url')
+        name = request.data.get("name")
+        title = request.data.get("title")
+        image = request.data.get("image")
+        url = request.data.get("url")
         block = Block.objects.get(name=name)
 
         with transaction.atomic():
-            link = Link.objects.create(
-                block=block,
-                image=image,
-                title=title,
-                url=url
-            )
+            link = Link.objects.create(block=block, image=image, title=title, url=url)
         d = LinkSerializer(link).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
 class LinkDeleteView(DestroyAPIView):
-    lookup_field = "id"    
+    lookup_field = "id"
     permission_classes = (AllowAny,)
     serializer_class = LinkSerializer
     queryset = Link.objects.all()
@@ -204,12 +234,14 @@ class LinkDeleteView(DestroyAPIView):
 
 class ListRulesOfBlock(ListAPIView):
     permission_classes = (AllowAny,)
-    serializer_class = RuleSerializer 
+    serializer_class = RuleSerializer
+    queryset = Rule.objects.all()
 
-    def get(self, request, name):
-        rule = Rule.objects.filter(block=name)
-        serializer = self.serializer_class(rule, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+    def list(self, request, name):
+        # rule = get_object_or_404(Rule, block__name=name)
+        rule = Rule.objects.filter(block__name=name)
+        serializer = RuleSerializer(rule, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class CreateRuleView(CreateAPIView):
@@ -218,23 +250,19 @@ class CreateRuleView(CreateAPIView):
     serializer_class = RuleSerializer
 
     def create(self, request, *args, **kwargs):
-        name = request.data.get('name')
-        title = request.data.get('title')
-        text = request.data.get('text') 
+        name = request.data.get("name")
+        title = request.data.get("title")
+        text = request.data.get("text")
         block = Block.objects.get(name=name)
 
         with transaction.atomic():
-            rule = Rule.objects.create(
-                block=block,
-                text=text,
-                title=title
-            )
+            rule = Rule.objects.create(block=block, text=text, title=title)
         d = RuleSerializer(rule).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
 class RuleDeleteView(DestroyAPIView):
-    lookup_field = "id"    
+    lookup_field = "id"
     permission_classes = (AllowAny,)
     serializer_class = RuleSerializer
     queryset = Rule.objects.all()
@@ -250,12 +278,12 @@ class ListBlocksOfUser(ListAPIView):
         serializer = self.serializer_class(block, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
-    
+
 class ListBlocksUserIsModerator(ListAPIView):
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination
-    serializer_class = BlockSerializer 
-    
+    serializer_class = BlockSerializer
+
     def get(self, request, username):
         blocks = Block.objects.all()
         user = get_object_or_404(User, username=username)
@@ -264,16 +292,19 @@ class ListBlocksUserIsModerator(ListAPIView):
                 serializer = self.serializer_class(block, many=True)
                 return Response(data=serializer.data, status=status.HTTP_200_OK)
             else:
-                return Response({ "there are no blocks user is moderator of" }, status=status.HTTP_200_OK)    
-    
+                return Response(
+                    {"there are no blocks user is moderator of"},
+                    status=status.HTTP_200_OK,
+                )
 
-@api_view(['POST'])
+
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def RePostView(request):
-    title = request.data.get('title')
-    p_id = request.data.get('p_id')
-    b_id = request.data.get('b_id')
-    
+    title = request.data.get("title")
+    p_id = request.data.get("p_id")
+    b_id = request.data.get("b_id")
+
     try:
         post = get_object_or_404(Post, id=p_id)
         block = get_object_or_404(Block, id=b_id)
@@ -292,18 +323,21 @@ def RePostView(request):
                 block=block,
                 author=request.user,
                 parent=post,
-                is_repost=True
+                is_repost=True,
             )
             post.reposts = post.reposts + 1
             post.save()
             Notification.objects.get_or_create(
-                    notification_type='RP',
-                    post=re_post,
-                    comments=(f"@{request.user.username} reposted your post in {block.name}"),
-                    to_user=post.author,
-                    from_user=request.user)
-        serializer =  PostSerializer(re_post)
-        return Response(serializer.data,status=status.HTTP_201_CREATED)
+                notification_type="RP",
+                post=re_post,
+                comments=(
+                    f"@{request.user.username} reposted your post in {block.name}"
+                ),
+                to_user=post.author,
+                from_user=request.user,
+            )
+        serializer = PostSerializer(re_post)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class CreatePostView(CreateAPIView):
@@ -312,12 +346,12 @@ class CreatePostView(CreateAPIView):
     serializer_class = PostSerializer
 
     def create(self, request, *args, **kwargs):
-        title = request.data.get('title')       
-        pk = request.data.get('pk')
-        attachment = request.data.get('attachment')
-        link = request.data.get('link')
-        text = request.data.get('text')
-        post_type = request.data.get('post_type')
+        title = request.data.get("title")
+        pk = request.data.get("pk")
+        attachment = request.data.get("attachment")
+        link = request.data.get("link")
+        text = request.data.get("text")
+        post_type = request.data.get("post_type")
         block = get_object_or_404(Block, id=pk)
         author = request.user
 
@@ -329,78 +363,111 @@ class CreatePostView(CreateAPIView):
                 text=text,
                 author=author,
                 block=block,
-                post_type=post_type
+                post_type=post_type,
             )
         d = PostSerializer(post).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
-class ListPostsOfUser(ListAPIView):
-    queryset = Post.objects.all()
-    permission_classes = (AllowAny,)
-    pagination_class = CustomPagination
-    serializer_class = PostSerializer_detailed 
+#class ListPostsOfUser(ListAPIView):
+#    queryset = Post.objects.all()
+#    permission_classes = (AllowAny,)
+ #   pagination_class = CustomPagination
+  #  serializer_class = PostSerializer_detailed
+#
+ #   def get(self, request, username, *args, **kwargs):
+  #      paginator = CustomPagination()
+  #      post = Post.objects.filter(
+    #        author__username=username, is_reviewed=True, is_deleted=False
+   #     )
+    #    result_page = paginator.paginate_queryset(post)
+    #    serializer = self.get_serializer(result_page, many=True)
+     #   return paginator.get_paginated_response({'data':serializer.data, 'noti_count': noti_count})
 
-    def get(self, request, username, *args, **kwargs):
-        post = Post.objects.filter(author__username=username, is_reviewed=True, is_deleted=False)
-        paginatedResult = self.paginate_queryset(post)
-        serializer = self.get_serializer(paginatedResult, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+@api_view(['GET'])
+@permission_classes((AllowAny,))
+def ListPostsOfUser(request, username):
+    post = Post.objects.filter(
+            author__username=username, is_reviewed=True, is_deleted=False
+        )
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(post,request)
 
+    serializer = PostSerializer_detailed(result_page, many=True, context={
+                                        
+                                        'request': request
+                                        })
+    return paginator.get_paginated_response({'data':serializer.data})    
+    
 
 class DetailPostOfUser(RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
     queryset = Post.objects.all()
-    
+
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return PostSerializer_detailed
         return PostSerializer
 
     def get_object(self):
         queryset = self.filter_queryset(self.get_queryset())
         conditions = {
-            'author__username': self.kwargs['username'],
-            'id': self.kwargs['p_id']
+            "author__username": self.kwargs["username"],
+            "id": self.kwargs["p_id"],
         }
         return get_object_or_404(queryset, **conditions)
 
     def put(self, request, *args, **kwargs):
-        kwargs['partial'] = True 
-        return self.update(request, *args, **kwargs)    
+        kwargs["partial"] = True
+        return self.update(request, *args, **kwargs)
 
 
-class ListPostsOfBlock(ListAPIView):
-    queryset = Post.objects.all()
-    permission_classes = (AllowAny,)
-    pagination_class = PageNumberPagination
-    serializer_class = PostSerializer_detailed 
+#class ListPostsOfBlock(ListAPIView):
+ #   queryset = Post.objects.all()
+  #  permission_classes = (AllowAny,)
+ #   pagination_class = CustomPagination
+  #  serializer_class = PostSerializer_detailed
+#
+ #   def get(self, request, b_name, *args, **kwargs):
+  #      post = Post.objects.filter(
+  #          block__name=b_name, is_reviewed=True, is_deleted=False
+   #     )
+   #     paginatedResult = self.paginate_queryset(post)
+   #     serializer = self.get_serializer(paginatedResult, many=True)
+    #    return Response(data=serializer.data, status=status.HTTP_200_OK)
 
-    def get(self, request, b_name):
-        block_post = Post.objects.filter(block__name=b_name, is_reviewed=True, is_deleted=False).order_by('-created')
-        serializer = self.serializer_class(block_post, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+@api_view(['GET'])
+@permission_classes((AllowAny,))
+def ListPostsOfBlock(request, b_name):
+    post = Post.objects.filter(
+            block__name=b_name, is_reviewed=True, is_deleted=False
+        )
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(post,request)
 
+    serializer = PostSerializer_detailed(result_page, many=True, context={
+                                        
+                                        'request': request
+                                        })
+    return paginator.get_paginated_response({'data':serializer.data})     
+    
 
 class DetailPostOfBlock(RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
-    queryset = Post.objects.all()   
+    queryset = Post.objects.all()
 
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return PostSerializer_detailed
         return PostSerializer
 
     def get_object(self):
         queryset = self.filter_queryset(self.get_queryset())
-        conditions = {
-            'block__name': self.kwargs['b_name'],
-            'id': self.kwargs['p_id']
-        }
-        return get_object_or_404(queryset, **conditions)   
+        conditions = {"block__name": self.kwargs["b_name"], "id": self.kwargs["p_id"]}
+        return get_object_or_404(queryset, **conditions)
 
     def put(self, request, *args, **kwargs):
-        kwargs['partial'] = True 
+        kwargs["partial"] = True
         return self.update(request, *args, **kwargs)
 
 
@@ -408,19 +475,23 @@ class ListSavedPostsOfUser(ListAPIView):
     queryset = Post.objects.all()
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination
-    serializer_class = PostSerializer_detailed 
+    serializer_class = PostSerializer_detailed
 
     def get(self, request):
-        posts = Post.objects.filter(is_reviewed=True, is_deleted=False).order_by('-created')
+        posts = Post.objects.filter(is_reviewed=True, is_deleted=False).order_by(
+            "-created"
+        )
         for post in posts:
             if self.request.user in post.saved.all():
                 serializer = self.serializer_class(posts, many=True)
                 return Response(data=serializer.data, status=status.HTTP_200_OK)
             else:
-                return Response({ "there are no saved posts from user" }, status=status.HTTP_200_OK)    
+                return Response(
+                    {"there are no saved posts from user"}, status=status.HTTP_200_OK
+                )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_saved_post(request):
     if request.method == "POST":
@@ -430,10 +501,15 @@ def user_saved_post(request):
             saved = True
         else:
             saved = False
-        return Response({ 'saved': saved, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "saved": saved,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def save_post(request):
     if request.method == "POST":
@@ -449,11 +525,15 @@ def save_post(request):
             post.saved.add(request.user)
             post.saved_count = post.saved_count + 1
             post.save()
-        return Response({ 'saved': saved, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "saved": saved,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
-
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_reported_post(request):
     if request.method == "POST":
@@ -463,10 +543,15 @@ def user_reported_post(request):
             report = True
         else:
             report = False
-        return Response({ 'report': report, }, status=status.HTTP_200_OK)
- 
+        return Response(
+            {
+                "report": report,
+            },
+            status=status.HTTP_200_OK,
+        )
 
-@api_view(['POST'])
+
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def report_post(request):
     if request.method == "POST":
@@ -482,27 +567,33 @@ def report_post(request):
             post.report.add(request.user)
             post.report_count = post.report_count + 1
             post.save()
-        return Response({ 'report': report, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "report": report,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
-class VoteOnPost(APIView):
-    permission_classes = (AllowAny,)
-    serializer_class = PostSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def post(self, request, *args, **kwargs):
+@api_view(["POST"])
+@permission_classes((AllowAny,))
+def VoteOnPost(request):
+    if request.method == "POST":
         voter = request.user
-        post_id = request.data.get('post_id')
-        value = request.data.get('value')
+        post_id = request.data.get("post_id")
+        value = request.data.get("value")
         post = get_object_or_404(Post, id=post_id)
-        
-        if value == 1:     
+
+        if value == 1:
             Notification.objects.get_or_create(
-                notification_type='VP',
+                notification_type="VP",
                 post=post,
-                comments=(f"Go see your post on {post.block.name}: “{post.title}...”"),
+                comments=(
+                    f"Go see your post on {post.block.name}: “{post.title}...”"
+                ),
                 to_user=post.author,
-                from_user=voter)
+                from_user=voter,
+            )
         try:
             vote = Vote.objects.get(voter=voter, post=post)
         except Vote.DoesNotExist:
@@ -514,15 +605,17 @@ class VoteOnPost(APIView):
             elif value == 0:
                 vote.delete()
 
-        return Response({
-            'post': PostSerializer(get_object_or_404(Post, id=post_id)).data
-        }, status=status.HTTP_201_CREATED)
-
+        return Response(
+            {"post": PostSerializer(get_object_or_404(Post, id=post_id)).data},
+                status=status.HTTP_201_CREATED,
+        )        
+        
+        
 
 class RetrievePost(ListAPIView):
     queryset = Post.objects.all()
     permission_classes = (AllowAny,)
-    serializer_class = PostSerializer 
+    serializer_class = PostSerializer
 
     def get(self, request, pk):
         post = Post.objects.get(id=pk)
@@ -530,7 +623,7 @@ class RetrievePost(ListAPIView):
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_voted_post(request):
     if request.method == "POST":
@@ -543,7 +636,13 @@ def user_voted_post(request):
         else:
             voted = False
             vote = 0
-        return Response({ 'voted': voted, 'vote': vote, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "voted": voted,
+                "vote": vote,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
 class CreateCommentView(CreateAPIView):
@@ -553,57 +652,66 @@ class CreateCommentView(CreateAPIView):
 
     def create(self, request, *args, **kwargs):
         author = request.user
-        post_id = request.data.get('post_id')
-        text = request.data.get('text')
-        parent_comment_id = request.data.get('parent_comment_id')        
+        post_id = request.data.get("post_id")
+        text = request.data.get("text")
+        parent_comment_id = request.data.get("parent_comment_id")
         post = get_object_or_404(Post, id=post_id)
-        
+
         with transaction.atomic():
             comment = Comment.objects.create(
                 post=post,
                 author=author,
-                parent_comment=parent_comment_id and Comment.objects.get(pk=parent_comment_id),
-                text=text
+                parent_comment=parent_comment_id
+                and Comment.objects.get(pk=parent_comment_id),
+                text=text,
             )
             post.comments = post.comments + 1
             post.save()
-        if parent_comment_id and Comment.objects.get(pk=parent_comment_id):            
+        if parent_comment_id and Comment.objects.get(pk=parent_comment_id):
             Notification.objects.get_or_create(
-                notification_type='C',
+                notification_type="C",
                 comment=Comment.objects.get(pk=parent_comment_id),
-                comments=(f"@{author.username} replied to your comment in b/{post.block.name}"),
+                comments=(
+                    f"@{author.username} replied to your comment in b/{post.block.name}"
+                ),
                 to_user=Comment.objects.get(pk=parent_comment_id).author,
-                from_user=author)     
+                from_user=author,
+            )
         else:
             Notification.objects.get_or_create(
-                notification_type='P',
+                notification_type="P",
                 post=post,
-                comments=(f"@{author.username} replied to your post in b/{post.block.name}"),
+                comments=(
+                    f"@{author.username} replied to your post in b/{post.block.name}"
+                ),
                 to_user=post.author,
-                from_user=author)
+                from_user=author,
+            )
 
         d = CommentSerializer(comment).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
-class VoteOnComment(APIView):
-    permission_classes = (AllowAny,)
-    serializer_class = CommentSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def post(self, request, *args, **kwargs):
+    
+@api_view(["POST"])
+@permission_classes((AllowAny,))
+def VoteOnComment(request):
+    if request.method == "POST":
         voter = request.user
-        comment_id = request.data.get('comment_id')
-        value = request.data.get('value')
+        comment_id = request.data.get("comment_id")
+        value = request.data.get("value")
         comment = get_object_or_404(Comment, id=comment_id)
-        
-        if value == 1:     
+
+        if value == 1:
             Notification.objects.get_or_create(
-                notification_type='VC',
+                notification_type="VC",
                 comment=comment,
-                comments=(f"Go see your comment on {comment.post.block.name}: “{comment.post.title}...”"),
+                comments=(
+                    f"Go see your comment on {comment.post.block.name}: “{comment.post.title}...”"
+                ),
                 to_user=comment.author,
-                from_user=voter) 
+                from_user=voter,
+            )
         try:
             vote = Vote.objects.get(voter=voter, comment=comment)
         except Vote.DoesNotExist:
@@ -615,12 +723,17 @@ class VoteOnComment(APIView):
             elif value == 0:
                 vote.delete()
 
-        return Response({
-            'comment': CommentSerializer(get_object_or_404(Comment, id=comment_id)).data
-        }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "comment": CommentSerializer(
+                    get_object_or_404(Comment, id=comment_id)
+                ).data
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_voted_comment(request):
     if request.method == "POST":
@@ -633,27 +746,34 @@ def user_voted_comment(request):
         else:
             voted = False
             vote = 0
-        return Response({ 'voted': voted, 'vote': vote, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "voted": voted,
+                "vote": vote,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
 class ListSavedCommentsOfUser(ListAPIView):
     queryset = Comment.objects.all()
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination
-    serializer_class = CommentSerializer_detailed 
+    serializer_class = CommentSerializer_detailed
 
     def get(self, request):
-        comments = Comment.objects.filter(is_deleted=False).order_by('-created')
+        comments = Comment.objects.filter(is_deleted=False).order_by("-created")
         for comment in comments:
             if self.request.user in comment.saved.all():
                 serializer = self.serializer_class(comments, many=True)
                 return Response(data=serializer.data, status=status.HTTP_200_OK)
             else:
-                return Response({ "there are no saved comments from user" }, status=status.HTTP_200_OK)    
+                return Response(
+                    {"there are no saved comments from user"}, status=status.HTTP_200_OK
+                )
 
 
-
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_saved_comment(request):
     if request.method == "POST":
@@ -663,10 +783,15 @@ def user_saved_comment(request):
             saved = True
         else:
             saved = False
-        return Response({ 'saved': saved, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "saved": saved,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_reported_comment(request):
     if request.method == "POST":
@@ -676,10 +801,15 @@ def user_reported_comment(request):
             report = True
         else:
             report = False
-        return Response({ 'report': report, }, status=status.HTTP_200_OK)
+        return Response(
+            {
+                "report": report,
+            },
+            status=status.HTTP_200_OK,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def save_comment(request):
     if request.method == "POST":
@@ -691,10 +821,15 @@ def save_comment(request):
         else:
             saved = True
             comment.saved.add(request.user)
-        return Response({ 'saved': saved, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "saved": saved,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def report_comment(request):
     if request.method == "POST":
@@ -706,7 +841,12 @@ def report_comment(request):
         else:
             report = True
             comment.report.add(request.user)
-        return Response({ 'report': report, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "report": report,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
 class ListNewCommentsOfPost(ListAPIView):
@@ -714,15 +854,15 @@ class ListNewCommentsOfPost(ListAPIView):
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             return CommentSerializer
 
     def get_queryset(self):
         return Comment.objects.filter(
-            post__block__name=self.kwargs['b_name'], post__id=self.kwargs['p_id'] 
-        ).order_by('-created')
+            post__block__name=self.kwargs["b_name"], post__id=self.kwargs["p_id"]
+        ).order_by("-created")
 
 
 class ListOldCommentsOfPost(ListAPIView):
@@ -730,15 +870,15 @@ class ListOldCommentsOfPost(ListAPIView):
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             return CommentSerializer
 
     def get_queryset(self):
         return Comment.objects.filter(
-            post__block__name=self.kwargs['b_name'], post__id=self.kwargs['p_id'] 
-        ).order_by('created')
+            post__block__name=self.kwargs["b_name"], post__id=self.kwargs["p_id"]
+        ).order_by("created")
 
 
 class ListPopularCommentsOfPost(ListAPIView):
@@ -746,37 +886,37 @@ class ListPopularCommentsOfPost(ListAPIView):
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             return CommentSerializer
 
     def get_queryset(self):
         return Comment.objects.filter(
-            post__block__name=self.kwargs['b_name'], post__id=self.kwargs['p_id'] 
-        ).order_by('votes')
+            post__block__name=self.kwargs["b_name"], post__id=self.kwargs["p_id"]
+        ).order_by("votes")
 
 
 class DetailCommentsOfPost(RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
     queryset = Comment.objects.all()
-    
+
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
         return CommentSerializer
 
     def get_object(self):
         queryset = self.filter_queryset(self.get_queryset())
         conditions = {
-            'post__block__name': self.kwargs['b_name'],
-            'post__id': self.kwargs['p_id'],
-            'id': self.kwargs['c_id']
+            "post__block__name": self.kwargs["b_name"],
+            "post__id": self.kwargs["p_id"],
+            "id": self.kwargs["c_id"],
         }
         return get_object_or_404(queryset, **conditions)
 
     def put(self, request, *args, **kwargs):
-        kwargs['partial'] = True 
+        kwargs["partial"] = True
         return self.update(request, *args, **kwargs)
 
 
@@ -785,32 +925,34 @@ class ListCommentsOfUser(ListCreateAPIView):
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             return CommentSerializer
 
     def get_queryset(self):
-        return Comment.objects.filter(author__username=self.kwargs['username']).order_by('-created')
+        return Comment.objects.filter(
+            author__username=self.kwargs["username"]
+        ).order_by("-created")
 
 
 class DetailCommentsOfUser(RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
     queryset = Comment.objects.all()
-    
+
     def get_serializer_class(self):
-        if self.request.method == 'GET':
+        if self.request.method == "GET":
             return CommentSerializer_detailed
         return CommentSerializer
 
     def get_object(self):
         queryset = self.filter_queryset(self.get_queryset())
         conditions = {
-            'author__username': self.kwargs['username'],
-            'id': self.kwargs['c_id']
+            "author__username": self.kwargs["username"],
+            "id": self.kwargs["c_id"],
         }
         return get_object_or_404(queryset, **conditions)
 
     def put(self, request, *args, **kwargs):
-        kwargs['partial'] = True 
+        kwargs["partial"] = True
         return self.update(request, *args, **kwargs)

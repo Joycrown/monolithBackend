@@ -553,7 +553,7 @@ class GetCryptoNews(GenericAPIView):
 
     def post(self, request):
         NEWSDATA_API_KEY = config("NEWSDATA_API_KEY")
-        api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
+        api = NewsDataApiClient(apikey="pub_1612976c905083433c26d4ac689267103ccfb")
         specific = request.data.get("crypto")
 
         news = api.crypto_api(q=specific, language="en")
@@ -570,7 +570,7 @@ class GetStockNews(GenericAPIView):
 
     def post(self, request):
         NEWSDATA_API_KEY = config("NEWSDATA_API_KEY")
-        api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
+        api = NewsDataApiClient(apikey="pub_1612976c905083433c26d4ac689267103ccfb")
         specific = request.data.get("stock")
 
         news = api.news_api(q=specific, language="en")
@@ -586,14 +586,13 @@ class GetCategoryNews(GenericAPIView):
     permission_classes = (AllowAny,)
 
     def get(
-        self, request, category, page
+        self, request, category
     ):  # can bt one of the following stocks, crypto, currencies, arts, real estate,wold economy, pub_1524778c92e3df5c784193332a4a5fba4158c
         NEWSDATA_API_KEY = config("NEWSDATA_API_KEY")
-        api = NewsDataApiClient(apikey="pub_1524778c92e3df5c784193332a4a5fba4158c")
+        api = NewsDataApiClient(apikey="pub_1612976c905083433c26d4ac689267103ccfb")
         specific = category
-        nextPage = page
 
-        news = api.news_api(q=specific, language="en", page=nextPage)
+        news = api.news_api(q=specific, language="en")
         return Response(
             {
                 "data": news,
@@ -609,7 +608,7 @@ class GetBusinessNews(GenericAPIView):
         self, request
     ):  # can bt one of the following stocks, crypto, currencies, arts, real estate,wold economy,
         NEWSDATA_API_KEY = config("NEWSDATA_API_KEY")
-        api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
+        api = NewsDataApiClient(apikey="pub_1612976c905083433c26d4ac689267103ccfb")
 
         news = api.news_api(category="business", language="en")
         return Response(

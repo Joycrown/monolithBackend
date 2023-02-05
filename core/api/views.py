@@ -83,10 +83,10 @@ from core.utils import create_broker_account, get_broker_client
 from django.http import HttpResponsePermanentRedirect
 
 
-
 class CustomRedirect(HttpResponsePermanentRedirect):
 
-    allowed_schemes = [os.environ.get('APP_SCHEME'), 'http', 'https']
+    allowed_schemes = [os.environ.get("APP_SCHEME"), "http", "https"]
+
 
 class UserIDView(APIView):
     def get(self, request, *args, **kwargs):
@@ -119,8 +119,7 @@ class RegisterView(generics.GenericAPIView):
             user_data["phone"] = user.phone
             html_tpl_path = "email_templates/welcome.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -157,8 +156,7 @@ class ResendRegisterEmailView(generics.GenericAPIView):
             user_data["email"] = user.email
             html_tpl_path = "email_templates/welcome.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -194,12 +192,22 @@ class VerifyEmail(generics.GenericAPIView):
             access_token = str(refresh.access_token)
             user.is_verified = True
             user.is_active = True
+            user.active = True
             user.otp = 0
             user.save()
             return Response(
-                {"id": user.id, "email": user.email, "username":user.username, "phone":user.phone, "slug": user.slug, "refresh_token": refresh_token, "access_token": access_token}, status=status.HTTP_200_OK
+                {
+                    "id": user.id,
+                    "email": user.email,
+                    "username": user.username,
+                    "phone": user.phone,
+                    "slug": user.slug,
+                    "refresh_token": refresh_token,
+                    "access_token": access_token,
+                },
+                status=status.HTTP_200_OK,
             )
-        else:    
+        else:
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -220,8 +228,7 @@ class LoginAPIView(generics.GenericAPIView):
             user.save()
             html_tpl_path = "email_templates/login.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -252,8 +259,7 @@ class ResendLoginEmailView(generics.GenericAPIView):
             user.save()
             html_tpl_path = "email_templates/login.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -284,9 +290,18 @@ class VerifyLoginEmail(generics.GenericAPIView):
             user.otp = 0
             user.save()
             return Response(
-                {"id": user.id, "email": user.email, "username":user.username, "phone":user.phone, "slug": user.slug, "refresh_token": refresh_token, "access_token": access_token}, status=status.HTTP_200_OK
+                {
+                    "id": user.id,
+                    "email": user.email,
+                    "username": user.username,
+                    "phone": user.phone,
+                    "slug": user.slug,
+                    "refresh_token": refresh_token,
+                    "access_token": access_token,
+                },
+                status=status.HTTP_200_OK,
             )
-        else:    
+        else:
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -306,8 +321,7 @@ class ResetPasswordAPIView(generics.GenericAPIView):
             user.save()
             html_tpl_path = "email_templates/reset.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -336,8 +350,7 @@ class ResendResetPasswordView(generics.GenericAPIView):
             user.save()
             html_tpl_path = "email_templates/reset.html"
             context_data = {"name": user.username, "code": user.otp}
-            email_html_template = get_template(
-                html_tpl_path).render(context_data)
+            email_html_template = get_template(html_tpl_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
@@ -365,15 +378,21 @@ class VerifyResetEmail(generics.GenericAPIView):
             user.otp = 0
             user.save()
             return Response(
-                {"id": user.id, "email": user.email, "username":user.username, "slug": user.slug}, status=status.HTTP_200_OK
+                {
+                    "id": user.id,
+                    "email": user.email,
+                    "username": user.username,
+                    "slug": user.slug,
+                },
+                status=status.HTTP_200_OK,
             )
-        else:    
+        else:
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SetNewPasswordAPIView(generics.GenericAPIView):
     serializer_class = SetNewPasswordSerializer
-    
+
     permission_classes = (permissions.AllowAny,)
 
     def patch(self, request):
@@ -428,17 +447,13 @@ class FeedbackCreateView(CreateAPIView):
     serializer_class = FeedbackSerializer
 
     def create(self, request, *args, **kwargs):
-        title = request.data.get('title')       
-        text = request.data.get('text')
-        username = request.data.get('username')
+        title = request.data.get("title")
+        text = request.data.get("text")
+        username = request.data.get("username")
         author = request.user
 
         with transaction.atomic():
-            feedback = Feedback.objects.create(
-                title=title,
-                text=text,
-                user=author
-            )
+            feedback = Feedback.objects.create(title=title, text=text, user=author)
         d = FeedbackSerializer(feedback).data
         return Response(d, status=status.HTTP_201_CREATED)
 
@@ -539,7 +554,7 @@ class BrokerAccountDeleteView(GenericAPIView):
 
 class UserFollowers(APIView):
     queryset = User.objects.all()
-    permission_classes = (AllowAny,)    
+    permission_classes = (AllowAny,)
     serializer_class = ListUserSerializer
 
     def get(self, request, username, format=None):
@@ -551,9 +566,7 @@ class UserFollowers(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         user_followers = found_user.followers.all()
-        serializer = self.serializer_class(
-            user_followers, many=True
-        )
+        serializer = self.serializer_class(user_followers, many=True)
 
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -575,19 +588,21 @@ class UserFollowing(APIView):
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def follow_unfollow_user(request):
     if request.method == "POST":
         username = request.data.get("username")
         fu_user = get_object_or_404(User, username=username)
         user = request.user
-        
+
         if fu_user in user.following.all():
             following = False
             user.following.remove(fu_user)
             user.save()
-            
+            fu_user.followers.remove(user)
+            fu_user.save()
+
             Notification.objects.get_or_create(
                 notification_type="UF",
                 comments=(f"@{user.username} unfollowed you"),
@@ -598,17 +613,24 @@ def follow_unfollow_user(request):
             following = True
             user.following.add(fu_user)
             user.save()
-            
+            fu_user.followers.add(user)
+            fu_user.save()
+
             Notification.objects.get_or_create(
                 notification_type="F",
                 comments=(f"@{user.username} followed you"),
                 to_user=fu_user,
                 from_user=user,
             )
-        return Response({ 'following': following, }, status=status.HTTP_201_CREATED)    
-    
+        return Response(
+            {
+                "following": following,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
-@api_view(['POST'])
+
+@api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_followed_user(request):
     if request.method == "POST":
@@ -619,7 +641,12 @@ def user_followed_user(request):
             following = True
         else:
             following = False
-        return Response({ 'following': following, }, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "following": following,
+            },
+            status=status.HTTP_201_CREATED,
+        )
 
 
 class UserProfile(APIView):
@@ -639,9 +666,7 @@ class UserProfile(APIView):
 
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        serializer = UserProfileSerializer(
-            found_user, context={"request": request}
-        )
+        serializer = UserProfileSerializer(found_user, context={"request": request})
 
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
@@ -702,27 +727,28 @@ class UserProfile(APIView):
 
                 return Response(data=serializer.data, status=status.HTTP_200_OK)
 
+
 class UserDetailView(RetrieveAPIView):
-    lookup_field = "username"    
+    lookup_field = "username"
     permission_classes = (AllowAny,)
     serializer_class = ListUserSerializer
     queryset = User.objects.all()
 
 
 class UserUpdateView(UpdateAPIView):
-    lookup_field = "username"   
-    parser_classes = (MultiPartParser, FormParser)
+    lookup_field = "username"
     permission_classes = (AllowAny,)
     serializer_class = ListUserSerializer
     queryset = User.objects.all()
+    parser_classes = (FormParser, MultiPartParser)
 
 
 class UserDeleteView(DestroyAPIView):
-    lookup_field = "username"    
+    lookup_field = "username"
     permission_classes = (AllowAny,)
     serializer_class = ListUserSerializer
     queryset = User.objects.all()
-    
+
 
 class ChangePassword(APIView):
     def put(self, request, username, format=None):

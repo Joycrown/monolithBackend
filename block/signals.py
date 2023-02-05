@@ -20,3 +20,37 @@ def post_save_block(sender, created, instance, **kwargs):
         block.subscriber_count =+ 1
         block.save()
         
+@receiver(post_save, sender=Block)
+def update_user(sender, instance, created, **kwargs):
+    block = instance
+    now = date.today()
+                            
+    if created:
+        if now.month == 1:
+           month = "January"
+        elif now.month == 2: 
+           month = "February"
+        elif now.month == 3: 
+           month = "March"
+        elif now.month == 4: 
+           month = "April"   
+        elif now.month == 5: 
+           month = "May"
+        elif now.month == 6: 
+           month = "June" 
+        elif now.month == 7: 
+           month = "July"
+        elif now.month == 8:
+           month = "August"   
+        elif now.month == 9:
+           month = "September" 
+        elif now.month == 10: 
+           month = "October"
+        elif now.month == 11: 
+           month = "November" 
+        else:
+           month = "December"
+        block.day = now.day
+        block.month = month
+        block.year = now.year
+        block.save()
