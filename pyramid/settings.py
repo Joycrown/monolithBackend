@@ -94,11 +94,11 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramid-prod',
-        'USER': 'pyramid-prod',
-        'PASSWORD': 'Universe&007',
+        'NAME': 'pyramid',
+        'USER': 'pyramid',
+        'PASSWORD': '00000000',
         'HOST': 'pyramid-prod.cumel6cv7bwg.us-east-2.rds.amazonaws.com',
-        'PORT': '5432',
+        'PORT': 5432,
     }
 }
 
