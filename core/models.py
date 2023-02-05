@@ -103,7 +103,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_banned = models.BooleanField(default=False)
     is_investor = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
-    slug = models.SlugField(unique=True, blank=True, null=False)
+    slug = models.SlugField(unique=True, blank=True, null=False, max_length=300)
     tos = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
     created = models.CharField(max_length=1000, null=True, blank=True)

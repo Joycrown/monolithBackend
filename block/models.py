@@ -131,7 +131,7 @@ class Block(models.Model):
     subscriber_count = models.IntegerField(blank=True, null=True, default=0)
     share_count = models.IntegerField(blank=True, null=True, default=0)
     is_deleted = models.BooleanField(default=False)
-    slug = models.SlugField(unique=True, blank=True, null=False)
+    slug = models.SlugField(unique=True, blank=True, null=False, max_length=255)
 
     @property
     def numPosts(self):
@@ -223,7 +223,7 @@ class Post(models.Model):
     votes = models.IntegerField(default=0)
     reposts = models.IntegerField(default=0)
     comments = models.IntegerField(default=0)
-    slug = models.SlugField(blank=True, null=False)
+    slug = models.SlugField(blank=True, null=False, max_length=300)
 
     def get_author(self):
         if self.is_deleted:
