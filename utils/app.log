@@ -25,3 +25,13 @@
 2023-02-04 18:28:01,045 | DEBUG | asyncio | selector_events | 3976 | 17144 | Using selector: SelectSelector
 2023-02-04 18:31:52,242 | DEBUG | asyncio | selector_events | 3816 | 1956 | Using selector: SelectSelector
 2023-02-04 18:31:54,412 | DEBUG | asyncio | selector_events | 3816 | 1956 | Using selector: SelectSelector
+2023-02-05 11:18:16,274 | DEBUG | asyncio | selector_events | 5256 | 5176 | Using selector: SelectSelector
+2023-02-05 11:18:20,673 | DEBUG | asyncio | selector_events | 5256 | 5176 | Using selector: SelectSelector
+2023-02-05 11:19:27,691 | DEBUG | asyncio | selector_events | 1152 | 9420 | Using selector: SelectSelector
+2023-02-05 11:19:28,733 | DEBUG | asyncio | selector_events | 1152 | 9420 | Using selector: SelectSelector
+2023-02-05 11:27:09,169 | DEBUG | asyncio | selector_events | 6668 | 3896 | Using selector: SelectSelector
+2023-02-05 11:27:11,393 | DEBUG | asyncio | selector_events | 6668 | 3896 | Using selector: SelectSelector
+2023-02-05 11:27:34,679 | DEBUG | asyncio | selector_events | 3580 | 7824 | Using selector: SelectSelector
+2023-02-05 11:27:37,038 | DEBUG | asyncio | selector_events | 3580 | 7824 | Using selector: SelectSelector
+2023-02-05 11:27:53,850 | DEBUG | asyncio | selector_events | 1636 | 2688 | Using selector: SelectSelector
+2023-02-05 11:27:54,932 | DEBUG | asyncio | selector_events | 1636 | 2688 | Using selector: SelectSelector
