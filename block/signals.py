@@ -24,6 +24,7 @@ def post_save_block(sender, created, instance, **kwargs):
 @receiver(post_save, sender=Block)
 def update_user(sender, instance, created, **kwargs):
     block = instance
+    creator = block.creator
     now = date.today()
                             
     if created:
@@ -54,4 +55,7 @@ def update_user(sender, instance, created, **kwargs):
         block.day = now.day
         block.month = month
         block.year = now.year
+        block.moderators.add(creator)
+        block.subscribers.add(creator)
+        block.subscriber_count =+ 1
         block.save()
