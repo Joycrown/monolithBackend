@@ -13,8 +13,9 @@ from .models import Block
 @receiver(post_save, sender=Block)
 def post_save_block(sender, created, instance, **kwargs):
     block = instance
-    creator = block.creator
+
     if created:
+        creator = block.creator
         block.moderators.add(creator)
         block.subscribers.add(creator)
         block.subscriber_count =+ 1
@@ -28,6 +29,7 @@ def update_user(sender, instance, created, **kwargs):
     now = date.today()
                             
     if created:
+        month = ""
         if now.month == 1:
            month = "January"
         elif now.month == 2: 
@@ -55,7 +57,4 @@ def update_user(sender, instance, created, **kwargs):
         block.day = now.day
         block.month = month
         block.year = now.year
-        block.moderators.add(creator)
-        block.subscribers.add(creator)
-        block.subscriber_count =+ 1
         block.save()
