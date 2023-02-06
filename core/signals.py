@@ -15,6 +15,7 @@ def update_user(sender, instance, created, **kwargs):
     now = date.today()
                             
     if created:
+        month = ""
         if now.month == 1:
            month = "January"
         elif now.month == 2: 
