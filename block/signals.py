@@ -11,10 +11,10 @@ from django.shortcuts import get_object_or_404
 from .models import Block
 
 @receiver(post_save, sender=Block)
-def post_save_block(sender, created, instance, **kwargs):
-    block = instance
+def post_save_block(sender, created, instance, **kwargs):    
 
     if created:
+        block = instance
         creator = block.creator
         block.moderators.add(creator)
         block.subscribers.add(creator)
