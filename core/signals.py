@@ -13,7 +13,6 @@ from .models import User
 def update_user(sender, instance, created, **kwargs):
     user = instance
     now = date.today()
-    month = ""
                             
     if created:
         if now.month == 1:
