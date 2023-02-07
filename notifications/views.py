@@ -24,8 +24,7 @@ def NotificationView(request):
     paginator = CustomPagination()
     result_page = paginator.paginate_queryset(notify_list,request)
     noti_count = Notification.objects.filter(
-        to_user=request.user,
-        user_has_seen=False
+        to_user=request.user
     ).count()
     """
     instead of doing ,if 0 then not show notificaton badge in client side 
