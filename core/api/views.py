@@ -78,7 +78,7 @@ class RegisterView(generics.GenericAPIView):
             user.otp = otp
             now = date.today()
             user.day = now.day
-            user.month = now.month
+            #user.month = now.month
             user.year = now.year
             call_code = request.data.get("call_code")
             user.call_code = call_code
