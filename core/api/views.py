@@ -80,6 +80,8 @@ class RegisterView(generics.GenericAPIView):
             user.day = now.day
             user.month = now.month
             user.year = now.year
+            call_code = request.data.get("call_code")
+            user.call_code = call_code
             user.is_active = True
             user.tos = True
 
