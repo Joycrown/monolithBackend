@@ -23,6 +23,7 @@ from drf_extra_fields.fields import Base64ImageField
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length=68, min_length=6, write_only=True)
+    call_code = serializers.CharField(max_length=68, min_length=6, write_only=True)
 
     default_error_messages = {
         "username": "The username should only contain alphanumeric characters"
@@ -36,7 +37,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         email = attrs.get("email", "")
         username = attrs.get("username", "")
         phone = attrs.get("phone", "")
-        call_code = attrs.get("call_code", "")
 
         if not username.isalnum():
             raise serializers.ValidationError(self.default_error_messages)
