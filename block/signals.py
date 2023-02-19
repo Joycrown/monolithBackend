@@ -11,21 +11,25 @@ from django.shortcuts import get_object_or_404
 from .models import Block
  
 @receiver(post_save, sender=Block)
-def post_save_block(sender, created, instance, **kwargs):
-    block = instance
-    creator = block.creator
+def post_save_block(sender, created, instance, **kwargs):    
+
     if created:
+        block = instance
+        creator = block.creator
         block.moderators.add(creator)
         block.subscribers.add(creator)
         block.subscriber_count =+ 1
         block.save()
+       
         
 @receiver(post_save, sender=Block)
 def update_user(sender, instance, created, **kwargs):
     block = instance
+    creator = block.creator
     now = date.today()
                             
     if created:
+        month = ""
         if now.month == 1:
            month = "January"
         elif now.month == 2: 
