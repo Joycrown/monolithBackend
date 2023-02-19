@@ -1,41 +1,18 @@
-import jwt
 import os
-import requests
 import random
-import string
-import re
-from datetime import timedelta
-from datetime import datetime as dt
-from datetime import date, timedelta
+from datetime import date
 
 from django.db import transaction
-from django.db.models import Q
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404, HttpResponsePermanentRedirect
-from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
-from django.shortcuts import render, redirect
-from django.urls import reverse
-from django.conf import settings
-from django.contrib import auth
-from django.contrib.sites.shortcuts import get_current_site
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import (
-    smart_str,
-    force_str,
-    smart_bytes,
-    DjangoUnicodeDecodeError,
-)
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from django.shortcuts import get_object_or_404
 from django.template.loader import get_template
-from django.core.mail import EmailMessage
-
+ 
 from utils.utils import Util
 from core.models import User, Feedback, Investor, Poi, Document
 from .serializers import (
     ListUserSerializer,
     UserProfileSerializer,
-    UserSerializer,
     RegisterSerializer,
     LogoutSerializer,
     LoginSerializer,
@@ -50,35 +27,26 @@ from .serializers import (
     SetNewPasswordSerializer,
     ResetPasswordSerializer,
 )
-from core.renderers import UserRenderer
 from core.emails import *
 from core.utils import create_broker_account, create_user_watchlist
 from notifications.models import Notification
 
-from rest_framework import generics, status, views, permissions
+from rest_framework import generics, status, permissions
 from rest_framework.generics import (
-    ListAPIView,
     RetrieveAPIView,
     CreateAPIView,
     UpdateAPIView,
     DestroyAPIView,
-    RetrieveUpdateAPIView,
     GenericAPIView,
 )
 from rest_framework.renderers import JSONRenderer
-from rest_framework.pagination import PageNumberPagination
-from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
-from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
-from rest_framework_simplejwt.tokens import RefreshToken, AccessToken
-from rest_framework.throttling import ScopedRateThrottle
-from rest_framework_simplejwt.authentication import JWTAuthentication
-from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.status import HTTP_200_OK
+from rest_framework_simplejwt.tokens import RefreshToken
 from core.utils import create_broker_account, get_broker_client
 from django.http import HttpResponsePermanentRedirect
 
@@ -113,20 +81,29 @@ class RegisterView(generics.GenericAPIView):
             user.month = now.month
             user.year = now.year
             user.is_active = True
-            user.save()
+            user.tos = True
+
             user_data["email"] = user.email
             user_data["username"] = user.username
             user_data["phone"] = user.phone
             html_tpl_path = "email_templates/welcome.html"
+            html_intro_path = "email_templates/intro.html"
             context_data = {"name": user.username, "code": user.otp}
             email_html_template = get_template(html_tpl_path).render(context_data)
+            intro_html_template = get_template(html_intro_path).render(context_data)
             data = {
                 "email_body": email_html_template,
                 "to_email": user.email,
                 "email_subject": "Please verify your Pyramid email",
             }
-
+            intro = {
+                "email_body": intro_html_template,
+                "to_email": user.email,
+                "email_subject": "Welcome To Pyramid",
+            }
             Util.send_email(data)
+            Util.send_email(intro)
+            user.save()
             return Response(user_data, status=status.HTTP_201_CREATED)
 
         else:
@@ -208,7 +185,7 @@ class VerifyEmail(generics.GenericAPIView):
                 status=status.HTTP_200_OK,
             )
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status": False, "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class LoginAPIView(generics.GenericAPIView):
@@ -238,7 +215,7 @@ class LoginAPIView(generics.GenericAPIView):
             Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status":False, "message":"User is not active"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ResendLoginEmailView(generics.GenericAPIView):
@@ -269,7 +246,7 @@ class ResendLoginEmailView(generics.GenericAPIView):
             Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status": False, "message":"User is not active"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class VerifyLoginEmail(generics.GenericAPIView):
@@ -302,7 +279,7 @@ class VerifyLoginEmail(generics.GenericAPIView):
                 status=status.HTTP_200_OK,
             )
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status": False, "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ResetPasswordAPIView(generics.GenericAPIView):
@@ -331,7 +308,7 @@ class ResetPasswordAPIView(generics.GenericAPIView):
             Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status":False, "message": "User not found"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ResendResetPasswordView(generics.GenericAPIView):
@@ -360,7 +337,7 @@ class ResendResetPasswordView(generics.GenericAPIView):
             Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status":False, "message": "User not found"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class VerifyResetEmail(generics.GenericAPIView):
@@ -387,7 +364,7 @@ class VerifyResetEmail(generics.GenericAPIView):
                 status=status.HTTP_200_OK,
             )
         else:
-            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status":False, "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SetNewPasswordAPIView(generics.GenericAPIView):
@@ -488,7 +465,7 @@ class InvestorCreateView(GenericAPIView):
             return Response({"data": serializer.data}, status.HTTP_200_OK)
         else:
 
-            return Response({"message": serializer.error}, status.HTTP_400_BAD_REQUEST)
+            return Response({"status":False,"message": serializer.error}, status.HTTP_400_BAD_REQUEST)
 
 
 class InvestorUpdateView(UpdateAPIView):
@@ -563,7 +540,7 @@ class UserFollowers(APIView):
             found_user = User.objects.get(username=username)
             print(f"found user {found_user}")
         except User.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"status":False, "message":"User not found"},status=status.HTTP_404_NOT_FOUND)
 
         user_followers = found_user.followers.all()
         serializer = self.serializer_class(user_followers, many=True)
@@ -578,7 +555,7 @@ class UserFollowing(APIView):
             found_user = User.objects.get(username=username)
             print(f"found user {found_user}")
         except User.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"status":False, "message":"User not found"}, status=status.HTTP_404_NOT_FOUND)
 
         user_following = found_user.following.all()
         serializer = ListUserSerializer(
@@ -664,7 +641,7 @@ class UserProfile(APIView):
 
         if found_user is None:
 
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"status":False, "message":"User not found"}, status=status.HTTP_404_NOT_FOUND)
 
         serializer = UserProfileSerializer(found_user, context={"request": request})
 
@@ -686,7 +663,7 @@ class UserProfile(APIView):
 
         else:
 
-            serializer = serializers.UserProfileSerializer(
+            serializer = UserProfileSerializer(
                 found_user, data=request.data, partial=True
             )
 
@@ -698,8 +675,8 @@ class UserProfile(APIView):
 
             else:
 
-                return Response(
-                    data=serializer.errors, status=status.HTTP_400_BAD_REQUEST
+                return Response({"status":False, "message":serializer.errors}
+                    , status=status.HTTP_400_BAD_REQUEST
                 )
 
     def patch(self, request, username, format=None):
@@ -710,7 +687,7 @@ class UserProfile(APIView):
 
         if found_user is None:
 
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"status":False, "message":"User not found"}, status=status.HTTP_404_NOT_FOUND)
 
         elif found_user.username != user.username:
 
@@ -718,7 +695,7 @@ class UserProfile(APIView):
 
         else:
 
-            serializer = serializers.UserProfileSerializer(
+            serializer = UserProfileSerializer(
                 found_user, data=request.data, partial=True
             )
 

@@ -4,7 +4,7 @@ from .views import (
     UserIDView,
     RegisterView,
     ResendRegisterEmailView,
-    VerifyEmail,
+    VerifyEmail, 
     LoginAPIView,
     ResendLoginEmailView,
     VerifyLoginEmail,
