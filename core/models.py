@@ -1,29 +1,18 @@
-import time
-import random
-import string
 import uuid
 
-from datetime import datetime
 from utils.utils import get_random_code
-from PIL import Image
-from taggit.managers import TaggableManager
-
+from utils.utils import MONTH as month
 from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
 from django.utils.translation import gettext as _
-from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 from django.contrib.auth.models import (
     AbstractBaseUser,
     PermissionsMixin,
     BaseUserManager,
 )
-from django.contrib.admin import display
-from django.db.models import Max
-from django.conf import settings
-
+from datetime import date
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.response import Response
 
 # TODO Add the users wallet when working on crypto/stock/payment system
 
@@ -39,6 +28,14 @@ def upload_for(instance, filename):
 def document_to(instance, filename):
     return "documents/{0}/{1}".format(instance.user.username, filename)
 
+def add_user_util(instance):
+    
+    now = date.today()
+    if not instance.month:
+        instance.day = now.day
+        instance.month = month[now.month]
+        instance.year = now.year
+        instance.created = date(day=now.day, month=now.month, year=now.year)
 
 class UserManager(BaseUserManager):
     def create_user(self, email, username, phone, password=None):
@@ -103,7 +100,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_banned = models.BooleanField(default=False)
     is_investor = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
-    slug = models.SlugField(unique=True, blank=True, null=False, max_length=300)
+    slug = models.SlugField(unique=True, blank=True, null=False, max_length=1000)
     tos = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
     created = models.CharField(max_length=1000, null=True, blank=True)
@@ -131,7 +128,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def following_count(self):
         return self.following.all().count()
-
+ 
     class Meta:
         ordering = ("-created_at",)
 
@@ -150,6 +147,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         else:
             to_slug = str(self.username)
         self.slug = to_slug
+        add_user_util(self)
         super().save(*args, **kwargs)
 
 

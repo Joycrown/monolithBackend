@@ -3,7 +3,7 @@ from rest_framework import serializers
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+ 
 from core.models import User, Feedback, Investor, Poi, Document
 from django.contrib import auth
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
@@ -30,12 +30,13 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["email", "username", "phone", "password"]
+        fields = ["email", "username", "phone", "password", "call_code"]
 
     def validate(self, attrs):
         email = attrs.get("email", "")
         username = attrs.get("username", "")
         phone = attrs.get("phone", "")
+        call_code = attrs.get("call_code", "")
 
         if not username.isalnum():
             raise serializers.ValidationError(self.default_error_messages)
@@ -254,6 +255,15 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             "created_at",
         )
 
+
+class UserCountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            "id",
+            "followers_count",
+            "following_count"
+            )
 
 class UserLessInfoSerializer(serializers.ModelSerializer):
     class Meta:

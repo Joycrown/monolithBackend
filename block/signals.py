@@ -9,7 +9,7 @@ from django.db.models.signals import post_save
 from django.shortcuts import get_object_or_404
 
 from .models import Block
-
+ 
 @receiver(post_save, sender=Block)
 def post_save_block(sender, created, instance, **kwargs):
     block = instance

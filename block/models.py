@@ -1,19 +1,16 @@
-import time
-import random
-import string
 
 from django.db import models, transaction
+from django.core.files import File
 from django.db.models import Sum
-from django.conf import settings
 from django.core.exceptions import FieldError
 from django.contrib.auth.models import Permission
 from django.utils.text import slugify
 from django.utils import timezone
+from datetime import date
 
 from guardian.shortcuts import assign_perm
-from datetime import datetime, timedelta
 from utils.utils import get_random_code
-from PIL import Image
+from utils.utils import MONTH as month
 
 from core.models import User
 
@@ -99,6 +96,22 @@ def edited(model):
     td = model.text.last_modified - model.created
     return td.days > -1 and td.seconds > 60 * 5
 
+def add_block_util(instance):
+    now = date.today()
+    if not instance.month:
+        instance.subscriber_count =+ 1
+        instance.day = now.day
+        instance.month = month[now.month]
+        instance.year = now.year
+        instance.save()
+
+        
+def add_block_utils(instance):    
+    creator = instance.creator
+    instance.subscribers.add(creator)
+    instance.moderators.add(creator)
+    instance.save()        
+
 
 class Text(models.Model):
     text = models.TextField(blank=True)
@@ -131,7 +144,7 @@ class Block(models.Model):
     subscriber_count = models.IntegerField(blank=True, null=True, default=0)
     share_count = models.IntegerField(blank=True, null=True, default=0)
     is_deleted = models.BooleanField(default=False)
-    slug = models.SlugField(unique=True, blank=True, null=False, max_length=255)
+    slug = models.SlugField(unique=True, blank=True, null=False, max_length=1000)
 
     @property
     def numPosts(self):
@@ -148,6 +161,7 @@ class Block(models.Model):
         return "/b/" + self.name
 
     def save(self, *args, **kwargs):
+
         ex = False
         SIZE = 250, 250
         if self.name:
@@ -158,8 +172,12 @@ class Block(models.Model):
                 ex = Block.objects.filter(slug=to_slug).exists()
         else:
             to_slug = str(self.name)
-        self.slug = to_slug
-        super().save(*args, **kwargs)
+        self.slug = to_slug    
+        add_block_util(self)
+        super().save(*args, **kwargs)  
+
+class Poll(models.Model):
+    pass
 
 
 class Link(models.Model):
@@ -185,13 +203,13 @@ class DeletedUser(object):
     def get_username(self):
         return self.username
 
-
+  
 class Post(models.Model):
     title = models.CharField(max_length=300)
     block = models.ForeignKey(Block, on_delete=models.CASCADE)
     attachment = models.ImageField(
         upload_to=post_to, blank=True, null=True, max_length=100000
-    )
+    )#this attachment is a picture, dont ask why its being called attachment.
     created = models.DateTimeField(auto_now_add=True)
     link = models.URLField(blank=True, null=True, max_length=2000)
     text = models.TextField(blank=True, null=True, max_length=100000)
@@ -223,7 +241,7 @@ class Post(models.Model):
     votes = models.IntegerField(default=0)
     reposts = models.IntegerField(default=0)
     comments = models.IntegerField(default=0)
-    slug = models.SlugField(blank=True, null=False, max_length=300)
+    slug = models.SlugField(blank=True, null=False, max_length=1000)
 
     def get_author(self):
         if self.is_deleted:
@@ -278,7 +296,7 @@ class Comment(models.Model):
         User, related_name="comment_saved", blank=True, default=None
     )
     created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField(blank=True, null=True, max_length=100000)
+    text = models.TextField(blank=True, null=True)
     is_deleted = models.BooleanField(default=False)
     saved_count = models.IntegerField(blank=True, null=True, default=0)
     report_count = models.IntegerField(blank=True, null=True, default=0)

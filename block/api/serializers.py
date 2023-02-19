@@ -4,7 +4,7 @@ from block.models import *
 from core.models import User
 from core.api.serializers import UserLessInfoSerializer
 from drf_extra_fields.fields import Base64ImageField, Base64FileField
-
+ 
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):

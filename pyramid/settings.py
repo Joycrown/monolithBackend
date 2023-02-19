@@ -79,7 +79,7 @@ TEMPLATES = [
         },
     },
 ]
-ASGI_APPLICATION = "pyramid.asgi.application"
+ASGI_APPLICATION = "pyramid.routing.application"
 WSGI_APPLICATION = "pyramid.wsgi.application"
 
 # Database
