@@ -94,11 +94,10 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramid',
-        'USER': 'pyramid',
-        'PASSWORD': '00000000',
-        'HOST': 'pyramid-prod.cumel6cv7bwg.us-east-2.rds.amazonaws.com',
-        'PORT': 5432,
+        'NAME': 'pyramidlive-database',
+        'USER': 'frwattwdom',
+        'PASSWORD': '4MF4IT62278YZIGO$',
+        'HOST': 'pyramidlive-server.postgres.database.azure.com',
     }
 }
 
@@ -153,6 +152,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media
 MEDIA_URL = "/media/"
