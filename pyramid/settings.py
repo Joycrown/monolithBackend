@@ -278,12 +278,13 @@ AUTHENTICATION_BACKENDS = (
     "guardian.backends.ObjectPermissionBackend",
 )
 
+DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
 
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
 
-AWS_ACCESS_KEY_ID = "AKIA6OYWCN5IGVHDXY4F"
-AWS_SECRET_ACCESS_KEY = "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"
-
-AWS_STORAGE_BUCKET_NAME = "pyramid-env"
-AWS_QUERYSTRING_AUTH = False
-AWS_S3_FILE_OVERWRITE = False
+AZURE_ACCOUNT_NAME = "pyramidstorages"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
