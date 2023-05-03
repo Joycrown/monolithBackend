@@ -16,12 +16,13 @@ SECRET_KEY = "django-insecure-1yd$y6)cjv&o8p&-fl&alj=n+s6!tu7)z(160ld%ml%m36qax!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*", "http://pyramid-prod.eba-hseyksis.us-east-2.elasticbeanstalk.com/"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "channels",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,9 +39,7 @@ INSTALLED_APPS = [
     # install app
     "rest_framework",
     "corsheaders",
-    "channels",
     "drf_spectacular",
-    "drf_spectacular_sidecar",
     "taggit",
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
@@ -84,22 +83,22 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramidlive-database',
-        'USER': 'frwattwdom',
-        'PASSWORD': '4MF4IT62278YZIGO$',
-        'HOST': 'pyramidlive-server.postgres.database.azure.com',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'pyramidlive-database',
+#        'USER': 'frwattwdom',
+#        'PASSWORD': '4MF4IT62278YZIGO$',
+#        'HOST': 'pyramidlive-server.postgres.database.azure.com',
+#    }
+#}
 
 
 #DATABASES = {
@@ -177,17 +176,6 @@ EMAIL_HOST_USER = "pyramid2047@gmail.com"
 EMAIL_HOST_PASSWORD = "pivblgnuvfnttluj"
 
 
-# swagger spectacular
-SPECTACULAR_SETTINGS = {
-    "TITLE": "PYRAMID API",
-    "DESCRIPTION": "Pyramid Api Docs",
-    "VERSION": "1.0.0",
-    "SERVE_INCLUDE_SCHEMA": False,
-    "SWAGGER_UI_DIST": "SIDECAR",  # shorthand to use the sidecar instead
-    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
-    "REDOC_DIST": "SIDECAR",
-    # OTHER SETTINGS
-}
 
 
 # api
@@ -278,8 +266,8 @@ AUTHENTICATION_BACKENDS = (
     "guardian.backends.ObjectPermissionBackend",
 )
 
-DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
-STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
+DEFAULT_FILE_STORAGE = 'pyramid.custom_azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'pyramid.custom_azure.AzureStaticStorage'
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"

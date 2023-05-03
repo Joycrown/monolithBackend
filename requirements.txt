@@ -86,6 +86,7 @@ sqlparse==0.4.2
 sseclient-py==1.7.2
 toml==0.10.2
 Twisted==22.8.0
+twisted-iocpsupport==1.0.2
 txaio==22.2.1
 typing_extensions==4.4.0
 uritemplate==4.1.1

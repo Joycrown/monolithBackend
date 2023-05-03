@@ -3,8 +3,7 @@ from block.models import *
 
 from core.models import User
 from core.api.serializers import UserLessInfoSerializer
-from drf_extra_fields.fields import Base64ImageField, Base64FileField
- 
+
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
@@ -24,8 +23,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class BlockDetailSerializer(serializers.ModelSerializer):
-    avatar = Base64ImageField()
-    cover = Base64ImageField()
 
     class Meta:
         model = Block
@@ -73,7 +70,7 @@ class RuleSerializer(serializers.ModelSerializer):
 
 
 class LinkSerializer(serializers.ModelSerializer):
-    image = Base64ImageField()
+    image = ()
 
     class Meta:
         model = Link
@@ -127,7 +124,6 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer_detailed(serializers.ModelSerializer):
-    attachment = Base64ImageField()
 
     class Meta:
         model = Post
@@ -158,6 +154,38 @@ class PostSerializer_detailed(serializers.ModelSerializer):
             "created_time_ago",
         ]
         depth = 2
+
+
+class PostCountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = [
+            "id",
+            "votes",
+            "reposts",
+            "comments",
+            "share_count",
+        ]
+
+
+class BlockCountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Block
+        fields = [
+            "id",
+            "subscriber_count", 
+            "online_count"           
+        ]
+
+  
+class CommentCountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = [
+            "id",
+            "votes", 
+            "share_count"           
+        ]
 
 
 class PostSerializer(serializers.ModelSerializer):

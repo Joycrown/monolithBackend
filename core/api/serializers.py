@@ -18,7 +18,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.shortcuts import render, get_object_or_404
 
 from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
-from drf_extra_fields.fields import Base64ImageField
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -377,8 +376,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 class ListUserSerializer(serializers.ModelSerializer):
-    avatar = Base64ImageField()
-    cover = Base64ImageField()
 
     class Meta:
         model = User

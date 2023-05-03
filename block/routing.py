@@ -1,4 +1,4 @@
-from block.consumer import TimelineConsumer
+from block.consumers import TimelineConsumer
 from django.urls import re_path 
 
 

@@ -48,3 +48,70 @@
 2023-02-19 02:00:31,617 | DEBUG | asyncio | selector_events | 8768 | 6320 | Using selector: SelectSelector
 2023-02-19 02:00:46,565 | DEBUG | asyncio | selector_events | 12792 | 7484 | Using selector: SelectSelector
 2023-02-19 02:00:47,639 | DEBUG | asyncio | selector_events | 12792 | 7484 | Using selector: SelectSelector
+2023-05-02 21:45:48,659 | DEBUG | asyncio | selector_events | 2932 | 14652 | Using selector: SelectSelector
+2023-05-02 21:45:52,423 | DEBUG | asyncio | selector_events | 13152 | 16356 | Using selector: SelectSelector
+2023-05-02 21:45:54,117 | INFO | django.utils.autoreload | autoreload | 13152 | 16356 | Watching for file changes with StatReloader
+2023-05-02 22:03:06,845 | DEBUG | asyncio | selector_events | 13152 | 16356 | Using selector: SelectSelector
+2023-05-02 22:03:07,165 | DEBUG | asyncio | selector_events | 2932 | 14652 | Using selector: SelectSelector
+2023-05-02 22:04:10,147 | DEBUG | asyncio | selector_events | 3552 | 12212 | Using selector: SelectSelector
+2023-05-02 22:04:13,584 | DEBUG | asyncio | selector_events | 13236 | 13988 | Using selector: SelectSelector
+2023-05-02 22:04:14,936 | INFO | django.utils.autoreload | autoreload | 13236 | 13988 | Watching for file changes with StatReloader
+2023-05-02 22:32:33,051 | INFO | django.utils.autoreload | autoreload | 13236 | 13988 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\api\serializers.py changed, reloading.
+2023-05-02 22:32:33,055 | DEBUG | asyncio | selector_events | 13236 | 13988 | Using selector: SelectSelector
+2023-05-02 22:32:36,030 | DEBUG | asyncio | selector_events | 1448 | 4416 | Using selector: SelectSelector
+2023-05-02 22:32:37,343 | INFO | django.utils.autoreload | autoreload | 1448 | 4416 | Watching for file changes with StatReloader
+2023-05-02 22:47:14,002 | DEBUG | asyncio | selector_events | 1448 | 4416 | Using selector: SelectSelector
+2023-05-02 22:47:14,345 | DEBUG | asyncio | selector_events | 3552 | 12212 | Using selector: SelectSelector
+2023-05-02 22:47:25,362 | DEBUG | asyncio | selector_events | 13472 | 14316 | Using selector: SelectSelector
+2023-05-02 22:47:28,653 | DEBUG | asyncio | selector_events | 14136 | 10636 | Using selector: SelectSelector
+2023-05-02 22:47:30,049 | INFO | django.utils.autoreload | autoreload | 14136 | 10636 | Watching for file changes with StatReloader
+2023-05-02 23:23:08,812 | DEBUG | asyncio | selector_events | 14136 | 10636 | Using selector: SelectSelector
+2023-05-02 23:23:09,204 | DEBUG | asyncio | selector_events | 13472 | 14316 | Using selector: SelectSelector
+2023-05-02 23:23:25,090 | DEBUG | asyncio | selector_events | 11044 | 10312 | Using selector: SelectSelector
+2023-05-02 23:23:28,477 | DEBUG | asyncio | selector_events | 12960 | 15892 | Using selector: SelectSelector
+2023-05-02 23:23:29,849 | INFO | django.utils.autoreload | autoreload | 12960 | 15892 | Watching for file changes with StatReloader
+2023-05-03 08:55:47,309 | INFO | django.utils.autoreload | autoreload | 12960 | 15892 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\pyramid\settings.py changed, reloading.
+2023-05-03 08:55:47,312 | DEBUG | asyncio | selector_events | 12960 | 15892 | Using selector: SelectSelector
+2023-05-03 08:55:50,369 | DEBUG | asyncio | selector_events | 3480 | 13348 | Using selector: SelectSelector
+2023-05-03 08:55:52,067 | DEBUG | asyncio | selector_events | 11044 | 10312 | Using selector: SelectSelector
+2023-05-03 09:28:48,431 | DEBUG | asyncio | selector_events | 4092 | 12468 | Using selector: SelectSelector
+2023-05-03 09:28:51,768 | DEBUG | asyncio | selector_events | 2440 | 10132 | Using selector: SelectSelector
+2023-05-03 09:28:53,092 | INFO | django.utils.autoreload | autoreload | 2440 | 10132 | Watching for file changes with StatReloader
+2023-05-03 09:29:59,913 | INFO | django.utils.autoreload | autoreload | 2440 | 10132 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\pyramid\settings.py changed, reloading.
+2023-05-03 09:29:59,916 | DEBUG | asyncio | selector_events | 2440 | 10132 | Using selector: SelectSelector
+2023-05-03 09:30:02,808 | DEBUG | asyncio | selector_events | 3108 | 12332 | Using selector: SelectSelector
+2023-05-03 09:30:04,177 | INFO | django.utils.autoreload | autoreload | 3108 | 12332 | Watching for file changes with StatReloader
+2023-05-03 09:35:12,219 | INFO | django.utils.autoreload | autoreload | 3108 | 12332 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\pyramid\settings.py changed, reloading.
+2023-05-03 09:35:12,222 | DEBUG | asyncio | selector_events | 3108 | 12332 | Using selector: SelectSelector
+2023-05-03 09:35:14,824 | DEBUG | asyncio | selector_events | 14736 | 10596 | Using selector: SelectSelector
+2023-05-03 09:35:16,312 | INFO | django.utils.autoreload | autoreload | 14736 | 10596 | Watching for file changes with StatReloader
+2023-05-03 09:36:54,901 | INFO | django.utils.autoreload | autoreload | 14736 | 10596 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\routing.py changed, reloading.
+2023-05-03 09:36:54,909 | DEBUG | asyncio | selector_events | 14736 | 10596 | Using selector: SelectSelector
+2023-05-03 09:36:57,318 | DEBUG | asyncio | selector_events | 4220 | 2692 | Using selector: SelectSelector
+2023-05-03 09:36:58,699 | INFO | django.utils.autoreload | autoreload | 4220 | 2692 | Watching for file changes with StatReloader
+2023-05-03 09:37:44,116 | DEBUG | asyncio | selector_events | 4220 | 2692 | Using selector: SelectSelector
+2023-05-03 09:37:44,462 | DEBUG | asyncio | selector_events | 4092 | 12468 | Using selector: SelectSelector
+2023-05-03 09:50:29,919 | INFO | django.utils.autoreload | autoreload | 2880 | 10400 | Watching for file changes with StatReloader
+2023-05-03 09:55:45,747 | DEBUG | asyncio | selector_events | 12060 | 10400 | Using selector: SelectSelector
+2023-05-03 09:55:48,669 | DEBUG | asyncio | selector_events | 3232 | 10640 | Using selector: SelectSelector
+2023-05-03 09:57:31,418 | DEBUG | asyncio | selector_events | 11380 | 2712 | Using selector: SelectSelector
+2023-05-03 09:57:34,210 | DEBUG | asyncio | selector_events | 16168 | 15904 | Using selector: SelectSelector
+2023-05-03 09:59:29,452 | DEBUG | asyncio | selector_events | 10820 | 16236 | Using selector: SelectSelector
+2023-05-03 09:59:32,188 | DEBUG | asyncio | selector_events | 12484 | 4804 | Using selector: SelectSelector
+2023-05-03 10:03:12,874 | DEBUG | asyncio | selector_events | 3256 | 10540 | Using selector: SelectSelector
+2023-05-03 10:03:46,533 | DEBUG | asyncio | selector_events | 15208 | 8704 | Using selector: SelectSelector
+2023-05-03 10:04:09,412 | DEBUG | asyncio | selector_events | 3968 | 7628 | Using selector: SelectSelector
+2023-05-03 10:04:12,297 | DEBUG | asyncio | selector_events | 10496 | 14612 | Using selector: SelectSelector
+2023-05-03 10:38:01,997 | DEBUG | asyncio | selector_events | 8280 | 15868 | Using selector: SelectSelector
+2023-05-03 10:38:04,220 | DEBUG | asyncio | selector_events | 1112 | 2172 | Using selector: SelectSelector
+2023-05-03 10:38:49,807 | DEBUG | asyncio | selector_events | 2396 | 11484 | Using selector: SelectSelector
+2023-05-03 10:50:30,349 | DEBUG | asyncio | selector_events | 13752 | 3176 | Using selector: SelectSelector
+2023-05-03 10:50:33,748 | DEBUG | asyncio | selector_events | 11776 | 7132 | Using selector: SelectSelector
+2023-05-03 11:03:01,610 | DEBUG | asyncio | selector_events | 15160 | 5536 | Using selector: SelectSelector
+2023-05-03 11:03:04,577 | DEBUG | asyncio | selector_events | 10284 | 12028 | Using selector: SelectSelector
+2023-05-03 11:03:06,021 | INFO | django.utils.autoreload | autoreload | 10284 | 12028 | Watching for file changes with StatReloader
+2023-05-03 11:03:08,067 | INFO | daphne.server | server | 10284 | 12712 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-05-03 11:03:08,068 | INFO | daphne.server | server | 10284 | 12712 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-05-03 11:03:08,070 | INFO | daphne.server | server | 10284 | 12712 | Listening on TCP address 127.0.0.1:8000
+2023-05-03 11:03:31,276 | DEBUG | asyncio | selector_events | 10284 | 12028 | Using selector: SelectSelector
+2023-05-03 11:03:31,607 | DEBUG | asyncio | selector_events | 15160 | 5536 | Using selector: SelectSelector
