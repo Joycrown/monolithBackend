@@ -349,6 +349,7 @@ class CreatePostView(CreateAPIView):
         title = request.data.get("title")
         pk = request.data.get("pk")
         attachment = request.data.get("attachment")
+        video = request.data.get("video")
         link = request.data.get("link")
         text = request.data.get("text")
         post_type = request.data.get("post_type")
@@ -359,6 +360,7 @@ class CreatePostView(CreateAPIView):
             post = Post.objects.create(
                 title=title,
                 attachment=attachment,
+                video=video,
                 link=link,
                 text=text,
                 author=author,

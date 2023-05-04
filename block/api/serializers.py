@@ -132,6 +132,7 @@ class PostSerializer_detailed(serializers.ModelSerializer):
             "title",
             "block",
             "attachment",
+            "video",
             "created",
             "link",
             "text",

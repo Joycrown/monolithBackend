@@ -115,3 +115,13 @@
 2023-05-03 11:03:08,070 | INFO | daphne.server | server | 10284 | 12712 | Listening on TCP address 127.0.0.1:8000
 2023-05-03 11:03:31,276 | DEBUG | asyncio | selector_events | 10284 | 12028 | Using selector: SelectSelector
 2023-05-03 11:03:31,607 | DEBUG | asyncio | selector_events | 15160 | 5536 | Using selector: SelectSelector
+2023-05-04 03:30:19,024 | DEBUG | asyncio | selector_events | 6816 | 2896 | Using selector: SelectSelector
+2023-05-04 03:30:25,589 | DEBUG | asyncio | selector_events | 6816 | 2896 | Using selector: SelectSelector
+2023-05-04 03:31:36,287 | DEBUG | asyncio | selector_events | 8284 | 6556 | Using selector: SelectSelector
+2023-05-04 03:31:39,694 | DEBUG | asyncio | selector_events | 13688 | 1832 | Using selector: SelectSelector
+2023-05-04 03:31:41,463 | INFO | django.utils.autoreload | autoreload | 13688 | 1832 | Watching for file changes with StatReloader
+2023-05-04 03:31:43,955 | INFO | daphne.server | server | 13688 | 9952 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-05-04 03:31:43,957 | INFO | daphne.server | server | 13688 | 9952 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-05-04 03:31:43,975 | INFO | daphne.server | server | 13688 | 9952 | Listening on TCP address 127.0.0.1:8000
+2023-05-04 03:31:49,864 | DEBUG | asyncio | selector_events | 13688 | 1832 | Using selector: SelectSelector
+2023-05-04 03:31:50,381 | DEBUG | asyncio | selector_events | 8284 | 6556 | Using selector: SelectSelector

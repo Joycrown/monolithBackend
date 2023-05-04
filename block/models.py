@@ -210,6 +210,9 @@ class Post(models.Model):
     attachment = models.ImageField(
         upload_to=post_to, blank=True, null=True, max_length=100000
     )#this attachment is a picture, dont ask why its being called attachment.
+    video = models.FileField(
+        upload_to=post_to, blank=True, null=True, max_length=1000000
+    )
     created = models.DateTimeField(auto_now_add=True)
     link = models.URLField(blank=True, null=True, max_length=2000)
     text = models.TextField(blank=True, null=True, max_length=100000)
