@@ -7,7 +7,7 @@ from rest_framework import permissions
 
 urlpatterns = [
     path("babla/", admin.site.urls),
-    path("chat/", include("chat.api.urls")),
+    #path("chat/", include("chat.api.urls")),
     path("block/", include("block.api.urls")),
     path("core/", include("core.api.urls")),
     #path("chat/", include("chat.urls")),
