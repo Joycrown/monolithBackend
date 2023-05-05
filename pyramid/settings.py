@@ -83,22 +83,22 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'pyramidlive-database',
-#        'USER': 'frwattwdom',
-#        'PASSWORD': '4MF4IT62278YZIGO$',
-#        'HOST': 'pyramidlive-server.postgres.database.azure.com',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pyramidlive-database',
+        'USER': 'yghkpqknnt',
+        'PASSWORD': 'P7BX1TFMTIUPQPR4$',
+        'HOST': 'pyramidlive-server.postgres.database.azure.com',
+    }
+}
 
 
 #DATABASES = {
