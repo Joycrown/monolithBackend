@@ -28,6 +28,7 @@ from .views import (
     UserUpdateView,
     UserDetailView,
     UserDeleteView,
+    UpdateUserView,
     BrokerAccountDetailView,
     BrokerAccountUpdateView,
     BrokerAccountDeleteView,
@@ -72,6 +73,7 @@ urlpatterns = [
     path(
         "user/delete/<username>/", UserDeleteView.as_view(), name="user-delete"
     ),
+    path("user/detail/<username>/", UpdateUserView.as_view(), name="user-detail"),
     path("user/retrieve/<username>/", UserDetailView.as_view(), name="user-detail"),
     path("follow/user/", follow_unfollow_user, name="follow_unfollow_user"),
     path("followers/<username>/", UserFollowers.as_view(), name="user_followers"),
