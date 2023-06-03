@@ -371,6 +371,37 @@ class CreatePostView(CreateAPIView):
         return Response(d, status=status.HTTP_201_CREATED)
 
 
+class PostCreateView(CreateAPIView):
+    permission_classes = (AllowAny,)
+    parser_classes = (FormParser, MultiPartParser)
+    serializer_class = PostSerializer
+
+    def create(self, request, *args, **kwargs):
+        title = request.data.get("title")
+        pk = request.data.get("pk")
+        attachment = request.data.get("attachment")
+        video = request.data.get("video")
+        link = request.data.get("link")
+        text = request.data.get("text")
+        post_type = request.data.get("post_type")
+        block = get_object_or_404(Block, id=pk)
+        author = request.user
+
+        with transaction.atomic():
+            post = Post.objects.create(
+                title=title,
+                attachment=attachment,
+                video=video,
+                link=link,
+                text=text,
+                author=author,
+                block=block,
+                post_type=post_type,
+            )
+        d = PostSerializer(post).data
+        return Response(d, status=status.HTTP_201_CREATED)
+
+
 #class ListPostsOfUser(ListAPIView):
 #    queryset = Post.objects.all()
 #    permission_classes = (AllowAny,)

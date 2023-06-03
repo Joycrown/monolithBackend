@@ -135,3 +135,5 @@
 2023-05-04 18:10:42,469 | DEBUG | asyncio | selector_events | 6916 | 7796 | Using selector: SelectSelector
 2023-05-04 18:58:44,093 | DEBUG | asyncio | selector_events | 3320 | 16388 | Using selector: SelectSelector
 2023-05-04 18:58:47,992 | DEBUG | asyncio | selector_events | 3320 | 16388 | Using selector: SelectSelector
+2023-06-03 10:07:24,996 | DEBUG | asyncio | selector_events | 4044 | 8248 | Using selector: SelectSelector
+2023-06-03 10:07:31,620 | DEBUG | asyncio | selector_events | 4044 | 8248 | Using selector: SelectSelector
