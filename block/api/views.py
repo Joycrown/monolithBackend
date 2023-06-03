@@ -380,12 +380,13 @@ class PostCreateView(CreateAPIView):
         title = request.data.get("title")
         pk = request.data.get("pk")
         attachment = request.data.get("attachment")
+        username = request.data.get("username")
         video = request.data.get("video")
         link = request.data.get("link")
         text = request.data.get("text")
         post_type = request.data.get("post_type")
         block = get_object_or_404(Block, id=pk)
-        author = request.user
+        author = get_object_or_404(User, username=username)
 
         with transaction.atomic():
             post = Post.objects.create(
