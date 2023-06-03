@@ -722,6 +722,33 @@ class UserUpdateView(UpdateAPIView):
     parser_classes = (FormParser, MultiPartParser)
 
 
+class UpdateUserView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
+
+    def put(self, request, username):
+        user = get_object_or_404(User, username=username)
+        users_serializer = ListUserSerializer(user, data=request.data)
+        if users_serializer.is_valid():
+            users_serializer.save()
+            return Response(users_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(users_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def patch(self, request, username):
+        user = get_object_or_404(User, username=username)
+        users_serializer = ListUserSerializer(user, data=request.data)
+        if users_serializer.is_valid():
+            users_serializer.save()
+            return Response(users_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(users_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self, request, username):
+        user = get_object_or_404(User, username=username)
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 class UserDeleteView(DestroyAPIView):
     lookup_field = "username"
     permission_classes = (AllowAny,)

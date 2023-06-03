@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
 
- 
+
 urlpatterns = [
     # BLOCK VIEWS
     path('block/create/', CreateBlockView.as_view(), name='create_block'),    
