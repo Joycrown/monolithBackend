@@ -7,10 +7,9 @@ from rest_framework import permissions
 
 urlpatterns = [
     path("babla/", admin.site.urls),
-    #path("chat/", include("chat.api.urls")),
     path("block/", include("block.api.urls")),
     path("core/", include("core.api.urls")),
-    #path("chat/", include("chat.urls")),
+    path("chat/", include("chat.urls")),
     path("search/", include("search.api.urls")),
     path("notifications/", include("notifications.urls")),
     #path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

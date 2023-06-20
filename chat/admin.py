@@ -1,9 +1,6 @@
 from django.contrib import admin
+from .models import Chatroom, Message, Request
 
-from .models import Admin, Message, MessageAttachment, GenericFileUpload
-
-
-admin.site.register(Admin)
+admin.site.register(Chatroom)
 admin.site.register(Message)
-admin.site.register(MessageAttachment)
-admin.site.register(GenericFileUpload)
+admin.site.register(Request)

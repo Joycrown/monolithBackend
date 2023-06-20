@@ -137,3 +137,100 @@
 2023-05-04 18:58:47,992 | DEBUG | asyncio | selector_events | 3320 | 16388 | Using selector: SelectSelector
 2023-06-03 10:07:24,996 | DEBUG | asyncio | selector_events | 4044 | 8248 | Using selector: SelectSelector
 2023-06-03 10:07:31,620 | DEBUG | asyncio | selector_events | 4044 | 8248 | Using selector: SelectSelector
+2023-06-14 17:49:45,376 | DEBUG | asyncio | selector_events | 2892 | 17076 | Using selector: SelectSelector
+2023-06-14 17:49:52,682 | DEBUG | asyncio | selector_events | 2892 | 17076 | Using selector: SelectSelector
+2023-06-14 17:50:10,316 | DEBUG | asyncio | selector_events | 10552 | 5060 | Using selector: SelectSelector
+2023-06-14 17:50:13,761 | DEBUG | asyncio | selector_events | 10552 | 5060 | Using selector: SelectSelector
+2023-06-14 17:50:25,848 | DEBUG | asyncio | selector_events | 4576 | 13284 | Using selector: SelectSelector
+2023-06-14 17:50:29,379 | DEBUG | asyncio | selector_events | 14280 | 7580 | Using selector: SelectSelector
+2023-06-14 17:50:30,982 | INFO | django.utils.autoreload | autoreload | 14280 | 7580 | Watching for file changes with StatReloader
+2023-06-14 17:50:33,434 | INFO | daphne.server | server | 14280 | 16584 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-14 17:50:33,434 | INFO | daphne.server | server | 14280 | 16584 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-14 17:50:33,451 | INFO | daphne.server | server | 14280 | 16584 | Listening on TCP address 127.0.0.1:8000
+2023-06-14 17:51:13,090 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP b'GET' request for ['127.0.0.1', 63713]
+2023-06-14 17:51:13,172 | DEBUG | asyncio | selector_events | 14280 | 14052 | Using selector: SelectSelector
+2023-06-14 17:51:13,227 | WARNING | django.request | log | 14280 | 860 | Not Found: /
+2023-06-14 17:51:13,241 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP 404 response started for ['127.0.0.1', 63713]
+2023-06-14 17:51:13,245 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP close for ['127.0.0.1', 63713]
+2023-06-14 17:51:13,252 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP response complete for ['127.0.0.1', 63713]
+2023-06-14 17:51:13,253 | WARNING | django.channels.server | runserver | 14280 | 16584 | [33mHTTP GET / 404 [0.16, 127.0.0.1:63713][0m
+2023-06-14 17:51:14,235 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP b'GET' request for ['127.0.0.1', 63713]
+2023-06-14 17:51:14,241 | DEBUG | asyncio | selector_events | 14280 | 14052 | Using selector: SelectSelector
+2023-06-14 17:51:14,258 | WARNING | django.request | log | 14280 | 860 | Not Found: /favicon.ico
+2023-06-14 17:51:14,260 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP 404 response started for ['127.0.0.1', 63713]
+2023-06-14 17:51:14,261 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP close for ['127.0.0.1', 63713]
+2023-06-14 17:51:14,263 | DEBUG | daphne.http_protocol | http_protocol | 14280 | 16584 | HTTP response complete for ['127.0.0.1', 63713]
+2023-06-14 17:51:14,264 | WARNING | django.channels.server | runserver | 14280 | 16584 | [33mHTTP GET /favicon.ico 404 [0.03, 127.0.0.1:63713][0m
+2023-06-14 18:02:38,847 | INFO | django.utils.autoreload | autoreload | 14280 | 7580 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\admin.py changed, reloading.
+2023-06-14 18:02:38,849 | DEBUG | asyncio | selector_events | 14280 | 7580 | Using selector: SelectSelector
+2023-06-14 18:02:45,409 | DEBUG | asyncio | selector_events | 14016 | 16840 | Using selector: SelectSelector
+2023-06-14 18:02:48,752 | INFO | django.utils.autoreload | autoreload | 14016 | 16840 | Watching for file changes with StatReloader
+2023-06-14 18:02:53,579 | INFO | daphne.server | server | 14016 | 12572 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-14 18:02:53,579 | INFO | daphne.server | server | 14016 | 12572 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-14 18:02:53,584 | INFO | daphne.server | server | 14016 | 12572 | Listening on TCP address 127.0.0.1:8000
+2023-06-14 18:03:01,769 | INFO | django.utils.autoreload | autoreload | 14016 | 16840 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\pyramid\urls.py changed, reloading.
+2023-06-14 18:03:01,769 | DEBUG | asyncio | selector_events | 14016 | 16840 | Using selector: SelectSelector
+2023-06-14 18:03:04,853 | DEBUG | asyncio | selector_events | 12520 | 14132 | Using selector: SelectSelector
+2023-06-14 18:03:06,923 | INFO | django.utils.autoreload | autoreload | 12520 | 14132 | Watching for file changes with StatReloader
+2023-06-14 18:03:09,314 | INFO | daphne.server | server | 12520 | 17076 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-14 18:03:09,321 | INFO | daphne.server | server | 12520 | 17076 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-14 18:03:09,324 | INFO | daphne.server | server | 12520 | 17076 | Listening on TCP address 127.0.0.1:8000
+2023-06-14 18:03:26,435 | DEBUG | asyncio | selector_events | 16784 | 6272 | Using selector: SelectSelector
+2023-06-14 18:03:47,939 | DEBUG | asyncio | selector_events | 5328 | 16252 | Using selector: SelectSelector
+2023-06-14 18:03:52,297 | DEBUG | asyncio | selector_events | 5328 | 16252 | Using selector: SelectSelector
+2023-06-14 18:04:24,077 | DEBUG | asyncio | selector_events | 16216 | 11400 | Using selector: SelectSelector
+2023-06-14 18:04:27,806 | DEBUG | asyncio | selector_events | 16216 | 11400 | Using selector: SelectSelector
+2023-06-14 18:05:00,197 | DEBUG | asyncio | selector_events | 12520 | 14132 | Using selector: SelectSelector
+2023-06-14 18:05:00,517 | DEBUG | asyncio | selector_events | 4576 | 13284 | Using selector: SelectSelector
+2023-06-14 18:05:23,384 | DEBUG | asyncio | selector_events | 7972 | 17924 | Using selector: SelectSelector
+2023-06-14 18:05:26,650 | DEBUG | asyncio | selector_events | 7972 | 17924 | Using selector: SelectSelector
+2023-06-14 18:05:38,440 | DEBUG | asyncio | selector_events | 17760 | 6828 | Using selector: SelectSelector
+2023-06-14 18:05:41,787 | DEBUG | asyncio | selector_events | 17760 | 6828 | Using selector: SelectSelector
+2023-06-14 18:06:27,873 | DEBUG | asyncio | selector_events | 9868 | 10912 | Using selector: SelectSelector
+2023-06-14 18:06:31,605 | DEBUG | asyncio | selector_events | 9868 | 10912 | Using selector: SelectSelector
+2023-06-14 18:06:51,872 | DEBUG | asyncio | selector_events | 1276 | 16144 | Using selector: SelectSelector
+2023-06-14 18:06:55,254 | DEBUG | asyncio | selector_events | 16368 | 14920 | Using selector: SelectSelector
+2023-06-14 18:06:56,916 | INFO | django.utils.autoreload | autoreload | 16368 | 14920 | Watching for file changes with StatReloader
+2023-06-14 18:06:59,173 | INFO | daphne.server | server | 16368 | 1268 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-14 18:06:59,173 | INFO | daphne.server | server | 16368 | 1268 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-14 18:06:59,178 | INFO | daphne.server | server | 16368 | 1268 | Listening on TCP address 127.0.0.1:8000
+2023-06-14 18:08:23,401 | DEBUG | daphne.http_protocol | http_protocol | 16368 | 1268 | HTTP b'GET' request for ['127.0.0.1', 63923]
+2023-06-14 18:08:23,424 | DEBUG | asyncio | selector_events | 16368 | 9476 | Using selector: SelectSelector
+2023-06-14 18:08:23,441 | WARNING | django.request | log | 16368 | 9724 | Not Found: /
+2023-06-14 18:08:23,442 | DEBUG | daphne.http_protocol | http_protocol | 16368 | 1268 | HTTP 404 response started for ['127.0.0.1', 63923]
+2023-06-14 18:08:23,443 | DEBUG | daphne.http_protocol | http_protocol | 16368 | 1268 | HTTP close for ['127.0.0.1', 63923]
+2023-06-14 18:08:23,445 | DEBUG | daphne.http_protocol | http_protocol | 16368 | 1268 | HTTP response complete for ['127.0.0.1', 63923]
+2023-06-14 18:08:23,447 | WARNING | django.channels.server | runserver | 16368 | 1268 | [33mHTTP GET / 404 [0.05, 127.0.0.1:63923][0m
+2023-06-14 18:30:59,539 | INFO | django.utils.autoreload | autoreload | 16368 | 14920 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\routing.py changed, reloading.
+2023-06-14 18:30:59,544 | DEBUG | asyncio | selector_events | 16368 | 14920 | Using selector: SelectSelector
+2023-06-14 18:31:03,741 | DEBUG | asyncio | selector_events | 6804 | 18404 | Using selector: SelectSelector
+2023-06-14 18:31:06,268 | INFO | django.utils.autoreload | autoreload | 6804 | 18404 | Watching for file changes with StatReloader
+2023-06-14 18:31:08,977 | INFO | daphne.server | server | 6804 | 4576 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-14 18:31:08,978 | INFO | daphne.server | server | 6804 | 4576 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-14 18:31:08,980 | INFO | daphne.server | server | 6804 | 4576 | Listening on TCP address 127.0.0.1:8000
+2023-06-14 19:06:50,232 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP b'GET' request for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,259 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP 301 response started for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,260 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP close for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,261 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP response complete for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,263 | INFO | django.channels.server | runserver | 6804 | 4576 | [32mHTTP GET /chat 301 [0.03, 127.0.0.1:51816][0m
+2023-06-14 19:06:50,270 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP b'GET' request for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,287 | DEBUG | asyncio | selector_events | 6804 | 14532 | Using selector: SelectSelector
+2023-06-14 19:06:50,468 | WARNING | django.request | log | 6804 | 13792 | Unauthorized: /chat/
+2023-06-14 19:06:50,469 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP 401 response started for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,470 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP close for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,471 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP response complete for ['127.0.0.1', 51816]
+2023-06-14 19:06:50,472 | WARNING | django.channels.server | runserver | 6804 | 4576 | [31;1mHTTP GET /chat/ 401 [0.20, 127.0.0.1:51816][0m
+2023-06-14 19:07:04,034 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP b'GET' request for ['127.0.0.1', 51816]
+2023-06-14 19:07:04,041 | DEBUG | asyncio | selector_events | 6804 | 14532 | Using selector: SelectSelector
+2023-06-14 19:07:04,050 | WARNING | django.request | log | 6804 | 13792 | Unauthorized: /chat/
+2023-06-14 19:07:04,052 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP 401 response started for ['127.0.0.1', 51816]
+2023-06-14 19:07:04,053 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP close for ['127.0.0.1', 51816]
+2023-06-14 19:07:04,054 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP response complete for ['127.0.0.1', 51816]
+2023-06-14 19:07:04,056 | WARNING | django.channels.server | runserver | 6804 | 4576 | [31;1mHTTP GET /chat/?format=json 401 [0.02, 127.0.0.1:51816][0m
+2023-06-14 19:07:06,681 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP b'GET' request for ['127.0.0.1', 51816]
+2023-06-14 19:07:06,686 | DEBUG | asyncio | selector_events | 6804 | 14532 | Using selector: SelectSelector
+2023-06-14 19:07:06,714 | WARNING | django.request | log | 6804 | 13792 | Unauthorized: /chat/
+2023-06-14 19:07:06,716 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP 401 response started for ['127.0.0.1', 51816]
+2023-06-14 19:07:06,716 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP close for ['127.0.0.1', 51816]
+2023-06-14 19:07:06,717 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP response complete for ['127.0.0.1', 51816]
+2023-06-14 19:07:06,718 | WARNING | django.channels.server | runserver | 6804 | 4576 | [31;1mHTTP GET /chat/ 401 [0.04, 127.0.0.1:51816][0m

@@ -70,7 +70,6 @@ class RuleSerializer(serializers.ModelSerializer):
 
 
 class LinkSerializer(serializers.ModelSerializer):
-    image = ()
 
     class Meta:
         model = Link

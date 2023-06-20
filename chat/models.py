@@ -1,82 +1,80 @@
-import time
-import random
-import string
-
-from datetime import datetime
-from core.models import User
-from utils.utils import get_random_code
-
 from django.db import models
-from django.utils import timezone
-from django.template.defaultfilters import slugify
-# TODO Add News
+from django.db.models import (Model, TextField, DateTimeField, ForeignKey, ManyToManyField, 
+                    CharField, CASCADE)
+from asgiref.sync import async_to_sync
+from django.utils.translation import gettext_lazy as _
+from channels.layers import get_channel_layer
+from notifications.models import Notification
+
+from core.models import User
 
 
-def upload_to(instance, filename):
-    return 'messages/{filename}'.format(filename=filename)
-
-
-class Admin(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='admin', editable=True)
-    name = models.CharField(max_length=1000, blank=True)
-    slug = models.SlugField(max_length=1000, blank=True)
-    tos = models.BooleanField(default=True)
-    available = models.BooleanField(default=True)
-    created = models.DateTimeField(default=timezone.now)
-    updated = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        ordering = ('created',)
+class Chatroom(Model): # Chatroom == Group == one-to-one | on-to-many users
+    name = CharField(max_length=150)
+    users = ManyToManyField(User, related_name='recipients')
+    created_at = DateTimeField(auto_now_add=True)
+    updated_at = DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.slug
+        return str(self.id)
+
+
+class Request(Model):
+    class PermissionsTypes(models.TextChoices):
+        WAITING = 'waiting', _("Waiting")
+        GRANTED = 'granted', _('Granted')
+        DENIED = 'denied', _("Denied")
+
+    user = ForeignKey(User, related_name='request_owner', on_delete=CASCADE)
+    chatroom = ForeignKey(Chatroom, related_name='request_target', on_delete=CASCADE)
+    permission = models.CharField(max_length=32, choices=PermissionsTypes.choices, default=PermissionsTypes.WAITING)
+
+
+
+class Message(Model):
+    user = ForeignKey(User, on_delete=CASCADE, verbose_name='user', related_name='from_user')
+    chatroom = ForeignKey(Chatroom, on_delete=CASCADE, verbose_name='chatroom', related_name='chatroom')
+    created_at = DateTimeField(auto_now_add=True)
+    updated_at = DateTimeField(auto_now=True)
+    body = TextField(max_length=2000)
+
+    def __str__(self):
+        return str(self.id)
+
+    def characters(self):
+        return len(self.body)
+
+    def notify_ws_clients(self):
+        """
+        Inform client there is a new message.
+        """
+        #notification = {
+        #    'type': 'recieve_group_message',
+        #    'message': '{}'.format(self.id)
+        #}
+        Notification.objects.get_or_create(
+                notification_type="CT",
+                comments=(
+                    f"@{self.user.username} sent a chat request"
+                ),
+                to_user=post.author,
+                from_user=self.user,
+        )
+
+        channel_layer = get_channel_layer()
+        print("user.id {}".format(self.user.id))
+        print("user.id {}".format(self.user.id))
+
+        async_to_sync(channel_layer.group_send)("{}".format(self.user.id), notification)
+        async_to_sync(channel_layer.group_send)("{}".format(self.user.id), notification)
 
     def save(self, *args, **kwargs):
-        ex = False
-        if self.name:
-            to_slug = slugify(str(self.name))
-            ex = Admin.objects.filter(slug=to_slug).exists()
-            while ex:
-                to_slug = slugify(to_slug + "" + str(get_random_code()))
-                ex = Admin.objects.filter(slug=to_slug).exists()
-        else:
-            to_slug = str(self.name)
-        self.slug = to_slug
-        super().save(*args, **kwargs)
-
-
-class GenericFileUpload(models.Model):
-    file_upload = models.FileField(upload_to=upload_to, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.file_upload}"
-
-
-class Message(models.Model):
-    sender = models.ForeignKey(
-        "core.User", related_name="admin_sender", on_delete=models.CASCADE)
-    receiver = models.ForeignKey(
-        "core.User", related_name="admin_receiver", on_delete=models.CASCADE)
-    message = models.TextField(blank=True, null=True)
-    is_read = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f"message between {self.sender.username} and {self.receiver.username}"
-
-    class Meta:
-        ordering = ("-created_at",)
-
-
-class MessageAttachment(models.Model):
-    message = models.ForeignKey(
-        Message, related_name="message_attachments", on_delete=models.CASCADE)
-    attachment = models.ForeignKey(
-        GenericFileUpload, related_name="message_uploads", on_delete=models.CASCADE)
-    caption = models.CharField(max_length=255, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ("created_at",)
+        """
+        Trims white spaces, saves the message and notifies the recipient via WS
+        if the message is new.
+        """
+        new = self.id
+        self.body = self.body.strip()  # Trimming whitespaces from the body
+        super(Message, self).save(*args, **kwargs)
+        if new is None:
+            self.notify_ws_clients()

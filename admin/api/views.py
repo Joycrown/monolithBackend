@@ -16,7 +16,7 @@ from django.conf import settings
 
 from notifications.models import Notification
 from utils.utils import Util
-from chat.models import (
+from admin.models import (
     GenericFileUpload, Message, MessageAttachment
 )
 from .serializers import GenericFileUpload, GenericFileUploadSerializer, MessageSerializer, MessageAttachmentSerializer
