@@ -1,5 +1,5 @@
 from rest_framework.test import APITestCase
-from chat.models import Admin, GenericFileUpload, Message, MessageAttachment
+from admin.models import Admin, GenericFileUpload, Message, MessageAttachment
 from core.models import User
 
 

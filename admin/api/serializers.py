@@ -1,7 +1,7 @@
 from rest_framework.fields import CurrentUserDefault
 from rest_framework import serializers
 
-from chat.models import (
+from admin.models import (
     Admin, GenericFileUpload, Message, MessageAttachment
 )
 

@@ -92,7 +92,7 @@ class BlockDetailView(RetrieveAPIView):
 class BlockUpdateView(UpdateAPIView):
     lookup_field = "name"
     permission_classes = (AllowAny,)
-    serializer_class = BlockSerializer
+    serializer_class = BlockDetailSerializer
     queryset = Block.objects.all()
     parser_classes = (FormParser, MultiPartParser)
 
