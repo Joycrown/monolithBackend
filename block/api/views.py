@@ -75,11 +75,12 @@ class CreateBlockView(CreateAPIView):
         name = request.data.get("name")
         block_type = request.data.get("block_type")
         category = request.data.get("category")
+        username = request.data.get("username")
         creator = get_object_or_404(User, username=username)
 
         with transaction.atomic():
             block = Block.objects.create(
-                creator=creator, name=name, block_type=block_type, category=category
+                creator=creator, name=name, block_type=block_type, category=category, avatar=avatar, cover=cover
             )
         d = BlockSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
