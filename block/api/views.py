@@ -67,12 +67,15 @@ class CreateBlockView(CreateAPIView):
     permission_classes = (AllowAny,)
     renderer_classes = (JSONRenderer,)
     serializer_class = BlockSerializer
+    parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
+        avatar = request.data.get("avatar")
+        cover = request.data.get("cover")
         name = request.data.get("name")
         block_type = request.data.get("block_type")
         category = request.data.get("category")
-        creator = self.request.user
+        creator = get_object_or_404(User, username=username)
 
         with transaction.atomic():
             block = Block.objects.create(
