@@ -64,7 +64,7 @@ def update_user(sender, instance, created, **kwargs):
 @receiver(post_save, sender=Post)
 def post_save_create_finance_post(sender, created, instance, **kwargs):    
    api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
-   query = "Finance"
+   query = "World Economy"
    username = "leox"
    pk = 6
    news = api.news_api(q=query, language="en")
