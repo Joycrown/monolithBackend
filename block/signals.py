@@ -68,10 +68,12 @@ def post_save_create_finance_post(sender, created, instance, **kwargs):
    username = "leox"
    pk = 6
    news = api.news_api(q=query, language="en")
+   data = news
+   print(data)
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news.results():
+      for new in data.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
