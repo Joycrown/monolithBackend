@@ -71,7 +71,7 @@ def post_save_create_finance_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news.results:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
@@ -137,7 +137,7 @@ def post_save_create_crypto_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
@@ -203,7 +203,7 @@ def post_save_create_stock_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
@@ -269,7 +269,7 @@ def post_save_create_estate_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
@@ -335,7 +335,7 @@ def post_save_create_forex_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
@@ -401,7 +401,7 @@ def post_save_create_economy_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news:
+      for new in news.results():
          if new.image_url:
             title = new.title
             attachment = new.image_url
