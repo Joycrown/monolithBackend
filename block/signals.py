@@ -71,7 +71,7 @@ def post_save_create_finance_post(sender, created, instance, **kwargs):
    block = get_object_or_404(Block, id=pk)
    author = get_object_or_404(User, username=username)
    if created:
-      for new in news.data.results:
+      for new in news.results:
          if new.image_url:
             title = new.title
             attachment = new.image_url
