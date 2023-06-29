@@ -120,10 +120,10 @@ class Text(models.Model):
 
 class Block(models.Model):
     avatar = models.ImageField(
-        upload_to=block_to, blank=True, null=True, max_length=100000
+        upload_to=block_to, blank=True, null=True, max_length=1000000
     )
     cover = models.ImageField(
-        upload_to=block_for, blank=True, null=True, max_length=100000
+        upload_to=block_for, blank=True, null=True, max_length=1000000
     )
     name = models.CharField(max_length=250, unique=True)
     desc = models.TextField(blank=True, null=True, max_length=100000)
