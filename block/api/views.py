@@ -65,7 +65,6 @@ from rest_framework.generics import (
 
 class CreateBlockView(CreateAPIView):
     permission_classes = (AllowAny,)
-    renderer_classes = (JSONRenderer,)
     serializer_class = BlockSerializer
     parser_classes = (FormParser, MultiPartParser)
 
@@ -73,6 +72,8 @@ class CreateBlockView(CreateAPIView):
         avatar = request.data.get("avatar")
         cover = request.data.get("cover")
         name = request.data.get("name")
+        desc = request.data.get("desc")
+        about = request.data.get("about")
         block_type = request.data.get("block_type")
         category = request.data.get("category")
         username = request.data.get("username")
@@ -80,7 +81,7 @@ class CreateBlockView(CreateAPIView):
 
         with transaction.atomic():
             block = Block.objects.create(
-                creator=creator, name=name, block_type=block_type, category=category, avatar=avatar, cover=cover
+                creator=creator, name=name, block_type=block_type, category=category, avatar=avatar, cover=cover, desc=desc, about=about
             )
         d = BlockSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
