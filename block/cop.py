@@ -25,22 +25,6 @@ def finance_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -56,23 +40,7 @@ def finance_post():
                      author=author,
                      block=block,
                      post_type="text",
-                  )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
+                  )                 
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -80,14 +48,6 @@ def finance_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
@@ -119,22 +79,6 @@ def crypto_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -151,22 +95,6 @@ def crypto_post():
                      block=block,
                      post_type="text",
                   )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -174,14 +102,6 @@ def crypto_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
@@ -213,22 +133,6 @@ def stock_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -245,22 +149,6 @@ def stock_post():
                      block=block,
                      post_type="text",
                   )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -268,14 +156,6 @@ def stock_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
@@ -307,22 +187,6 @@ def real_estate_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -339,22 +203,6 @@ def real_estate_post():
                      block=block,
                      post_type="text",
                   )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -362,14 +210,6 @@ def real_estate_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
@@ -401,22 +241,6 @@ def forex_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -433,22 +257,6 @@ def forex_post():
                      block=block,
                      post_type="text",
                   )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -456,14 +264,6 @@ def forex_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
@@ -495,22 +295,6 @@ def economy_post():
                      block=block,
                      post_type="text",
                   )
-            if value[1]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[1]['title'],
-                     attachment=value[1]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  )
-            if value[2]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[2]['title'],
-                     video=value[2]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[3]['link'] != None: #Create link post
                Post.objects.create(
                      title=value[3]['title'],
@@ -527,22 +311,6 @@ def economy_post():
                      block=block,
                      post_type="text",
                   )                
-            if value[5]['image_url'] != None: #Create image post
-               Post.objects.create(
-                     title=value[5]['title'],
-                     attachment=value[5]['image_url'],
-                     author=author,
-                     block=block,
-                     post_type="image",
-                  ) 
-            if value[6]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[6]['title'],
-                     video=value[6]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
-                  )
             if value[7]['link'] != None: #Create link post 
                Post.objects.create(
                      title=value[7]['title'],
@@ -550,14 +318,6 @@ def economy_post():
                      author=author,
                      block=block,
                      post_type="link",
-                  )
-            if value[8]['video_url'] != None: #Create video post 
-               Post.objects.create(
-                     title=value[8]['title'],
-                     video=value[8]['video_url'],
-                     author=author,
-                     block=block,
-                     post_type="video",
                   )
             if value[9]['link'] != None: #Create link post       
                Post.objects.create(
