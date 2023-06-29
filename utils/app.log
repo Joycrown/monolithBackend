@@ -234,3 +234,886 @@
 2023-06-14 19:07:06,716 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP close for ['127.0.0.1', 51816]
 2023-06-14 19:07:06,717 | DEBUG | daphne.http_protocol | http_protocol | 6804 | 4576 | HTTP response complete for ['127.0.0.1', 51816]
 2023-06-14 19:07:06,718 | WARNING | django.channels.server | runserver | 6804 | 4576 | [31;1mHTTP GET /chat/ 401 [0.04, 127.0.0.1:51816][0m
+2023-06-27 19:30:30,996 | DEBUG | asyncio | selector_events | 15080 | 3972 | Using selector: SelectSelector
+2023-06-27 19:30:38,113 | DEBUG | asyncio | selector_events | 4000 | 7332 | Using selector: SelectSelector
+2023-06-27 19:30:42,856 | INFO | django.utils.autoreload | autoreload | 4000 | 7332 | Watching for file changes with StatReloader
+2023-06-27 19:30:54,608 | INFO | daphne.server | server | 4000 | 18424 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-27 19:30:54,609 | INFO | daphne.server | server | 4000 | 18424 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-27 19:30:54,612 | INFO | daphne.server | server | 4000 | 18424 | Listening on TCP address 127.0.0.1:8000
+2023-06-27 19:31:12,463 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:12,535 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:31:12,597 | WARNING | django.request | log | 4000 | 19448 | Not Found: /
+2023-06-27 19:31:12,604 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 404 response started for ['127.0.0.1', 52683]
+2023-06-27 19:31:12,606 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:31:12,607 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:31:12,607 | WARNING | django.channels.server | runserver | 4000 | 18424 | [33mHTTP GET / 404 [0.14, 127.0.0.1:52683][0m
+2023-06-27 19:31:13,588 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:13,594 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:31:13,610 | WARNING | django.request | log | 4000 | 19448 | Not Found: /favicon.ico
+2023-06-27 19:31:13,611 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 404 response started for ['127.0.0.1', 52683]
+2023-06-27 19:31:13,612 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:31:13,615 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:31:13,616 | WARNING | django.channels.server | runserver | 4000 | 18424 | [33mHTTP GET /favicon.ico 404 [0.03, 127.0.0.1:52683][0m
+2023-06-27 19:31:42,533 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,545 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 301 response started for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,547 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,549 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,551 | INFO | django.channels.server | runserver | 4000 | 18424 | [32mHTTP GET /babla 301 [0.02, 127.0.0.1:52683][0m
+2023-06-27 19:31:42,561 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,562 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:31:42,803 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 302 response started for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,804 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,804 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,804 | INFO | django.channels.server | runserver | 4000 | 18424 | [32mHTTP GET /babla/ 302 [0.24, 127.0.0.1:52683][0m
+2023-06-27 19:31:42,817 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:42,822 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:31:43,039 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52683]
+2023-06-27 19:31:43,039 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:31:43,039 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:31:43,039 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.22, 127.0.0.1:52683][0m
+2023-06-27 19:31:59,677 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'POST' request for ['127.0.0.1', 52683]
+2023-06-27 19:31:59,685 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:32:00,612 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52683]
+2023-06-27 19:32:00,612 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52683]
+2023-06-27 19:32:00,612 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52683]
+2023-06-27 19:32:00,612 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP POST /babla/login/?next=/babla/ 200 [0.94, 127.0.0.1:52683][0m
+2023-06-27 19:33:51,095 | DEBUG | asyncio | selector_events | 16164 | 11040 | Using selector: SelectSelector
+2023-06-27 19:33:54,406 | DEBUG | asyncio | selector_events | 16164 | 11040 | Using selector: SelectSelector
+2023-06-27 19:34:43,469 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'POST' request for ['127.0.0.1', 52817]
+2023-06-27 19:34:43,475 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:34:44,342 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 302 response started for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,343 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,343 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,343 | INFO | django.channels.server | runserver | 4000 | 18424 | [32mHTTP POST /babla/login/?next=/babla/ 302 [0.87, 127.0.0.1:52817][0m
+2023-06-27 19:34:44,356 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,359 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:34:44,493 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,495 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,496 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:34:44,496 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/ 200 [0.14, 127.0.0.1:52817][0m
+2023-06-27 19:34:56,487 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,494 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:34:56,791 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,791 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,791 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,799 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/core/user/ 200 [0.31, 127.0.0.1:52817][0m
+2023-06-27 19:34:56,842 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,846 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:34:56,871 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,871 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,873 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:34:56,874 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:07,120 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,126 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:07,239 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,241 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,242 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,242 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/post/ 200 [0.12, 127.0.0.1:52817][0m
+2023-06-27 19:35:07,289 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,293 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:07,320 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,320 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,320 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:07,320 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:09,598 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,604 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:09,921 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,921 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,921 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,921 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/post/add/ 200 [0.32, 127.0.0.1:52817][0m
+2023-06-27 19:35:09,968 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,973 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:09,996 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,997 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,998 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:09,999 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:17,758 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:17,763 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:17,835 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:17,837 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:17,838 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:17,839 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/block/ 200 [0.08, 127.0.0.1:52817][0m
+2023-06-27 19:35:18,011 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:18,015 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:18,111 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:18,137 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:18,138 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:18,140 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.13, 127.0.0.1:52817][0m
+2023-06-27 19:35:20,250 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,253 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:20,484 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,484 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,484 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,484 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/block/add/ 200 [0.23, 127.0.0.1:52817][0m
+2023-06-27 19:35:20,525 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,529 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:20,553 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,553 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,555 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:20,556 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:43,675 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'POST' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:43,692 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:43,763 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing BlpImagePlugin
+2023-06-27 19:35:43,771 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing BmpImagePlugin
+2023-06-27 19:35:43,772 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing BufrStubImagePlugin
+2023-06-27 19:35:43,775 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing CurImagePlugin
+2023-06-27 19:35:43,778 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing DcxImagePlugin
+2023-06-27 19:35:43,785 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing DdsImagePlugin
+2023-06-27 19:35:43,788 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing EpsImagePlugin
+2023-06-27 19:35:43,889 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing FitsStubImagePlugin
+2023-06-27 19:35:43,897 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing FliImagePlugin
+2023-06-27 19:35:43,900 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing FpxImagePlugin
+2023-06-27 19:35:43,905 | DEBUG | PIL.Image | Image | 4000 | 15448 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2023-06-27 19:35:43,905 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing FtexImagePlugin
+2023-06-27 19:35:43,911 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing GbrImagePlugin
+2023-06-27 19:35:43,916 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing GifImagePlugin
+2023-06-27 19:35:43,916 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing GribStubImagePlugin
+2023-06-27 19:35:43,920 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing Hdf5StubImagePlugin
+2023-06-27 19:35:43,924 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing IcnsImagePlugin
+2023-06-27 19:35:43,934 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing IcoImagePlugin
+2023-06-27 19:35:43,937 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing ImImagePlugin
+2023-06-27 19:35:43,943 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing ImtImagePlugin
+2023-06-27 19:35:43,947 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing IptcImagePlugin
+2023-06-27 19:35:43,951 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing JpegImagePlugin
+2023-06-27 19:35:43,952 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing Jpeg2KImagePlugin
+2023-06-27 19:35:43,953 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing McIdasImagePlugin
+2023-06-27 19:35:43,956 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing MicImagePlugin
+2023-06-27 19:35:43,962 | DEBUG | PIL.Image | Image | 4000 | 15448 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2023-06-27 19:35:43,962 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing MpegImagePlugin
+2023-06-27 19:35:43,966 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing MpoImagePlugin
+2023-06-27 19:35:43,969 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing MspImagePlugin
+2023-06-27 19:35:43,973 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PalmImagePlugin
+2023-06-27 19:35:43,985 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PcdImagePlugin
+2023-06-27 19:35:43,988 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PcxImagePlugin
+2023-06-27 19:35:43,989 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PdfImagePlugin
+2023-06-27 19:35:44,011 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PixarImagePlugin
+2023-06-27 19:35:44,016 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PngImagePlugin
+2023-06-27 19:35:44,017 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PpmImagePlugin
+2023-06-27 19:35:44,017 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing PsdImagePlugin
+2023-06-27 19:35:44,022 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing SgiImagePlugin
+2023-06-27 19:35:44,026 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing SpiderImagePlugin
+2023-06-27 19:35:44,030 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing SunImagePlugin
+2023-06-27 19:35:44,033 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing TgaImagePlugin
+2023-06-27 19:35:44,037 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing TiffImagePlugin
+2023-06-27 19:35:44,038 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing WebPImagePlugin
+2023-06-27 19:35:44,081 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing WmfImagePlugin
+2023-06-27 19:35:44,085 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing XbmImagePlugin
+2023-06-27 19:35:44,091 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing XpmImagePlugin
+2023-06-27 19:35:44,093 | DEBUG | PIL.Image | Image | 4000 | 15448 | Importing XVThumbImagePlugin
+2023-06-27 19:35:44,154 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/avatars/Pyramid/System_Design.jpeg'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6cf6d5f6-1519-11ee-950d-34f64b613077'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2023-06-27 19:35:44,182 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | Starting new HTTPS connection (1): pyramidstorages.blob.core.windows.net:443
+2023-06-27 19:35:45,782 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | https://pyramidstorages.blob.core.windows.net:443 "HEAD /media/avatars/Pyramid/System_Design.jpeg HTTP/1.1" 404 0
+2023-06-27 19:35:45,782 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '06426a37-a01e-0058-1026-a9b2a1000000'
+    'x-ms-client-request-id': '6cf6d5f6-1519-11ee-950d-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Tue, 27 Jun 2023 18:35:45 GMT'
+2023-06-27 19:35:45,791 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/avatars/Pyramid/System_Design.jpeg?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1042667'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6df09bc9-1519-11ee-b0d0-34f64b613077'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2023-06-27 19:35:49,264 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | https://pyramidstorages.blob.core.windows.net:443 "PUT /media/avatars/Pyramid/System_Design.jpeg?timeout=20 HTTP/1.1" 201 0
+2023-06-27 19:35:49,265 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 27 Jun 2023 18:35:49 GMT'
+    'ETag': '"0x8DB773D541FD636"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '06426ad1-a01e-0058-0d26-a9b2a1000000'
+    'x-ms-client-request-id': '6df09bc9-1519-11ee-b0d0-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 27 Jun 2023 18:35:48 GMT'
+2023-06-27 19:35:49,314 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 302 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,315 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,318 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,318 | INFO | django.channels.server | runserver | 4000 | 18424 | [32mHTTP POST /babla/block/block/add/ 302 [5.64, 127.0.0.1:52817][0m
+2023-06-27 19:35:49,326 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,327 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:49,423 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,423 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,431 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,433 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/block/ 200 [0.11, 127.0.0.1:52817][0m
+2023-06-27 19:35:49,473 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,477 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:49,498 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,499 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,499 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:49,499 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:51,118 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,123 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:51,193 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,193 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,193 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,193 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/post/ 200 [0.08, 127.0.0.1:52817][0m
+2023-06-27 19:35:51,237 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,237 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:51,261 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,262 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,264 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:51,264 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:35:53,511 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,516 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:53,690 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,690 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,694 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,695 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/block/post/add/ 200 [0.18, 127.0.0.1:52817][0m
+2023-06-27 19:35:53,729 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'GET' request for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,736 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:35:53,757 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 200 response started for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,758 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,758 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:35:53,759 | INFO | django.channels.server | runserver | 4000 | 18424 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52817][0m
+2023-06-27 19:36:28,103 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP b'POST' request for ['127.0.0.1', 52817]
+2023-06-27 19:36:28,107 | DEBUG | asyncio | selector_events | 4000 | 15448 | Using selector: SelectSelector
+2023-06-27 19:36:28,133 | DEBUG | PIL.PngImagePlugin | PngImagePlugin | 4000 | 15448 | STREAM b'IHDR' 16 13
+2023-06-27 19:36:28,133 | DEBUG | PIL.PngImagePlugin | PngImagePlugin | 4000 | 15448 | STREAM b'pHYs' 41 9
+2023-06-27 19:36:28,133 | DEBUG | PIL.PngImagePlugin | PngImagePlugin | 4000 | 15448 | STREAM b'tEXt' 62 25
+2023-06-27 19:36:28,141 | DEBUG | PIL.PngImagePlugin | PngImagePlugin | 4000 | 15448 | STREAM b'IDAT' 99 7928
+2023-06-27 19:36:28,153 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/posts/gkkkk/retail.png'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '873086b3-1519-11ee-8c43-34f64b613077'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2023-06-27 19:36:28,483 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | https://pyramidstorages.blob.core.windows.net:443 "HEAD /media/posts/gkkkk/retail.png HTTP/1.1" 404 0
+2023-06-27 19:36:28,485 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '0642ca3f-a01e-0058-2d26-a9b2a1000000'
+    'x-ms-client-request-id': '873086b3-1519-11ee-8c43-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Tue, 27 Jun 2023 18:36:27 GMT'
+2023-06-27 19:36:28,491 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/posts/gkkkk/retail.png?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '8043'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8763e470-1519-11ee-bc08-34f64b613077'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2023-06-27 19:36:28,796 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | https://pyramidstorages.blob.core.windows.net:443 "PUT /media/posts/gkkkk/retail.png?timeout=20 HTTP/1.1" 201 0
+2023-06-27 19:36:28,796 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 4000 | 15448 | Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 27 Jun 2023 18:36:28 GMT'
+    'ETag': '"0x8DB773D6BCF1982"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '0642cb22-a01e-0058-7226-a9b2a1000000'
+    'x-ms-client-request-id': '8763e470-1519-11ee-bc08-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 27 Jun 2023 18:36:28 GMT'
+2023-06-27 19:36:28,817 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-27 19:36:30,019 | DEBUG | urllib3.connectionpool | connectionpool | 4000 | 15448 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 97025
+2023-06-27 19:36:30,721 | WARNING | django.request | log | 4000 | 19448 | Not Found: /babla/block/post/add/
+2023-06-27 19:36:30,747 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP 404 response started for ['127.0.0.1', 52817]
+2023-06-27 19:36:30,747 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP close for ['127.0.0.1', 52817]
+2023-06-27 19:36:30,747 | DEBUG | daphne.http_protocol | http_protocol | 4000 | 18424 | HTTP response complete for ['127.0.0.1', 52817]
+2023-06-27 19:36:30,747 | WARNING | django.channels.server | runserver | 4000 | 18424 | [33mHTTP POST /babla/block/post/add/ 404 [2.64, 127.0.0.1:52817][0m
+2023-06-27 19:54:26,144 | INFO | django.utils.autoreload | autoreload | 4000 | 7332 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-27 19:54:26,147 | DEBUG | asyncio | selector_events | 4000 | 7332 | Using selector: SelectSelector
+2023-06-27 19:54:28,819 | DEBUG | asyncio | selector_events | 13988 | 13672 | Using selector: SelectSelector
+2023-06-27 19:54:30,641 | INFO | django.utils.autoreload | autoreload | 13988 | 13672 | Watching for file changes with StatReloader
+2023-06-27 19:54:33,205 | INFO | daphne.server | server | 13988 | 2064 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-27 19:54:33,206 | INFO | daphne.server | server | 13988 | 2064 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-27 19:54:33,217 | INFO | daphne.server | server | 13988 | 2064 | Listening on TCP address 127.0.0.1:8000
+2023-06-27 19:54:33,542 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP b'GET' request for ['127.0.0.1', 52959]
+2023-06-27 19:54:33,646 | DEBUG | asyncio | selector_events | 13988 | 3240 | Using selector: SelectSelector
+2023-06-27 19:54:33,982 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP 200 response started for ['127.0.0.1', 52959]
+2023-06-27 19:54:33,983 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP close for ['127.0.0.1', 52959]
+2023-06-27 19:54:33,984 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP response complete for ['127.0.0.1', 52959]
+2023-06-27 19:54:33,985 | INFO | django.channels.server | runserver | 13988 | 2064 | [mHTTP GET /babla/block/post/add/ 200 [0.44, 127.0.0.1:52959][0m
+2023-06-27 19:54:53,638 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP b'POST' request for ['127.0.0.1', 52959]
+2023-06-27 19:54:53,640 | DEBUG | asyncio | selector_events | 13988 | 3240 | Using selector: SelectSelector
+2023-06-27 19:54:53,718 | DEBUG | urllib3.connectionpool | connectionpool | 13988 | 3240 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-27 19:54:54,649 | DEBUG | urllib3.connectionpool | connectionpool | 13988 | 3240 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 97025
+2023-06-27 19:54:55,609 | WARNING | django.request | log | 13988 | 18280 | Not Found: /babla/block/post/add/
+2023-06-27 19:54:55,670 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP 404 response started for ['127.0.0.1', 52959]
+2023-06-27 19:54:55,670 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP close for ['127.0.0.1', 52959]
+2023-06-27 19:54:55,670 | DEBUG | daphne.http_protocol | http_protocol | 13988 | 2064 | HTTP response complete for ['127.0.0.1', 52959]
+2023-06-27 19:54:55,670 | WARNING | django.channels.server | runserver | 13988 | 2064 | [33mHTTP POST /babla/block/post/add/ 404 [2.03, 127.0.0.1:52959][0m
+2023-06-27 19:56:31,098 | INFO | django.utils.autoreload | autoreload | 13988 | 13672 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-27 19:56:31,104 | DEBUG | asyncio | selector_events | 13988 | 13672 | Using selector: SelectSelector
+2023-06-27 19:56:33,769 | DEBUG | asyncio | selector_events | 16600 | 15536 | Using selector: SelectSelector
+2023-06-27 19:56:35,339 | INFO | django.utils.autoreload | autoreload | 16600 | 15536 | Watching for file changes with StatReloader
+2023-06-27 19:56:37,206 | INFO | daphne.server | server | 16600 | 18180 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-27 19:56:37,207 | INFO | daphne.server | server | 16600 | 18180 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-27 19:56:37,210 | INFO | daphne.server | server | 16600 | 18180 | Listening on TCP address 127.0.0.1:8000
+2023-06-27 19:56:42,299 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP b'GET' request for ['127.0.0.1', 52987]
+2023-06-27 19:56:42,326 | DEBUG | asyncio | selector_events | 16600 | 16948 | Using selector: SelectSelector
+2023-06-27 19:56:42,793 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP 200 response started for ['127.0.0.1', 52987]
+2023-06-27 19:56:42,793 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP close for ['127.0.0.1', 52987]
+2023-06-27 19:56:42,805 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP response complete for ['127.0.0.1', 52987]
+2023-06-27 19:56:42,814 | INFO | django.channels.server | runserver | 16600 | 18180 | [mHTTP GET /babla/block/post/add/ 200 [0.52, 127.0.0.1:52987][0m
+2023-06-27 19:56:46,832 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP b'POST' request for ['127.0.0.1', 52987]
+2023-06-27 19:56:46,834 | DEBUG | asyncio | selector_events | 16600 | 16948 | Using selector: SelectSelector
+2023-06-27 19:56:46,912 | DEBUG | urllib3.connectionpool | connectionpool | 16600 | 16948 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-27 19:56:48,058 | DEBUG | urllib3.connectionpool | connectionpool | 16600 | 16948 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 97025
+2023-06-27 19:56:48,972 | WARNING | django.request | log | 16600 | 3760 | Not Found: /babla/block/post/add/
+2023-06-27 19:56:48,974 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP 404 response started for ['127.0.0.1', 52987]
+2023-06-27 19:56:48,975 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP close for ['127.0.0.1', 52987]
+2023-06-27 19:56:48,977 | DEBUG | daphne.http_protocol | http_protocol | 16600 | 18180 | HTTP response complete for ['127.0.0.1', 52987]
+2023-06-27 19:56:48,977 | WARNING | django.channels.server | runserver | 16600 | 18180 | [33mHTTP POST /babla/block/post/add/ 404 [2.14, 127.0.0.1:52987][0m
+2023-06-28 11:47:17,438 | INFO | django.utils.autoreload | autoreload | 16600 | 15536 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:47:17,451 | DEBUG | asyncio | selector_events | 16600 | 15536 | Using selector: SelectSelector
+2023-06-28 11:47:21,759 | DEBUG | asyncio | selector_events | 4588 | 19404 | Using selector: SelectSelector
+2023-06-28 11:47:24,359 | INFO | django.utils.autoreload | autoreload | 4588 | 19404 | Watching for file changes with StatReloader
+2023-06-28 11:47:42,036 | INFO | django.utils.autoreload | autoreload | 4588 | 19404 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:47:42,038 | DEBUG | asyncio | selector_events | 4588 | 19404 | Using selector: SelectSelector
+2023-06-28 11:47:44,468 | DEBUG | asyncio | selector_events | 13892 | 13492 | Using selector: SelectSelector
+2023-06-28 11:47:46,122 | INFO | django.utils.autoreload | autoreload | 13892 | 13492 | Watching for file changes with StatReloader
+2023-06-28 11:47:51,496 | INFO | daphne.server | server | 13892 | 19728 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:47:51,496 | INFO | daphne.server | server | 13892 | 19728 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:47:51,506 | INFO | daphne.server | server | 13892 | 19728 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:48:34,646 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP b'GET' request for ['127.0.0.1', 60270]
+2023-06-28 11:48:34,681 | DEBUG | asyncio | selector_events | 13892 | 2664 | Using selector: SelectSelector
+2023-06-28 11:48:35,175 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP 200 response started for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,176 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP close for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,178 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP response complete for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,178 | INFO | django.channels.server | runserver | 13892 | 19728 | [mHTTP GET /babla/block/post/add/ 200 [0.53, 127.0.0.1:60270][0m
+2023-06-28 11:48:35,241 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP b'GET' request for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,245 | DEBUG | asyncio | selector_events | 13892 | 2664 | Using selector: SelectSelector
+2023-06-28 11:48:35,271 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP 200 response started for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,272 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP close for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,273 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP response complete for ['127.0.0.1', 60270]
+2023-06-28 11:48:35,274 | INFO | django.channels.server | runserver | 13892 | 19728 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:60270][0m
+2023-06-28 11:48:51,030 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP b'POST' request for ['127.0.0.1', 60310]
+2023-06-28 11:48:51,034 | DEBUG | asyncio | selector_events | 13892 | 2664 | Using selector: SelectSelector
+2023-06-28 11:48:51,071 | DEBUG | urllib3.connectionpool | connectionpool | 13892 | 2664 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:48:53,787 | DEBUG | urllib3.connectionpool | connectionpool | 13892 | 2664 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:48:55,202 | WARNING | django.request | log | 13892 | 4956 | Not Found: /babla/block/post/add/
+2023-06-28 11:48:55,209 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP 404 response started for ['127.0.0.1', 60310]
+2023-06-28 11:48:55,211 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP close for ['127.0.0.1', 60310]
+2023-06-28 11:48:55,212 | DEBUG | daphne.http_protocol | http_protocol | 13892 | 19728 | HTTP response complete for ['127.0.0.1', 60310]
+2023-06-28 11:48:55,213 | WARNING | django.channels.server | runserver | 13892 | 19728 | [33mHTTP POST /babla/block/post/add/ 404 [4.18, 127.0.0.1:60310][0m
+2023-06-28 11:52:46,941 | INFO | django.utils.autoreload | autoreload | 13892 | 13492 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:52:46,943 | DEBUG | asyncio | selector_events | 13892 | 13492 | Using selector: SelectSelector
+2023-06-28 11:52:49,650 | DEBUG | asyncio | selector_events | 19324 | 20232 | Using selector: SelectSelector
+2023-06-28 11:52:51,280 | INFO | django.utils.autoreload | autoreload | 19324 | 20232 | Watching for file changes with StatReloader
+2023-06-28 11:52:53,428 | INFO | daphne.server | server | 19324 | 13696 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:52:53,428 | INFO | daphne.server | server | 19324 | 13696 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:52:53,438 | INFO | daphne.server | server | 19324 | 13696 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:52:56,059 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP b'GET' request for ['127.0.0.1', 60338]
+2023-06-28 11:52:56,079 | DEBUG | asyncio | selector_events | 19324 | 14072 | Using selector: SelectSelector
+2023-06-28 11:52:56,327 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP 200 response started for ['127.0.0.1', 60338]
+2023-06-28 11:52:56,328 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP close for ['127.0.0.1', 60338]
+2023-06-28 11:52:56,329 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP response complete for ['127.0.0.1', 60338]
+2023-06-28 11:52:56,330 | INFO | django.channels.server | runserver | 19324 | 13696 | [mHTTP GET /babla/block/post/add/ 200 [0.27, 127.0.0.1:60338][0m
+2023-06-28 11:53:00,265 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP b'POST' request for ['127.0.0.1', 60338]
+2023-06-28 11:53:00,271 | DEBUG | asyncio | selector_events | 19324 | 14072 | Using selector: SelectSelector
+2023-06-28 11:53:00,308 | DEBUG | urllib3.connectionpool | connectionpool | 19324 | 14072 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:53:01,194 | DEBUG | urllib3.connectionpool | connectionpool | 19324 | 14072 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:53:02,061 | WARNING | django.request | log | 19324 | 1128 | Not Found: /babla/block/post/add/
+2023-06-28 11:53:02,063 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP 404 response started for ['127.0.0.1', 60338]
+2023-06-28 11:53:02,064 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP close for ['127.0.0.1', 60338]
+2023-06-28 11:53:02,065 | DEBUG | daphne.http_protocol | http_protocol | 19324 | 13696 | HTTP response complete for ['127.0.0.1', 60338]
+2023-06-28 11:53:02,066 | WARNING | django.channels.server | runserver | 19324 | 13696 | [33mHTTP POST /babla/block/post/add/ 404 [1.80, 127.0.0.1:60338][0m
+2023-06-28 11:54:50,643 | INFO | django.utils.autoreload | autoreload | 19324 | 20232 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:54:50,643 | DEBUG | asyncio | selector_events | 19324 | 20232 | Using selector: SelectSelector
+2023-06-28 11:54:52,583 | DEBUG | asyncio | selector_events | 17340 | 19204 | Using selector: SelectSelector
+2023-06-28 11:54:54,171 | INFO | django.utils.autoreload | autoreload | 17340 | 19204 | Watching for file changes with StatReloader
+2023-06-28 11:54:56,221 | INFO | daphne.server | server | 17340 | 13552 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:54:56,222 | INFO | daphne.server | server | 17340 | 13552 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:54:56,224 | INFO | daphne.server | server | 17340 | 13552 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:55:03,942 | INFO | django.utils.autoreload | autoreload | 17340 | 19204 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:55:03,942 | DEBUG | asyncio | selector_events | 17340 | 19204 | Using selector: SelectSelector
+2023-06-28 11:55:06,584 | DEBUG | asyncio | selector_events | 19856 | 11220 | Using selector: SelectSelector
+2023-06-28 11:55:08,099 | INFO | django.utils.autoreload | autoreload | 19856 | 11220 | Watching for file changes with StatReloader
+2023-06-28 11:55:09,961 | INFO | daphne.server | server | 19856 | 12336 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:55:09,961 | INFO | daphne.server | server | 19856 | 12336 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:55:09,971 | INFO | daphne.server | server | 19856 | 12336 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:55:13,681 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP b'GET' request for ['127.0.0.1', 60368]
+2023-06-28 11:55:13,698 | DEBUG | asyncio | selector_events | 19856 | 19236 | Using selector: SelectSelector
+2023-06-28 11:55:13,979 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP 200 response started for ['127.0.0.1', 60368]
+2023-06-28 11:55:13,980 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP close for ['127.0.0.1', 60368]
+2023-06-28 11:55:13,981 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP response complete for ['127.0.0.1', 60368]
+2023-06-28 11:55:13,982 | INFO | django.channels.server | runserver | 19856 | 12336 | [mHTTP GET /babla/block/post/add/ 200 [0.30, 127.0.0.1:60368][0m
+2023-06-28 11:55:18,246 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP b'POST' request for ['127.0.0.1', 60368]
+2023-06-28 11:55:18,249 | DEBUG | asyncio | selector_events | 19856 | 19236 | Using selector: SelectSelector
+2023-06-28 11:55:18,299 | DEBUG | urllib3.connectionpool | connectionpool | 19856 | 19236 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:55:22,206 | DEBUG | urllib3.connectionpool | connectionpool | 19856 | 19236 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:55:28,381 | WARNING | django.request | log | 19856 | 19824 | Not Found: /babla/block/post/add/
+2023-06-28 11:55:28,383 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP 404 response started for ['127.0.0.1', 60368]
+2023-06-28 11:55:28,385 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP close for ['127.0.0.1', 60368]
+2023-06-28 11:55:28,386 | DEBUG | daphne.http_protocol | http_protocol | 19856 | 12336 | HTTP response complete for ['127.0.0.1', 60368]
+2023-06-28 11:55:28,386 | WARNING | django.channels.server | runserver | 19856 | 12336 | [33mHTTP POST /babla/block/post/add/ 404 [10.14, 127.0.0.1:60368][0m
+2023-06-28 11:56:55,603 | INFO | django.utils.autoreload | autoreload | 19856 | 11220 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:56:55,604 | DEBUG | asyncio | selector_events | 19856 | 11220 | Using selector: SelectSelector
+2023-06-28 11:56:57,560 | DEBUG | asyncio | selector_events | 17272 | 11656 | Using selector: SelectSelector
+2023-06-28 11:56:59,387 | INFO | django.utils.autoreload | autoreload | 17272 | 11656 | Watching for file changes with StatReloader
+2023-06-28 11:57:01,488 | INFO | daphne.server | server | 17272 | 14620 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:57:01,489 | INFO | daphne.server | server | 17272 | 14620 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:57:01,491 | INFO | daphne.server | server | 17272 | 14620 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:57:03,862 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:03,886 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:04,169 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:04,170 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:04,171 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:04,172 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/block/post/add/ 200 [0.31, 127.0.0.1:60389][0m
+2023-06-28 11:57:07,004 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'POST' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:07,008 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:07,053 | DEBUG | urllib3.connectionpool | connectionpool | 17272 | 5928 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:57:07,952 | DEBUG | urllib3.connectionpool | connectionpool | 17272 | 5928 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:57:08,715 | WARNING | django.request | log | 17272 | 7272 | Not Found: /babla/block/post/add/
+2023-06-28 11:57:08,716 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 404 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:08,717 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:08,720 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:08,724 | WARNING | django.channels.server | runserver | 17272 | 14620 | [33mHTTP POST /babla/block/post/add/ 404 [1.72, 127.0.0.1:60389][0m
+2023-06-28 11:57:19,565 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:19,574 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:19,692 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:19,694 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:19,697 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:19,698 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/block/post/add/ 200 [0.13, 127.0.0.1:60389][0m
+2023-06-28 11:57:22,772 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:22,776 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:22,885 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:22,886 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:22,887 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:22,888 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/block/post/ 200 [0.12, 127.0.0.1:60389][0m
+2023-06-28 11:57:22,930 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:22,936 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:23,006 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:23,023 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:23,049 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:23,050 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/jsi18n/ 200 [0.12, 127.0.0.1:60389][0m
+2023-06-28 11:57:26,246 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,251 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:26,359 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,360 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,361 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,361 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/block/post/add/ 200 [0.12, 127.0.0.1:60389][0m
+2023-06-28 11:57:26,427 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'GET' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,431 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:26,460 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 200 response started for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,461 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,462 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:57:26,463 | INFO | django.channels.server | runserver | 17272 | 14620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:60389][0m
+2023-06-28 11:57:44,345 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP b'POST' request for ['127.0.0.1', 60389]
+2023-06-28 11:57:44,348 | DEBUG | asyncio | selector_events | 17272 | 5928 | Using selector: SelectSelector
+2023-06-28 11:57:44,379 | DEBUG | urllib3.connectionpool | connectionpool | 17272 | 5928 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:57:48,996 | DEBUG | urllib3.connectionpool | connectionpool | 17272 | 5928 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:58:03,528 | WARNING | django.request | log | 17272 | 7272 | Not Found: /babla/block/post/add/
+2023-06-28 11:58:03,529 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP 404 response started for ['127.0.0.1', 60389]
+2023-06-28 11:58:03,530 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP close for ['127.0.0.1', 60389]
+2023-06-28 11:58:03,531 | DEBUG | daphne.http_protocol | http_protocol | 17272 | 14620 | HTTP response complete for ['127.0.0.1', 60389]
+2023-06-28 11:58:03,532 | WARNING | django.channels.server | runserver | 17272 | 14620 | [33mHTTP POST /babla/block/post/add/ 404 [19.19, 127.0.0.1:60389][0m
+2023-06-28 11:58:46,187 | INFO | django.utils.autoreload | autoreload | 17272 | 11656 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 11:58:46,187 | DEBUG | asyncio | selector_events | 17272 | 11656 | Using selector: SelectSelector
+2023-06-28 11:58:48,283 | DEBUG | asyncio | selector_events | 15972 | 14524 | Using selector: SelectSelector
+2023-06-28 11:58:49,721 | INFO | django.utils.autoreload | autoreload | 15972 | 14524 | Watching for file changes with StatReloader
+2023-06-28 11:58:51,770 | INFO | daphne.server | server | 15972 | 17100 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 11:58:51,771 | INFO | daphne.server | server | 15972 | 17100 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 11:58:51,775 | INFO | daphne.server | server | 15972 | 17100 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 11:58:52,164 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP b'GET' request for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,200 | DEBUG | asyncio | selector_events | 15972 | 17664 | Using selector: SelectSelector
+2023-06-28 11:58:52,533 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP 200 response started for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,534 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP close for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,535 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP response complete for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,536 | INFO | django.channels.server | runserver | 15972 | 17100 | [mHTTP GET /babla/block/post/add/ 200 [0.37, 127.0.0.1:60436][0m
+2023-06-28 11:58:52,597 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP b'GET' request for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,600 | DEBUG | asyncio | selector_events | 15972 | 17664 | Using selector: SelectSelector
+2023-06-28 11:58:52,642 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP 200 response started for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,644 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP close for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,645 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP response complete for ['127.0.0.1', 60436]
+2023-06-28 11:58:52,646 | INFO | django.channels.server | runserver | 15972 | 17100 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:60436][0m
+2023-06-28 11:59:13,391 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP b'POST' request for ['127.0.0.1', 60436]
+2023-06-28 11:59:13,395 | DEBUG | asyncio | selector_events | 15972 | 17664 | Using selector: SelectSelector
+2023-06-28 11:59:13,437 | DEBUG | urllib3.connectionpool | connectionpool | 15972 | 17664 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 11:59:14,300 | DEBUG | urllib3.connectionpool | connectionpool | 15972 | 17664 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 58586
+2023-06-28 11:59:15,031 | WARNING | django.request | log | 15972 | 16656 | Not Found: /babla/block/post/add/
+2023-06-28 11:59:15,033 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP 404 response started for ['127.0.0.1', 60436]
+2023-06-28 11:59:15,034 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP close for ['127.0.0.1', 60436]
+2023-06-28 11:59:15,035 | DEBUG | daphne.http_protocol | http_protocol | 15972 | 17100 | HTTP response complete for ['127.0.0.1', 60436]
+2023-06-28 11:59:15,036 | WARNING | django.channels.server | runserver | 15972 | 17100 | [33mHTTP POST /babla/block/post/add/ 404 [1.64, 127.0.0.1:60436][0m
+2023-06-28 12:06:23,727 | INFO | django.utils.autoreload | autoreload | 15972 | 14524 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 12:06:23,727 | DEBUG | asyncio | selector_events | 15972 | 14524 | Using selector: SelectSelector
+2023-06-28 12:06:26,372 | DEBUG | asyncio | selector_events | 13300 | 12580 | Using selector: SelectSelector
+2023-06-28 12:06:28,086 | INFO | django.utils.autoreload | autoreload | 13300 | 12580 | Watching for file changes with StatReloader
+2023-06-28 12:06:30,308 | INFO | daphne.server | server | 13300 | 18548 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 12:06:30,309 | INFO | daphne.server | server | 13300 | 18548 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 12:06:30,312 | INFO | daphne.server | server | 13300 | 18548 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 12:06:30,448 | DEBUG | daphne.http_protocol | http_protocol | 13300 | 18548 | HTTP b'GET' request for ['127.0.0.1', 60472]
+2023-06-28 12:06:30,468 | DEBUG | asyncio | selector_events | 13300 | 19116 | Using selector: SelectSelector
+2023-06-28 12:06:30,792 | DEBUG | daphne.http_protocol | http_protocol | 13300 | 18548 | HTTP 200 response started for ['127.0.0.1', 60472]
+2023-06-28 12:06:30,793 | DEBUG | daphne.http_protocol | http_protocol | 13300 | 18548 | HTTP close for ['127.0.0.1', 60472]
+2023-06-28 12:06:30,794 | DEBUG | daphne.http_protocol | http_protocol | 13300 | 18548 | HTTP response complete for ['127.0.0.1', 60472]
+2023-06-28 12:06:30,795 | INFO | django.channels.server | runserver | 13300 | 18548 | [mHTTP GET /babla/block/post/add/ 200 [0.35, 127.0.0.1:60472][0m
+2023-06-28 12:07:21,581 | INFO | django.utils.autoreload | autoreload | 13300 | 12580 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 12:07:21,583 | DEBUG | asyncio | selector_events | 13300 | 12580 | Using selector: SelectSelector
+2023-06-28 12:07:23,567 | DEBUG | asyncio | selector_events | 3056 | 4212 | Using selector: SelectSelector
+2023-06-28 12:07:24,979 | INFO | django.utils.autoreload | autoreload | 3056 | 4212 | Watching for file changes with StatReloader
+2023-06-28 12:07:26,911 | INFO | daphne.server | server | 3056 | 1816 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 12:07:26,911 | INFO | daphne.server | server | 3056 | 1816 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 12:07:26,915 | INFO | daphne.server | server | 3056 | 1816 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 12:07:40,520 | DEBUG | daphne.http_protocol | http_protocol | 3056 | 1816 | HTTP b'POST' request for ['127.0.0.1', 60493]
+2023-06-28 12:07:40,532 | DEBUG | asyncio | selector_events | 3056 | 16108 | Using selector: SelectSelector
+2023-06-28 12:07:40,575 | DEBUG | urllib3.connectionpool | connectionpool | 3056 | 16108 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 12:07:41,479 | DEBUG | urllib3.connectionpool | connectionpool | 3056 | 16108 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 74082
+2023-06-28 12:07:42,244 | WARNING | django.request | log | 3056 | 5700 | Not Found: /babla/block/post/add/
+2023-06-28 12:07:42,246 | DEBUG | daphne.http_protocol | http_protocol | 3056 | 1816 | HTTP 404 response started for ['127.0.0.1', 60493]
+2023-06-28 12:07:42,247 | DEBUG | daphne.http_protocol | http_protocol | 3056 | 1816 | HTTP close for ['127.0.0.1', 60493]
+2023-06-28 12:07:42,248 | DEBUG | daphne.http_protocol | http_protocol | 3056 | 1816 | HTTP response complete for ['127.0.0.1', 60493]
+2023-06-28 12:07:42,249 | WARNING | django.channels.server | runserver | 3056 | 1816 | [33mHTTP POST /babla/block/post/add/ 404 [1.73, 127.0.0.1:60493][0m
+2023-06-28 12:08:12,602 | INFO | django.utils.autoreload | autoreload | 3056 | 4212 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 12:08:12,604 | DEBUG | asyncio | selector_events | 3056 | 4212 | Using selector: SelectSelector
+2023-06-28 12:08:15,362 | DEBUG | asyncio | selector_events | 12336 | 19936 | Using selector: SelectSelector
+2023-06-28 12:08:16,886 | INFO | django.utils.autoreload | autoreload | 12336 | 19936 | Watching for file changes with StatReloader
+2023-06-28 12:08:18,872 | INFO | daphne.server | server | 12336 | 15540 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 12:08:18,872 | INFO | daphne.server | server | 12336 | 15540 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 12:08:18,874 | INFO | daphne.server | server | 12336 | 15540 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 12:08:18,881 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP b'GET' request for ['127.0.0.1', 60511]
+2023-06-28 12:08:18,897 | DEBUG | asyncio | selector_events | 12336 | 19504 | Using selector: SelectSelector
+2023-06-28 12:08:19,192 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP 200 response started for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,193 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP close for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,194 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP response complete for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,195 | INFO | django.channels.server | runserver | 12336 | 15540 | [mHTTP GET /babla/block/post/add/ 200 [0.31, 127.0.0.1:60511][0m
+2023-06-28 12:08:19,251 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP b'GET' request for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,254 | DEBUG | asyncio | selector_events | 12336 | 19504 | Using selector: SelectSelector
+2023-06-28 12:08:19,301 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP 200 response started for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,302 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP close for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,303 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP response complete for ['127.0.0.1', 60511]
+2023-06-28 12:08:19,304 | INFO | django.channels.server | runserver | 12336 | 15540 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:60511][0m
+2023-06-28 12:08:47,328 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP b'POST' request for ['127.0.0.1', 60511]
+2023-06-28 12:08:47,334 | DEBUG | asyncio | selector_events | 12336 | 19504 | Using selector: SelectSelector
+2023-06-28 12:08:47,372 | DEBUG | urllib3.connectionpool | connectionpool | 12336 | 19504 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 12:08:48,198 | DEBUG | urllib3.connectionpool | connectionpool | 12336 | 19504 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 74082
+2023-06-28 12:08:49,121 | WARNING | django.request | log | 12336 | 19420 | Not Found: /babla/block/post/add/
+2023-06-28 12:08:49,123 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP 404 response started for ['127.0.0.1', 60511]
+2023-06-28 12:08:49,124 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP close for ['127.0.0.1', 60511]
+2023-06-28 12:08:49,125 | DEBUG | daphne.http_protocol | http_protocol | 12336 | 15540 | HTTP response complete for ['127.0.0.1', 60511]
+2023-06-28 12:08:49,126 | WARNING | django.channels.server | runserver | 12336 | 15540 | [33mHTTP POST /babla/block/post/add/ 404 [1.80, 127.0.0.1:60511][0m
+2023-06-28 12:09:30,914 | INFO | django.utils.autoreload | autoreload | 12336 | 19936 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-28 12:09:30,916 | DEBUG | asyncio | selector_events | 12336 | 19936 | Using selector: SelectSelector
+2023-06-28 12:09:32,712 | DEBUG | asyncio | selector_events | 12364 | 18100 | Using selector: SelectSelector
+2023-06-28 12:09:34,027 | INFO | django.utils.autoreload | autoreload | 12364 | 18100 | Watching for file changes with StatReloader
+2023-06-28 12:09:35,968 | INFO | daphne.server | server | 12364 | 19688 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-28 12:09:35,968 | INFO | daphne.server | server | 12364 | 19688 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-28 12:09:35,973 | INFO | daphne.server | server | 12364 | 19688 | Listening on TCP address 127.0.0.1:8000
+2023-06-28 12:09:56,204 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP b'GET' request for ['127.0.0.1', 60532]
+2023-06-28 12:09:56,221 | DEBUG | asyncio | selector_events | 12364 | 11668 | Using selector: SelectSelector
+2023-06-28 12:09:56,455 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP 200 response started for ['127.0.0.1', 60532]
+2023-06-28 12:09:56,456 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP close for ['127.0.0.1', 60532]
+2023-06-28 12:09:56,458 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP response complete for ['127.0.0.1', 60532]
+2023-06-28 12:09:56,459 | INFO | django.channels.server | runserver | 12364 | 19688 | [mHTTP GET /babla/block/post/add/ 200 [0.26, 127.0.0.1:60532][0m
+2023-06-28 12:10:07,337 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP b'POST' request for ['127.0.0.1', 60532]
+2023-06-28 12:10:07,340 | DEBUG | asyncio | selector_events | 12364 | 11668 | Using selector: SelectSelector
+2023-06-28 12:10:07,381 | DEBUG | urllib3.connectionpool | connectionpool | 12364 | 11668 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-28 12:10:08,215 | DEBUG | urllib3.connectionpool | connectionpool | 12364 | 11668 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=Finance HTTP/1.1" 200 74082
+2023-06-28 12:10:09,076 | WARNING | django.request | log | 12364 | 16552 | Not Found: /babla/block/post/add/
+2023-06-28 12:10:09,077 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP 404 response started for ['127.0.0.1', 60532]
+2023-06-28 12:10:09,078 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP close for ['127.0.0.1', 60532]
+2023-06-28 12:10:09,079 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP response complete for ['127.0.0.1', 60532]
+2023-06-28 12:10:09,080 | WARNING | django.channels.server | runserver | 12364 | 19688 | [33mHTTP POST /babla/block/post/add/ 404 [1.74, 127.0.0.1:60532][0m
+2023-06-28 13:14:27,390 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP b'GET' request for ['127.0.0.1', 60960]
+2023-06-28 13:14:27,397 | DEBUG | asyncio | selector_events | 12364 | 11668 | Using selector: SelectSelector
+2023-06-28 13:14:27,508 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP 200 response started for ['127.0.0.1', 60960]
+2023-06-28 13:14:27,509 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP close for ['127.0.0.1', 60960]
+2023-06-28 13:14:27,510 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP response complete for ['127.0.0.1', 60960]
+2023-06-28 13:14:27,510 | INFO | django.channels.server | runserver | 12364 | 19688 | [mHTTP GET /babla/block/post/add/ 200 [0.12, 127.0.0.1:60960][0m
+2023-06-28 22:59:26,146 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP b'GET' request for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,163 | DEBUG | asyncio | selector_events | 12364 | 11668 | Using selector: SelectSelector
+2023-06-28 22:59:26,326 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP 200 response started for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,327 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP close for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,329 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP response complete for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,329 | INFO | django.channels.server | runserver | 12364 | 19688 | [mHTTP GET /babla/block/post/add/ 200 [0.18, 127.0.0.1:61027][0m
+2023-06-28 22:59:26,374 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP b'GET' request for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,377 | DEBUG | asyncio | selector_events | 12364 | 11668 | Using selector: SelectSelector
+2023-06-28 22:59:26,406 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP 200 response started for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,407 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP close for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,408 | DEBUG | daphne.http_protocol | http_protocol | 12364 | 19688 | HTTP response complete for ['127.0.0.1', 61027]
+2023-06-28 22:59:26,408 | INFO | django.channels.server | runserver | 12364 | 19688 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:61027][0m
+2023-06-29 08:56:28,922 | INFO | django.utils.autoreload | autoreload | 12364 | 18100 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-29 08:56:28,952 | DEBUG | asyncio | selector_events | 12364 | 18100 | Using selector: SelectSelector
+2023-06-29 08:56:32,210 | DEBUG | asyncio | selector_events | 12600 | 11424 | Using selector: SelectSelector
+2023-06-29 08:56:34,499 | INFO | django.utils.autoreload | autoreload | 12600 | 11424 | Watching for file changes with StatReloader
+2023-06-29 08:56:38,985 | INFO | daphne.server | server | 12600 | 11032 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-29 08:56:38,986 | INFO | daphne.server | server | 12600 | 11032 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-29 08:56:38,989 | INFO | daphne.server | server | 12600 | 11032 | Listening on TCP address 127.0.0.1:8000
+2023-06-29 09:01:00,738 | INFO | django.utils.autoreload | autoreload | 12600 | 11424 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-29 09:01:00,739 | DEBUG | asyncio | selector_events | 12600 | 11424 | Using selector: SelectSelector
+2023-06-29 09:01:02,926 | DEBUG | asyncio | selector_events | 17128 | 18704 | Using selector: SelectSelector
+2023-06-29 09:01:04,530 | INFO | django.utils.autoreload | autoreload | 17128 | 18704 | Watching for file changes with StatReloader
+2023-06-29 09:01:06,635 | INFO | daphne.server | server | 17128 | 11472 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-29 09:01:06,651 | INFO | daphne.server | server | 17128 | 11472 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-29 09:01:06,653 | INFO | daphne.server | server | 17128 | 11472 | Listening on TCP address 127.0.0.1:8000
+2023-06-29 09:03:44,478 | INFO | django.utils.autoreload | autoreload | 17128 | 18704 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-29 09:03:44,483 | DEBUG | asyncio | selector_events | 17128 | 18704 | Using selector: SelectSelector
+2023-06-29 09:03:47,440 | DEBUG | asyncio | selector_events | 13660 | 2828 | Using selector: SelectSelector
+2023-06-29 09:03:49,825 | INFO | django.utils.autoreload | autoreload | 13660 | 2828 | Watching for file changes with StatReloader
+2023-06-29 09:03:52,096 | INFO | daphne.server | server | 13660 | 2172 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-29 09:03:52,096 | INFO | daphne.server | server | 13660 | 2172 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-29 09:03:52,114 | INFO | daphne.server | server | 13660 | 2172 | Listening on TCP address 127.0.0.1:8000
+2023-06-29 09:04:01,236 | INFO | django.utils.autoreload | autoreload | 13660 | 2828 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\models.py changed, reloading.
+2023-06-29 09:04:01,246 | DEBUG | asyncio | selector_events | 13660 | 2828 | Using selector: SelectSelector
+2023-06-29 09:04:03,709 | DEBUG | asyncio | selector_events | 7084 | 20048 | Using selector: SelectSelector
+2023-06-29 09:04:05,436 | INFO | django.utils.autoreload | autoreload | 7084 | 20048 | Watching for file changes with StatReloader
+2023-06-29 09:05:54,167 | INFO | django.utils.autoreload | autoreload | 7084 | 20048 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\cp.py changed, reloading.
+2023-06-29 09:05:54,169 | DEBUG | asyncio | selector_events | 7084 | 20048 | Using selector: SelectSelector
+2023-06-29 09:05:55,946 | DEBUG | asyncio | selector_events | 21200 | 5056 | Using selector: SelectSelector
+2023-06-29 09:05:57,001 | INFO | django.utils.autoreload | autoreload | 21200 | 5056 | Watching for file changes with StatReloader
+2023-06-29 09:06:56,924 | INFO | django.utils.autoreload | autoreload | 21200 | 5056 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\cp.py changed, reloading.
+2023-06-29 09:06:56,925 | DEBUG | asyncio | selector_events | 21200 | 5056 | Using selector: SelectSelector
+2023-06-29 09:06:58,728 | DEBUG | asyncio | selector_events | 9584 | 14944 | Using selector: SelectSelector
+2023-06-29 09:06:59,756 | INFO | django.utils.autoreload | autoreload | 9584 | 14944 | Watching for file changes with StatReloader
+2023-06-29 09:09:31,416 | DEBUG | asyncio | selector_events | 9584 | 14944 | Using selector: SelectSelector
+2023-06-29 09:09:46,772 | DEBUG | asyncio | selector_events | 19968 | 852 | Using selector: SelectSelector
+2023-06-29 09:09:49,576 | DEBUG | asyncio | selector_events | 10356 | 21452 | Using selector: SelectSelector
+2023-06-29 09:09:50,540 | INFO | django.utils.autoreload | autoreload | 10356 | 21452 | Watching for file changes with StatReloader
+2023-06-29 09:13:35,355 | DEBUG | asyncio | selector_events | 10356 | 21452 | Using selector: SelectSelector
+2023-06-29 09:13:35,571 | DEBUG | asyncio | selector_events | 19968 | 852 | Using selector: SelectSelector
+2023-06-29 09:13:47,724 | DEBUG | asyncio | selector_events | 9260 | 16096 | Using selector: SelectSelector
+2023-06-29 09:13:50,637 | DEBUG | asyncio | selector_events | 20728 | 18360 | Using selector: SelectSelector
+2023-06-29 09:13:51,990 | INFO | django.utils.autoreload | autoreload | 20728 | 18360 | Watching for file changes with StatReloader
+2023-06-29 09:14:35,037 | INFO | django.utils.autoreload | autoreload | 20728 | 18360 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-29 09:14:35,037 | DEBUG | asyncio | selector_events | 20728 | 18360 | Using selector: SelectSelector
+2023-06-29 09:14:36,906 | DEBUG | asyncio | selector_events | 7036 | 6596 | Using selector: SelectSelector
+2023-06-29 09:14:38,341 | DEBUG | urllib3.connectionpool | connectionpool | 7036 | 6596 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-29 09:14:39,571 | DEBUG | urllib3.connectionpool | connectionpool | 7036 | 6596 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=World%20Economy HTTP/1.1" 200 90190
+2023-06-29 09:14:41,082 | DEBUG | asyncio | selector_events | 7036 | 6596 | Using selector: SelectSelector
+2023-06-29 09:14:41,129 | INFO | django.utils.autoreload | autoreload | 7036 | 6596 | Watching for file changes with StatReloader
+2023-06-29 09:17:13,788 | INFO | django.utils.autoreload | autoreload | 7036 | 6596 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\cop.py changed, reloading.
+2023-06-29 09:17:15,616 | DEBUG | asyncio | selector_events | 988 | 3140 | Using selector: SelectSelector
+2023-06-29 09:17:17,023 | DEBUG | urllib3.connectionpool | connectionpool | 988 | 3140 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-29 09:17:17,856 | DEBUG | urllib3.connectionpool | connectionpool | 988 | 3140 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=World%20Economy HTTP/1.1" 200 90190
+2023-06-29 09:17:18,318 | DEBUG | asyncio | selector_events | 988 | 3140 | Using selector: SelectSelector
+2023-06-29 09:17:18,392 | INFO | django.utils.autoreload | autoreload | 988 | 3140 | Watching for file changes with StatReloader
+2023-06-29 09:17:46,148 | INFO | django.utils.autoreload | autoreload | 988 | 3140 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\signals.py changed, reloading.
+2023-06-29 09:17:48,017 | DEBUG | asyncio | selector_events | 17788 | 18960 | Using selector: SelectSelector
+2023-06-29 09:17:49,453 | DEBUG | urllib3.connectionpool | connectionpool | 17788 | 18960 | Starting new HTTPS connection (1): newsdata.io:443
+2023-06-29 09:17:50,190 | DEBUG | urllib3.connectionpool | connectionpool | 17788 | 18960 | https://newsdata.io:443 "GET /api/1/news?apikey=pub_14763965a946ce477ec7b9d12746e1e0c5adf&language=en&q=World%20Economy HTTP/1.1" 200 90190
+2023-06-29 09:17:50,618 | DEBUG | asyncio | selector_events | 17788 | 18960 | Using selector: SelectSelector
+2023-06-29 09:17:50,815 | INFO | django.utils.autoreload | autoreload | 17788 | 18960 | Watching for file changes with StatReloader
+2023-06-29 09:17:52,830 | INFO | daphne.server | server | 17788 | 6996 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-06-29 09:17:52,846 | INFO | daphne.server | server | 17788 | 6996 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-06-29 09:17:52,848 | INFO | daphne.server | server | 17788 | 6996 | Listening on TCP address 127.0.0.1:8000
+2023-06-29 09:18:05,912 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52471]
+2023-06-29 09:18:05,954 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:18:06,200 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52471]
+2023-06-29 09:18:06,201 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52471]
+2023-06-29 09:18:06,202 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52471]
+2023-06-29 09:18:06,203 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/ 200 [0.29, 127.0.0.1:52471][0m
+2023-06-29 09:19:11,344 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,349 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:11,554 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,555 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,556 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,557 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/core/user/ 200 [0.21, 127.0.0.1:52490][0m
+2023-06-29 09:19:11,629 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,633 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:11,659 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,660 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,662 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:11,662 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52490][0m
+2023-06-29 09:19:30,234 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,240 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:30,309 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,310 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,311 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,312 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/block/ 200 [0.08, 127.0.0.1:52490][0m
+2023-06-29 09:19:30,357 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,361 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:30,380 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,381 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,383 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:30,384 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52490][0m
+2023-06-29 09:19:32,387 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,392 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:32,562 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,564 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,565 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,566 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/block/add/ 200 [0.18, 127.0.0.1:52490][0m
+2023-06-29 09:19:32,632 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,637 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:19:32,657 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,659 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,660 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:19:32,661 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52490][0m
+2023-06-29 09:20:02,862 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'POST' request for ['127.0.0.1', 52490]
+2023-06-29 09:20:02,864 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:20:02,925 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing BlpImagePlugin
+2023-06-29 09:20:02,928 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing BmpImagePlugin
+2023-06-29 09:20:02,929 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing BufrStubImagePlugin
+2023-06-29 09:20:02,933 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing CurImagePlugin
+2023-06-29 09:20:02,936 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing DcxImagePlugin
+2023-06-29 09:20:02,941 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing DdsImagePlugin
+2023-06-29 09:20:02,945 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing EpsImagePlugin
+2023-06-29 09:20:03,011 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing FitsStubImagePlugin
+2023-06-29 09:20:03,014 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing FliImagePlugin
+2023-06-29 09:20:03,017 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing FpxImagePlugin
+2023-06-29 09:20:03,020 | DEBUG | PIL.Image | Image | 17788 | 18924 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2023-06-29 09:20:03,021 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing FtexImagePlugin
+2023-06-29 09:20:03,024 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing GbrImagePlugin
+2023-06-29 09:20:03,026 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing GifImagePlugin
+2023-06-29 09:20:03,027 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing GribStubImagePlugin
+2023-06-29 09:20:03,031 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing Hdf5StubImagePlugin
+2023-06-29 09:20:03,034 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing IcnsImagePlugin
+2023-06-29 09:20:03,040 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing IcoImagePlugin
+2023-06-29 09:20:03,043 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing ImImagePlugin
+2023-06-29 09:20:03,048 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing ImtImagePlugin
+2023-06-29 09:20:03,050 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing IptcImagePlugin
+2023-06-29 09:20:03,053 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing JpegImagePlugin
+2023-06-29 09:20:03,054 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing Jpeg2KImagePlugin
+2023-06-29 09:20:03,054 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing McIdasImagePlugin
+2023-06-29 09:20:03,057 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing MicImagePlugin
+2023-06-29 09:20:03,061 | DEBUG | PIL.Image | Image | 17788 | 18924 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2023-06-29 09:20:03,062 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing MpegImagePlugin
+2023-06-29 09:20:03,065 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing MpoImagePlugin
+2023-06-29 09:20:03,068 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing MspImagePlugin
+2023-06-29 09:20:03,070 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PalmImagePlugin
+2023-06-29 09:20:03,076 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PcdImagePlugin
+2023-06-29 09:20:03,080 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PcxImagePlugin
+2023-06-29 09:20:03,081 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PdfImagePlugin
+2023-06-29 09:20:03,097 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PixarImagePlugin
+2023-06-29 09:20:03,099 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PngImagePlugin
+2023-06-29 09:20:03,100 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PpmImagePlugin
+2023-06-29 09:20:03,101 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing PsdImagePlugin
+2023-06-29 09:20:03,103 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing SgiImagePlugin
+2023-06-29 09:20:03,105 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing SpiderImagePlugin
+2023-06-29 09:20:03,108 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing SunImagePlugin
+2023-06-29 09:20:03,112 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing TgaImagePlugin
+2023-06-29 09:20:03,115 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing TiffImagePlugin
+2023-06-29 09:20:03,115 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing WebPImagePlugin
+2023-06-29 09:20:03,154 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing WmfImagePlugin
+2023-06-29 09:20:03,156 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing XbmImagePlugin
+2023-06-29 09:20:03,162 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing XpmImagePlugin
+2023-06-29 09:20:03,165 | DEBUG | PIL.Image | Image | 17788 | 18924 | Importing XVThumbImagePlugin
+2023-06-29 09:20:03,183 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 17788 | 18924 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/avatars/leo/15.jpg'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'bf4168ad-1655-11ee-a467-34f64b613077'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2023-06-29 09:20:03,190 | DEBUG | urllib3.connectionpool | connectionpool | 17788 | 18924 | Starting new HTTPS connection (1): pyramidstorages.blob.core.windows.net:443
+2023-06-29 09:20:04,293 | DEBUG | urllib3.connectionpool | connectionpool | 17788 | 18924 | https://pyramidstorages.blob.core.windows.net:443 "HEAD /media/avatars/leo/15.jpg HTTP/1.1" 404 0
+2023-06-29 09:20:04,295 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 17788 | 18924 | Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cb61f634-301e-0028-3b62-aa0b56000000'
+    'x-ms-client-request-id': 'bf4168ad-1655-11ee-a467-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Thu, 29 Jun 2023 08:20:04 GMT'
+2023-06-29 09:20:04,298 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 17788 | 18924 | Request URL: 'https://pyramidstorages.blob.core.windows.net/media/avatars/leo/15.jpg?timeout=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '18144'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'If-None-Match': '*'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.16.0 Python/3.8.2 (Windows-10-10.0.19041-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'bfeb9e58-1655-11ee-80ea-34f64b613077'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2023-06-29 09:20:04,845 | DEBUG | urllib3.connectionpool | connectionpool | 17788 | 18924 | https://pyramidstorages.blob.core.windows.net:443 "PUT /media/avatars/leo/15.jpg?timeout=20 HTTP/1.1" 201 0
+2023-06-29 09:20:04,851 | INFO | azure.core.pipeline.policies.http_logging_policy | _universal | 17788 | 18924 | Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Thu, 29 Jun 2023 08:20:05 GMT'
+    'ETag': '"0x8DB7879A4BB4FC3"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cb61f6ab-301e-0028-2762-aa0b56000000'
+    'x-ms-client-request-id': 'bfeb9e58-1655-11ee-80ea-34f64b613077'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 29 Jun 2023 08:20:05 GMT'
+2023-06-29 09:20:04,911 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 302 response started for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,912 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,913 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,914 | INFO | django.channels.server | runserver | 17788 | 6996 | [32mHTTP POST /babla/block/block/add/ 302 [2.05, 127.0.0.1:52490][0m
+2023-06-29 09:20:04,920 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,923 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:20:04,988 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,990 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,991 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:20:04,992 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/block/ 200 [0.07, 127.0.0.1:52490][0m
+2023-06-29 09:20:05,034 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:20:05,040 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:20:05,079 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:20:05,081 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:20:05,082 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:20:05,083 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:52490][0m
+2023-06-29 09:20:41,518 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,526 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:20:41,609 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,610 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,612 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,613 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/post/ 200 [0.09, 127.0.0.1:52490][0m
+2023-06-29 09:20:41,680 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,689 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:20:41,714 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,720 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,723 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:20:41,726 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52490][0m
+2023-06-29 09:21:18,053 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,059 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:21:18,262 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,262 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,263 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,264 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/post/7/change/ 200 [0.21, 127.0.0.1:52490][0m
+2023-06-29 09:21:18,321 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,332 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:21:18,360 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,362 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,364 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:21:18,365 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52490][0m
+2023-06-29 09:21:39,929 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP b'GET' request for ['127.0.0.1', 52490]
+2023-06-29 09:21:39,936 | DEBUG | asyncio | selector_events | 17788 | 18924 | Using selector: SelectSelector
+2023-06-29 09:21:40,016 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP 200 response started for ['127.0.0.1', 52490]
+2023-06-29 09:21:40,018 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP close for ['127.0.0.1', 52490]
+2023-06-29 09:21:40,020 | DEBUG | daphne.http_protocol | http_protocol | 17788 | 6996 | HTTP response complete for ['127.0.0.1', 52490]
+2023-06-29 09:21:40,021 | INFO | django.channels.server | runserver | 17788 | 6996 | [mHTTP GET /babla/block/post/ 200 [0.09, 127.0.0.1:52490][0m
+2023-06-29 09:23:49,411 | DEBUG | asyncio | selector_events | 9260 | 16096 | Using selector: SelectSelector
