@@ -209,7 +209,7 @@ class Post(models.Model):
     block = models.ForeignKey(Block, on_delete=models.CASCADE)
     attachment = models.ImageField(
         upload_to=post_to, blank=True, null=True, max_length=100000
-    )#this attachment is a picture, dont ask why its being called attachment.
+    )
     video = models.FileField(
         upload_to=post_to, blank=True, null=True, max_length=1000000
     )
