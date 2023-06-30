@@ -7,7 +7,6 @@ Automat==20.2.0
 autopep8==1.5.7
 azure-core==1.26.4
 azure-storage-blob==12.16.0
-backports.zoneinfo==0.2.1
 boto3==1.26.36
 botocore==1.29.36
 certifi==2021.5.30
@@ -87,10 +86,8 @@ sqlparse==0.4.2
 sseclient-py==1.7.2
 toml==0.10.2
 Twisted==22.8.0
-twisted-iocpsupport==1.0.2
 txaio==22.2.1
 typing_extensions==4.4.0
-tzdata==2023.3
 uritemplate==4.1.1
 urllib3==1.26.7
 websockets==10.4
