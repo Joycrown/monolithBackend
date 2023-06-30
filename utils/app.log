@@ -1136,3 +1136,11 @@ Response headers:
 2023-06-30 00:37:36,183 | DEBUG | urllib3.connectionpool | connectionpool | 7096 | 21248 | Starting new HTTPS connection (1): newsdata.io:443
 2023-06-30 00:39:02,690 | DEBUG | asyncio | selector_events | 14924 | 18508 | Using selector: SelectSelector
 2023-06-30 00:39:13,356 | DEBUG | asyncio | selector_events | 14924 | 18508 | Using selector: SelectSelector
+2023-06-30 13:14:09,295 | DEBUG | asyncio | selector_events | 6624 | 12688 | Using selector: SelectSelector
+2023-06-30 13:14:13,914 | DEBUG | asyncio | selector_events | 6276 | 13504 | Using selector: SelectSelector
+2023-06-30 13:14:16,532 | INFO | django.utils.autoreload | autoreload | 6276 | 13504 | Watching for file changes with StatReloader
+2023-06-30 13:14:19,717 | DEBUG | asyncio | selector_events | 6276 | 13504 | Using selector: SelectSelector
+2023-06-30 13:14:19,872 | DEBUG | asyncio | selector_events | 6624 | 12688 | Using selector: SelectSelector
+2023-06-30 13:14:40,203 | DEBUG | asyncio | selector_events | 10212 | 12608 | Using selector: SelectSelector
+2023-06-30 13:15:34,085 | DEBUG | asyncio | selector_events | 20884 | 18872 | Using selector: SelectSelector
+2023-06-30 13:15:38,671 | DEBUG | asyncio | selector_events | 20884 | 18872 | Using selector: SelectSelector
