@@ -61,3 +61,4 @@ jobs:
           app-name: 'pyramidlive'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F21A191748141E5BB6C758CAEDB477A }}
+
