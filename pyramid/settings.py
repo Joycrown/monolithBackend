@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'pyramid',
         'USER': 'pyramid',
         'PASSWORD': 'Universe&007',
-        'HOST': 'pyramidlive-server.postgres.database.azure.com',
+        'HOST': 'pyramid.postgres.database.azure.com',
     }
 }
 
