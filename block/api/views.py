@@ -65,7 +65,7 @@ from rest_framework.generics import (
 
 class CreateBlockView(CreateAPIView):
     permission_classes = (AllowAny,)
-    serializer_class = BlockSerializer
+    serializer_class = BlockDetailSerializer
     parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
@@ -83,7 +83,7 @@ class CreateBlockView(CreateAPIView):
             block = Block.objects.create(
                 creator=creator, name=name, block_type=block_type, category=category, avatar=avatar, cover=cover, desc=desc, about=about
             )
-        d = BlockSerializer(block).data
+        d = BlockDetailSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
@@ -407,6 +407,24 @@ class PostCreateView(CreateAPIView):
         d = PostSerializer(post).data
         return Response(d, status=status.HTTP_201_CREATED)
 
+
+class PostDeleteView(APIView):
+    permission_classes = (AllowAny, )
+
+    def post(self,request):
+        data = request.data
+        post = get_object_or_404(Post,id=data.get('post_id'))
+        if post.author == request.user:
+            post.delete()
+            return Response({"post_deleted": True})
+
+
+class PostUpdateView(UpdateAPIView):
+    lookup_field = "id"
+    permission_classes = (AllowAny,)
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()
+    parser_classes = (FormParser, MultiPartParser)
 
 #class ListPostsOfUser(ListAPIView):
 #    queryset = Post.objects.all()
