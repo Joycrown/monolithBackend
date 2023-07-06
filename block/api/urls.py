@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostCreateView, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
+from .views import PostUpdateView, PostDeleteView, PostCreateView, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
 
 
 urlpatterns = [
@@ -22,6 +22,8 @@ urlpatterns = [
     # POST VIEWS    
     path('create-post/', CreatePostView.as_view(), name='create_post'),
     path('post-create/', PostCreateView.as_view(), name='post_create'),
+    path('post-delete/', PostDeleteView.as_view(), name='post_delete'),
+    path('post/<int:id>/update/', PostUpdateView.as_view(), name='update_post'),
     path('post/vote/', VoteOnPost, name='vote_post'),
     path('u/voted/post/', user_voted_post, name='user_voted_post'),
     path('retrieve/post/<int:pk>/', RetrievePost.as_view(), name='retrieve_post'),
