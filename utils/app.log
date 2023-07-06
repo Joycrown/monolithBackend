@@ -1144,3 +1144,166 @@ Response headers:
 2023-06-30 13:14:40,203 | DEBUG | asyncio | selector_events | 10212 | 12608 | Using selector: SelectSelector
 2023-06-30 13:15:34,085 | DEBUG | asyncio | selector_events | 20884 | 18872 | Using selector: SelectSelector
 2023-06-30 13:15:38,671 | DEBUG | asyncio | selector_events | 20884 | 18872 | Using selector: SelectSelector
+2023-07-01 14:56:57,894 | DEBUG | asyncio | selector_events | 14508 | 19372 | Using selector: SelectSelector
+2023-07-01 14:57:08,378 | DEBUG | asyncio | selector_events | 14420 | 15356 | Using selector: SelectSelector
+2023-07-01 14:57:11,274 | INFO | django.utils.autoreload | autoreload | 14420 | 15356 | Watching for file changes with StatReloader
+2023-07-01 14:57:18,595 | INFO | daphne.server | server | 14420 | 17068 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-01 14:57:18,595 | INFO | daphne.server | server | 14420 | 17068 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-01 14:57:18,597 | INFO | daphne.server | server | 14420 | 17068 | Listening on TCP address 127.0.0.1:8000
+2023-07-01 15:11:32,693 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP b'GET' request for ['127.0.0.1', 58388]
+2023-07-01 15:11:32,787 | DEBUG | asyncio | selector_events | 14420 | 18656 | Using selector: SelectSelector
+2023-07-01 15:11:32,816 | WARNING | django.request | log | 14420 | 14036 | Not Found: /
+2023-07-01 15:11:32,818 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP 404 response started for ['127.0.0.1', 58388]
+2023-07-01 15:11:32,820 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP close for ['127.0.0.1', 58388]
+2023-07-01 15:11:32,820 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP response complete for ['127.0.0.1', 58388]
+2023-07-01 15:11:32,821 | WARNING | django.channels.server | runserver | 14420 | 17068 | [33mHTTP GET / 404 [0.13, 127.0.0.1:58388][0m
+2023-07-01 15:11:32,826 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP b'GET' request for ['127.0.0.1', 58391]
+2023-07-01 15:11:32,830 | DEBUG | asyncio | selector_events | 14420 | 18656 | Using selector: SelectSelector
+2023-07-01 15:11:32,842 | WARNING | django.request | log | 14420 | 14036 | Not Found: /
+2023-07-01 15:11:32,843 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP 404 response started for ['127.0.0.1', 58391]
+2023-07-01 15:11:32,845 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP close for ['127.0.0.1', 58391]
+2023-07-01 15:11:32,847 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP response complete for ['127.0.0.1', 58391]
+2023-07-01 15:11:32,848 | WARNING | django.channels.server | runserver | 14420 | 17068 | [33mHTTP GET / 404 [0.02, 127.0.0.1:58391][0m
+2023-07-01 15:12:02,721 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP b'GET' request for ['127.0.0.1', 58401]
+2023-07-01 15:12:02,730 | DEBUG | asyncio | selector_events | 14420 | 18656 | Using selector: SelectSelector
+2023-07-01 15:12:04,029 | WARNING | django.request | log | 14420 | 14036 | Method Not Allowed: /block/block/create/
+2023-07-01 15:12:04,033 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP 405 response started for ['127.0.0.1', 58401]
+2023-07-01 15:12:04,035 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP close for ['127.0.0.1', 58401]
+2023-07-01 15:12:04,037 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP response complete for ['127.0.0.1', 58401]
+2023-07-01 15:12:04,040 | WARNING | django.channels.server | runserver | 14420 | 17068 | [31;1mHTTP GET /block/block/create/ 405 [1.32, 127.0.0.1:58401][0m
+2023-07-01 15:13:07,559 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP b'POST' request for ['127.0.0.1', 58420]
+2023-07-01 15:13:07,567 | DEBUG | asyncio | selector_events | 14420 | 18656 | Using selector: SelectSelector
+2023-07-01 15:13:07,692 | WARNING | django.request | log | 14420 | 14036 | Not Found: /block/block/create/
+2023-07-01 15:13:07,694 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP 404 response started for ['127.0.0.1', 58420]
+2023-07-01 15:13:07,694 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP close for ['127.0.0.1', 58420]
+2023-07-01 15:13:07,695 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP response complete for ['127.0.0.1', 58420]
+2023-07-01 15:13:07,697 | WARNING | django.channels.server | runserver | 14420 | 17068 | [33mHTTP POST /block/block/create/ 404 [0.14, 127.0.0.1:58420][0m
+2023-07-01 15:15:23,434 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP b'POST' request for ['127.0.0.1', 58451]
+2023-07-01 15:15:23,442 | DEBUG | asyncio | selector_events | 14420 | 18656 | Using selector: SelectSelector
+2023-07-01 15:15:23,513 | WARNING | django.request | log | 14420 | 14036 | Not Found: /block/block/create/
+2023-07-01 15:15:23,515 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP 404 response started for ['127.0.0.1', 58451]
+2023-07-01 15:15:23,516 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP close for ['127.0.0.1', 58451]
+2023-07-01 15:15:23,517 | DEBUG | daphne.http_protocol | http_protocol | 14420 | 17068 | HTTP response complete for ['127.0.0.1', 58451]
+2023-07-01 15:15:23,518 | WARNING | django.channels.server | runserver | 14420 | 17068 | [33mHTTP POST /block/block/create/ 404 [0.09, 127.0.0.1:58451][0m
+2023-07-01 15:17:36,718 | INFO | django.utils.autoreload | autoreload | 14420 | 15356 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\block\api\views.py changed, reloading.
+2023-07-01 15:17:36,806 | DEBUG | asyncio | selector_events | 14420 | 15356 | Using selector: SelectSelector
+2023-07-01 15:17:42,453 | DEBUG | asyncio | selector_events | 1248 | 21292 | Using selector: SelectSelector
+2023-07-01 15:17:45,069 | INFO | django.utils.autoreload | autoreload | 1248 | 21292 | Watching for file changes with StatReloader
+2023-07-01 15:17:50,617 | INFO | daphne.server | server | 1248 | 20972 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-01 15:17:50,619 | INFO | daphne.server | server | 1248 | 20972 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-01 15:17:50,632 | INFO | daphne.server | server | 1248 | 20972 | Listening on TCP address 127.0.0.1:8000
+2023-07-01 15:20:30,862 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'POST' request for ['127.0.0.1', 58524]
+2023-07-01 15:20:31,011 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:20:31,391 | WARNING | django.request | log | 1248 | 6664 | Not Found: /block/block/create/
+2023-07-01 15:20:31,445 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 404 response started for ['127.0.0.1', 58524]
+2023-07-01 15:20:31,447 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58524]
+2023-07-01 15:20:31,448 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58524]
+2023-07-01 15:20:31,449 | WARNING | django.channels.server | runserver | 1248 | 20972 | [33mHTTP POST /block/block/create/ 404 [0.59, 127.0.0.1:58524][0m
+2023-07-01 15:21:25,224 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'POST' request for ['127.0.0.1', 58563]
+2023-07-01 15:21:25,252 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:21:25,397 | WARNING | django.request | log | 1248 | 6664 | Not Found: /block/block/create/
+2023-07-01 15:21:25,405 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 404 response started for ['127.0.0.1', 58563]
+2023-07-01 15:21:25,407 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58563]
+2023-07-01 15:21:25,409 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58563]
+2023-07-01 15:21:25,410 | WARNING | django.channels.server | runserver | 1248 | 20972 | [33mHTTP POST /block/block/create/ 404 [0.19, 127.0.0.1:58563][0m
+2023-07-01 15:22:43,209 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58624]
+2023-07-01 15:22:43,220 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:22:43,418 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:22:43,423 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58624]
+2023-07-01 15:22:43,434 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58624]
+2023-07-01 15:22:43,441 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58624]
+2023-07-01 15:22:43,443 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.23, 127.0.0.1:58624][0m
+2023-07-01 15:23:23,346 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58668]
+2023-07-01 15:23:23,353 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:23:23,432 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:23:23,434 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58668]
+2023-07-01 15:23:23,434 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58668]
+2023-07-01 15:23:23,436 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58668]
+2023-07-01 15:23:23,437 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.09, 127.0.0.1:58668][0m
+2023-07-01 15:23:28,332 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58678]
+2023-07-01 15:23:28,338 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:23:28,434 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:23:28,436 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58678]
+2023-07-01 15:23:28,436 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58678]
+2023-07-01 15:23:28,438 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58678]
+2023-07-01 15:23:28,439 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.11, 127.0.0.1:58678][0m
+2023-07-01 15:23:36,181 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58689]
+2023-07-01 15:23:36,188 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:23:36,270 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:23:36,273 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58689]
+2023-07-01 15:23:36,275 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58689]
+2023-07-01 15:23:36,276 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58689]
+2023-07-01 15:23:36,277 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.10, 127.0.0.1:58689][0m
+2023-07-01 15:24:26,672 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58715]
+2023-07-01 15:24:26,676 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:24:26,718 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/create-post/
+2023-07-01 15:24:26,725 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58715]
+2023-07-01 15:24:26,726 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58715]
+2023-07-01 15:24:26,728 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58715]
+2023-07-01 15:24:26,730 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/create-post/ 405 [0.06, 127.0.0.1:58715][0m
+2023-07-01 15:24:51,697 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58730]
+2023-07-01 15:24:51,702 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:24:51,748 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/create-post/
+2023-07-01 15:24:51,751 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58730]
+2023-07-01 15:24:51,753 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58730]
+2023-07-01 15:24:51,754 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58730]
+2023-07-01 15:24:51,756 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/create-post/ 405 [0.06, 127.0.0.1:58730][0m
+2023-07-01 15:24:54,615 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58730]
+2023-07-01 15:24:54,622 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:24:54,655 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/create-post/
+2023-07-01 15:24:54,658 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58730]
+2023-07-01 15:24:54,660 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58730]
+2023-07-01 15:24:54,661 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58730]
+2023-07-01 15:24:54,663 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/create-post/ 405 [0.05, 127.0.0.1:58730][0m
+2023-07-01 15:25:27,534 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'OPTIONS' request for ['127.0.0.1', 58759]
+2023-07-01 15:25:27,540 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:25:27,723 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 200 response started for ['127.0.0.1', 58759]
+2023-07-01 15:25:27,724 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58759]
+2023-07-01 15:25:27,725 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58759]
+2023-07-01 15:25:27,727 | INFO | django.channels.server | runserver | 1248 | 20972 | [mHTTP OPTIONS /block/block/create/ 200 [0.19, 127.0.0.1:58759][0m
+2023-07-01 15:26:10,694 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'OPTIONS' request for ['127.0.0.1', 58770]
+2023-07-01 15:26:10,698 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:26:10,879 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 200 response started for ['127.0.0.1', 58770]
+2023-07-01 15:26:10,881 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58770]
+2023-07-01 15:26:10,881 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58770]
+2023-07-01 15:26:10,882 | INFO | django.channels.server | runserver | 1248 | 20972 | [mHTTP OPTIONS /block/block/create/ 200 [0.19, 127.0.0.1:58770][0m
+2023-07-01 15:26:28,712 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'POST' request for ['127.0.0.1', 58777]
+2023-07-01 15:26:28,719 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:26:28,865 | WARNING | django.request | log | 1248 | 6664 | Not Found: /block/block/create/
+2023-07-01 15:26:28,866 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 404 response started for ['127.0.0.1', 58777]
+2023-07-01 15:26:28,876 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58777]
+2023-07-01 15:26:28,877 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58777]
+2023-07-01 15:26:28,878 | WARNING | django.channels.server | runserver | 1248 | 20972 | [33mHTTP POST /block/block/create/ 404 [0.17, 127.0.0.1:58777][0m
+2023-07-01 15:26:31,968 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'OPTIONS' request for ['127.0.0.1', 58782]
+2023-07-01 15:26:31,974 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:26:32,191 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 200 response started for ['127.0.0.1', 58782]
+2023-07-01 15:26:32,192 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58782]
+2023-07-01 15:26:32,194 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58782]
+2023-07-01 15:26:32,195 | INFO | django.channels.server | runserver | 1248 | 20972 | [mHTTP OPTIONS /block/block/create/ 200 [0.23, 127.0.0.1:58782][0m
+2023-07-01 15:26:44,377 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58792]
+2023-07-01 15:26:44,381 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:26:44,505 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:26:44,509 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58792]
+2023-07-01 15:26:44,521 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58792]
+2023-07-01 15:26:44,530 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58792]
+2023-07-01 15:26:44,537 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.16, 127.0.0.1:58792][0m
+2023-07-01 15:26:49,147 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'OPTIONS' request for ['127.0.0.1', 58803]
+2023-07-01 15:26:49,152 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:26:49,291 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 200 response started for ['127.0.0.1', 58803]
+2023-07-01 15:26:49,293 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58803]
+2023-07-01 15:26:49,294 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58803]
+2023-07-01 15:26:49,295 | INFO | django.channels.server | runserver | 1248 | 20972 | [mHTTP OPTIONS /block/block/create/ 200 [0.15, 127.0.0.1:58803][0m
+2023-07-01 15:28:02,680 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58832]
+2023-07-01 15:28:02,687 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:28:02,759 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/block/create/
+2023-07-01 15:28:02,760 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58832]
+2023-07-01 15:28:02,762 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58832]
+2023-07-01 15:28:02,763 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58832]
+2023-07-01 15:28:02,765 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/block/create/ 405 [0.08, 127.0.0.1:58832][0m
+2023-07-01 15:28:47,074 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP b'GET' request for ['127.0.0.1', 58857]
+2023-07-01 15:28:47,079 | DEBUG | asyncio | selector_events | 1248 | 14804 | Using selector: SelectSelector
+2023-07-01 15:28:47,097 | WARNING | django.request | log | 1248 | 6664 | Method Not Allowed: /block/create-post/
+2023-07-01 15:28:47,100 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP 405 response started for ['127.0.0.1', 58857]
+2023-07-01 15:28:47,101 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58857]
+2023-07-01 15:28:47,103 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58857]
+2023-07-01 15:28:47,104 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/create-post/ 405 [0.03, 127.0.0.1:58857][0m
