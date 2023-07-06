@@ -441,6 +441,14 @@ class PostUpdateView(UpdateAPIView):
     #    serializer = self.get_serializer(result_page, many=True)
      #   return paginator.get_paginated_response({'data':serializer.data, 'noti_count': noti_count})
 
+
+class PostDeleteView(DestroyAPIView):
+    lookup_field = "id"
+    permission_classes = (AllowAny,)
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()
+
+
 @api_view(['GET'])
 @permission_classes((AllowAny,))
 def ListPostsOfUser(request, username):

@@ -11,7 +11,7 @@ def finance_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Finance"
       username = "pyramid"
-      pk = 6
+      pk = 10
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -64,8 +64,8 @@ def finance_post():
 def crypto_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Cryptocurrency"
-      username = "lumba"
-      pk = 2
+      username = "leom"
+      pk = 3
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -118,8 +118,8 @@ def crypto_post():
 def stock_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Stocks"
-      username = "roland"
-      pk = 3
+      username = "raymund"
+      pk = 8
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -172,8 +172,8 @@ def stock_post():
 def real_estate_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Real estate"
-      username = "benlo"
-      pk = 1
+      username = "isabelle"
+      pk = 2
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -226,8 +226,8 @@ def real_estate_post():
 def forex_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Forex"
-      username = "pyramid"
-      pk = 5
+      username = "lelle"
+      pk = 10
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -280,8 +280,8 @@ def forex_post():
 def economy_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "World Economy"
-      username = "benlo"
-      pk = 6
+      username = "leom"
+      pk = 7
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
