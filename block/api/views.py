@@ -428,7 +428,7 @@ class PostUpdateView(UpdateAPIView):
         author = get_object_or_404(User, username=username)
 
         with transaction.atomic():
-            if post:    
+            if post.author == request.user:    
                 post = Post.objects.update(
                     title=title,
                     attachment=attachment,
