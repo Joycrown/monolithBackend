@@ -63,9 +63,8 @@ def update_user(sender, instance, created, **kwargs):
         block.year = now.year
         block.save()
 
-#economy_post()
-#forex_post()
-#real_estate_post()
-#stock_post()
-#crypto_post()
-#finance_post()
+forex_post()
+real_estate_post()
+stock_post()
+crypto_post()
+finance_post()
