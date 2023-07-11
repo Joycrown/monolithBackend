@@ -4,7 +4,6 @@ from django.db.models import (Model, TextField, DateTimeField, ForeignKey, ManyT
 from asgiref.sync import async_to_sync
 from django.utils.translation import gettext_lazy as _
 from channels.layers import get_channel_layer
-from notifications.models import Notification
 
 from core.models import User
 
@@ -27,7 +26,7 @@ class Request(Model):
 
     user = ForeignKey(User, related_name='request_owner', on_delete=CASCADE)
     chatroom = ForeignKey(Chatroom, related_name='request_target', on_delete=CASCADE)
-    permission = models.CharField(max_length=32, choices=PermissionsTypes.choices, default=PermissionsTypes.WAITING)
+    permission = models.CharField(max_length=15, null=True, blank=True)
 
 
 
@@ -52,14 +51,6 @@ class Message(Model):
         #    'type': 'recieve_group_message',
         #    'message': '{}'.format(self.id)
         #}
-        Notification.objects.get_or_create(
-                notification_type="CT",
-                comments=(
-                    f"@{self.user.username} sent a chat request"
-                ),
-                to_user=post.author,
-                from_user=self.user,
-        )
 
         channel_layer = get_channel_layer()
         print("user.id {}".format(self.user.id))
