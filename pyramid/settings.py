@@ -81,6 +81,7 @@ TEMPLATES = [
 ASGI_APPLICATION = "pyramid.routing.application"
 WSGI_APPLICATION = "pyramid.wsgi.application"
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
