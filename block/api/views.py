@@ -81,7 +81,14 @@ class CreateBlockView(CreateAPIView):
 
         with transaction.atomic():
             block = Block.objects.create(
-                creator=creator, name=name, block_type=block_type, category=category, avatar=avatar, cover=cover, desc=desc, about=about
+                creator=creator, 
+                name=name, 
+                block_type=block_type, 
+                category=category, 
+                avatar=avatar, 
+                cover=cover, 
+                desc=desc, 
+                about=about
             )
         d = BlockDetailSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
@@ -408,6 +415,15 @@ class PostCreateView(CreateAPIView):
         return Response(d, status=status.HTTP_201_CREATED)
 
 
+
+class PostUpdateView(UpdateAPIView):
+    lookup_field = "id"
+    permission_classes = (AllowAny,)
+    parser_classes = (FormParser, MultiPartParser)
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()
+
+
 class PostDeleteView(APIView):
     permission_classes = (AllowAny, )
 
@@ -417,72 +433,6 @@ class PostDeleteView(APIView):
         if post.author == request.user:
             post.delete()
             return Response({"post_deleted": True})
-
-
-class PostCreateView(UpdateAPIView):
-    permission_classes = (AllowAny,)
-    parser_classes = (FormParser, MultiPartParser)
-    serializer_class = PostSerializer
-
-    def update(self, request, *args, **kwargs):
-        title = request.data.get("title")
-        pk = request.data.get("pk")
-        id = request.data.get("id")
-        attachment = request.data.get("attachment")
-        username = request.data.get("username")
-        video = request.data.get("video")
-        link = request.data.get("link")
-        text = request.data.get("text")
-        post_type = request.data.get("post_type")
-        post = get_object_or_404(Post, id=id)
-        block = get_object_or_404(Block, id=pk)
-        author = get_object_or_404(User, username=username)
-
-        with transaction.atomic():
-            if post:    
-                post = Post.objects.update(
-                    title=title,
-                    attachment=attachment,
-                    video=video,
-                    link=link,
-                    text=text,
-                    author=author,
-                    block=block,
-                    post_type=post_type,
-                )
-                d = PostSerializer(post).data
-                return Response(d, status=status.HTTP_201_CREATED)
-            else:
-                return Response({"there are no posts from user"}, status=status.HTTP_200_OK)
-        
-class PostUpdateView(UpdateAPIView):
-    lookup_field = "id"
-    permission_classes = (AllowAny,)
-    serializer_class = PostSerializer
-    queryset = Post.objects.all()
-    parser_classes = (FormParser, MultiPartParser)
-
-#class ListPostsOfUser(ListAPIView):
-#    queryset = Post.objects.all()
-#    permission_classes = (AllowAny,)
- #   pagination_class = CustomPagination
-  #  serializer_class = PostSerializer_detailed
-#
- #   def get(self, request, username, *args, **kwargs):
-  #      paginator = CustomPagination()
-  #      post = Post.objects.filter(
-    #        author__username=username, is_reviewed=True, is_deleted=False
-   #     )
-    #    result_page = paginator.paginate_queryset(post)
-    #    serializer = self.get_serializer(result_page, many=True)
-     #   return paginator.get_paginated_response({'data':serializer.data, 'noti_count': noti_count})
-
-
-class PostDeleteView(DestroyAPIView):
-    lookup_field = "id"
-    permission_classes = (AllowAny,)
-    serializer_class = PostSerializer
-    queryset = Post.objects.all()
 
 
 @api_view(['GET'])
