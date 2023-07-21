@@ -310,6 +310,25 @@ class ListBlocksUserIsModerator(ListAPIView):
                 )
 
 
+class ListBlocksUserIsJoined(ListAPIView):
+    permission_classes = (AllowAny,)
+    pagination_class = PageNumberPagination
+    serializer_class = BlockSerializer
+
+    def get(self, request, username):
+        blocks = Block.objects.all()
+        user = get_object_or_404(User, username=username)
+        for block in blocks:
+            if user in block.subscribers.all():
+                serializer = self.serializer_class(block, many=True)
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
+            else:
+                return Response(
+                    {"there are no blocks user is subscriber of"},
+                    status=status.HTTP_200_OK,
+                )
+
+
 @api_view(["POST"])
 @permission_classes((AllowAny,))
 def RePostView(request):
