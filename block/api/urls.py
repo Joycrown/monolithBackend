@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostUpdateView, PostDeleteView, PostCreateView, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
+from .views import PostUpdateView, PostDeleteView, PostCreateView, ListBlocksUserIsJoined, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
 
 
 urlpatterns = [
@@ -16,9 +16,10 @@ urlpatterns = [
     path('block/<str:name>/rules/', ListRulesOfBlock.as_view(), name='blocks_rules'),
     path("join/block/", join_block, name="join_block"),
     path('u/joined/block/', user_joined_block, name='user_joined_block'),
-    path('u/<str:username>/joined/blocks/', ListBlocksUserJoined.as_view(), name='joined_blocks'),
+    #path('u/<str:username>/joined/blocks/', ListBlocksUserJoined.as_view(), name='joined_blocks'),
     path('u/<str:username>/creator/blocks/', ListBlocksOfUser.as_view(), name='creator_blocks'),
     path('u/<str:username>/moderator/blocks/', ListBlocksUserIsModerator.as_view(), name='moderator_blocks'),
+    path('u/<str:username>/joined/blocks/', ListBlocksUserIsJoined.as_view(), name='joined_blocks'),
     # POST VIEWS    
     path('create-post/', CreatePostView.as_view(), name='create_post'),
     path('post-create/', PostCreateView.as_view(), name='post_create'),
