@@ -260,6 +260,7 @@ class CreateRuleView(CreateAPIView):
     permission_classes = (AllowAny,)
     renderer_classes = (JSONRenderer,)
     serializer_class = RuleSerializer
+    parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
         name = request.data.get("name")
