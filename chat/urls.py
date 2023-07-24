@@ -1,11 +1,7 @@
-from django.urls import include, path
-from rest_framework import routers
-from .views import ChatroomViewSet, MessageViewSet
-
-router = routers.DefaultRouter()
-router.register(r'chatrooms', ChatroomViewSet)
-router.register(r'messages', MessageViewSet)
+from django.urls import path
+from .views import return_chat_messages,get_rooms
 
 urlpatterns = [
-    path(r'', include(router.urls)),
+    path('create/<username>/',return_chat_messages , name="return_chat_messages"),
+    path('get_rooms/' ,get_rooms , name="get_rooms")
 ]

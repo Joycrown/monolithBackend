@@ -1,71 +1,137 @@
 from django.db import models
-from django.db.models import (Model, TextField, DateTimeField, ForeignKey, ManyToManyField, 
-                    CharField, CASCADE)
-from asgiref.sync import async_to_sync
-from django.utils.translation import gettext_lazy as _
-from channels.layers import get_channel_layer
-
+from datetime import date, datetime
+from django.utils import timezone
+from utils.utils import MONTH as month
 from core.models import User
-
-
-class Chatroom(Model): # Chatroom == Group == one-to-one | on-to-many users
-    name = CharField(max_length=150)
-    users = ManyToManyField(User, related_name='recipients')
-    created_at = DateTimeField(auto_now_add=True)
-    updated_at = DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return str(self.id)
-
-
-class Request(Model):
-    class PermissionsTypes(models.TextChoices):
-        WAITING = 'waiting', _("Waiting")
-        GRANTED = 'granted', _('Granted')
-        DENIED = 'denied', _("Denied")
-
-    user = ForeignKey(User, related_name='request_owner', on_delete=CASCADE)
-    chatroom = ForeignKey(Chatroom, related_name='request_target', on_delete=CASCADE)
-    permission = models.CharField(max_length=15, null=True, blank=True)
+from django.db.models import Q
 
 
 
-class Message(Model):
-    user = ForeignKey(User, on_delete=CASCADE, verbose_name='user', related_name='from_user')
-    chatroom = ForeignKey(Chatroom, on_delete=CASCADE, verbose_name='chatroom', related_name='chatroom')
-    created_at = DateTimeField(auto_now_add=True)
-    updated_at = DateTimeField(auto_now=True)
-    body = TextField(max_length=2000)
+def time_n_day_ago(instance):
+    now = datetime.now()
+    today = date.today()
+    current_hour = now.strftime("%H")
+    current_minutes = now.strftime("%M")
+    instance.day = today.day
+    instance.month = month[today.month]
+    instance.year = today.year
+    if current_hour == "01":
+        instance.time = f'1:{current_minutes} AM'
+    elif current_hour == "02":
+       instance.time = f'2:{current_minutes} AM'
+    elif current_hour == "03":
+       instance.time = f'3:{current_minutes} AM'
+    elif current_hour == "04":
+       instance.time = f'4:{current_minutes} AM'
+    elif current_hour == "05":
+       instance.time = f'5:{current_minutes} AM'
+    elif current_hour == "06":
+       instance.time = f'6:{current_minutes} AM'
+    elif current_hour == "07":
+       instance.time = f'7:{current_minutes} AM'
+    elif current_hour == "08":
+       instance.time = f'8:{current_minutes} AM'
+    elif current_hour == "09":
+       instance.time = f'9:{current_minutes} AM'
+    elif current_hour == "10":
+        instance.time = f'10:{current_minutes} AM'
+    elif current_hour == "11":
+        instance.time = f'11:{current_minutes} AM'
+    elif current_hour == "12":
+        instance.time = f'12:{current_minutes} PM'
+    elif current_hour == "13":
+       instance.time = f'1:{current_minutes} PM'
+    elif current_hour == "14":
+       instance.time = f'2:{current_minutes} PM'
+    elif current_hour == "15":
+       instance.time = f'3:{current_minutes} PM'
+    elif current_hour == "16":
+       instance.time = f'4:{current_minutes} PM'
+    elif current_hour == "17":
+       instance.time = f'5:{current_minutes} PM'
+    elif current_hour == "18":
+       instance.time = f'6:{current_minutes} PM'
+    elif current_hour == "19":
+       instance.time = f'7:{current_minutes} PM'
+    elif current_hour == "20":
+       instance.time = f'8:{current_minutes} PM'
+    elif current_hour == "21":
+       instance.time = f'9:{current_minutes} PM'
+    elif current_hour == "22":
+        instance.time = f'10:{current_minutes} PM'
+    elif current_hour == "23":
+        instance.time = f'11:{current_minutes} PM'
+    else:
+        instance.time = f'12:{current_minutes} AM'
 
-    def __str__(self):
-        return str(self.id)
 
-    def characters(self):
-        return len(self.body)
+class MessageManager(models.Manager):
+    def by_room(self, room):
+        messages = Message.objects.filter(room=room).order_by("-created_at")
+        return messages
 
-    def notify_ws_clients(self):
-        """
-        Inform client there is a new message.
-        """
-        #notification = {
-        #    'type': 'recieve_group_message',
-        #    'message': '{}'.format(self.id)
-        #}
 
-        channel_layer = get_channel_layer()
-        print("user.id {}".format(self.user.id))
-        print("user.id {}".format(self.user.id))
+class PrivateChatManager(models.Manager):
+    def create_room_if_none(self,u1,u2):
+        has_room = PrivateChat.objects.filter(Q(user1=u1 ,user2=u2)| Q(user1=u2,user2=u1)).first()
+        if not has_room:
+            print('not found so creating one ')
+            PrivateChat.objects.create(user1=u1,user2=u2)
+        return has_room  
 
-        async_to_sync(channel_layer.group_send)("{}".format(self.user.id), notification)
-        async_to_sync(channel_layer.group_send)("{}".format(self.user.id), notification)
 
+class BaseModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+
+class PrivateChat(BaseModel):
+    user1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user1")
+    user2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user2")
+    connected_users = models.ManyToManyField(
+        User, blank=True, related_name="connected_users")
+    is_active = models.BooleanField(default=False)
+    objects = PrivateChatManager()
+
+
+    def connect(self,user):
+        is_added = False
+        if not user in self.connected_users.all():
+            self.connected_users.add(user)
+            is_added = True
+        return is_added
+    
+    def disconnect(self,user):
+        is_removed = False
+        if not user in self.connected_users.all():
+            self.connected_users.remove(user)
+            is_removed = True
+        return is_removed
+    
+    def last_msg(self):
+        return self.message_set.all().last()
+    
+    def __str__(self) -> str:
+        return f'Chat : {self.user1} - {self.user2}'
+    
+
+class Message(BaseModel):
+    room = models.ForeignKey(PrivateChat, on_delete=models.CASCADE)
+    sender = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField(blank=False, null=False)
+    created = models.DateTimeField(default=timezone.now)
+    day = models.CharField(max_length=3, null=True, blank=True)
+    month = models.CharField(max_length=15, null=True, blank=True)
+    year = models.CharField(max_length=7, null=True, blank=True)
+    time = models.CharField(max_length=15, null=True, blank=True)
+    objects = MessageManager()
+
+    def __str__(self) -> str:
+        return f'From <Room - {self.room}>'
+    
     def save(self, *args, **kwargs):
-        """
-        Trims white spaces, saves the message and notifies the recipient via WS
-        if the message is new.
-        """
-        new = self.id
-        self.body = self.body.strip()  # Trimming whitespaces from the body
-        super(Message, self).save(*args, **kwargs)
-        if new is None:
-            self.notify_ws_clients()
+        time_n_day_ago(self)
+        super().save(*args, **kwargs)

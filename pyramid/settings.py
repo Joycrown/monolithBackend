@@ -92,7 +92,7 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramidlive-server',
+        'NAME': 'pyramidlive-database',
         'USER': 'yghkpqknnt',
         'PASSWORD': 'P7BX1TFMTIUPQPR4$',
         'HOST': 'pyramidlive-server.postgres.database.azure.com',

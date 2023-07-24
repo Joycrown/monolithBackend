@@ -415,6 +415,43 @@ class PostCreateView(CreateAPIView):
         return Response(d, status=status.HTTP_201_CREATED)
 
 
+class PostCreateView(UpdateAPIView):
+    permission_classes = (AllowAny,)
+    parser_classes = (FormParser, MultiPartParser)
+    serializer_class = PostSerializer
+
+    def update(self, request, *args, **kwargs):
+        title = request.data.get("title")
+        pk = request.data.get("pk")
+        id = request.data.get("id")
+        attachment = request.data.get("attachment")
+        username = request.data.get("username")
+        video = request.data.get("video")
+        link = request.data.get("link")
+        text = request.data.get("text")
+        post_type = request.data.get("post_type")
+        post = get_object_or_404(Post, id=id)
+        block = get_object_or_404(Block, id=pk)
+        author = get_object_or_404(User, username=username)
+
+        with transaction.atomic():
+            if post:    
+                post = Post.objects.update(
+                    title=title,
+                    attachment=attachment,
+                    video=video,
+                    link=link,
+                    text=text,
+                    author=author,
+                    block=block,
+                    post_type=post_type,
+                )
+                d = PostSerializer(post).data
+                return Response(d, status=status.HTTP_201_CREATED)
+            else:
+                return Response({"there are no posts from user"}, status=status.HTTP_200_OK)
+
+
 
 class PostUpdateView(UpdateAPIView):
     lookup_field = "id"

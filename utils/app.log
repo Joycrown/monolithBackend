@@ -1307,3 +1307,1033 @@ Response headers:
 2023-07-01 15:28:47,101 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP close for ['127.0.0.1', 58857]
 2023-07-01 15:28:47,103 | DEBUG | daphne.http_protocol | http_protocol | 1248 | 20972 | HTTP response complete for ['127.0.0.1', 58857]
 2023-07-01 15:28:47,104 | WARNING | django.channels.server | runserver | 1248 | 20972 | [31;1mHTTP GET /block/create-post/ 405 [0.03, 127.0.0.1:58857][0m
+2023-07-19 21:07:20,970 | DEBUG | asyncio | selector_events | 18392 | 23484 | Using selector: SelectSelector
+2023-07-19 21:07:23,422 | DEBUG | urllib3.connectionpool | connectionpool | 18392 | 23484 | Starting new HTTPS connection (1): newsdata.io:443
+2023-07-19 21:07:25,544 | DEBUG | asyncio | selector_events | 7040 | 16832 | Using selector: SelectSelector
+2023-07-19 21:07:27,200 | DEBUG | urllib3.connectionpool | connectionpool | 7040 | 16832 | Starting new HTTPS connection (1): newsdata.io:443
+2023-07-19 21:07:27,224 | INFO | django.utils.autoreload | autoreload | 7040 | 16832 | Watching for file changes with StatReloader
+2023-07-19 21:07:58,611 | DEBUG | asyncio | selector_events | 7040 | 16832 | Using selector: SelectSelector
+2023-07-19 21:07:58,845 | DEBUG | asyncio | selector_events | 18392 | 23484 | Using selector: SelectSelector
+2023-07-19 21:08:23,248 | DEBUG | asyncio | selector_events | 23388 | 6496 | Using selector: SelectSelector
+2023-07-19 21:08:26,742 | DEBUG | asyncio | selector_events | 16004 | 5932 | Using selector: SelectSelector
+2023-07-19 21:08:28,252 | INFO | django.utils.autoreload | autoreload | 16004 | 5932 | Watching for file changes with StatReloader
+2023-07-19 21:08:32,937 | INFO | daphne.server | server | 16004 | 4088 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-19 21:08:32,938 | INFO | daphne.server | server | 16004 | 4088 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-19 21:08:32,943 | INFO | daphne.server | server | 16004 | 4088 | Listening on TCP address 127.0.0.1:8000
+2023-07-19 21:08:57,791 | DEBUG | asyncio | selector_events | 16004 | 5932 | Using selector: SelectSelector
+2023-07-19 21:08:58,123 | DEBUG | asyncio | selector_events | 23388 | 6496 | Using selector: SelectSelector
+2023-07-19 21:09:06,575 | DEBUG | asyncio | selector_events | 23216 | 8156 | Using selector: SelectSelector
+2023-07-19 21:09:09,522 | DEBUG | asyncio | selector_events | 23216 | 8156 | Using selector: SelectSelector
+2023-07-19 21:09:39,719 | DEBUG | asyncio | selector_events | 10712 | 19228 | Using selector: SelectSelector
+2023-07-19 21:09:44,483 | DEBUG | asyncio | selector_events | 10712 | 19228 | Using selector: SelectSelector
+2023-07-19 21:10:04,439 | DEBUG | asyncio | selector_events | 23596 | 15900 | Using selector: SelectSelector
+2023-07-19 21:10:07,428 | DEBUG | asyncio | selector_events | 23596 | 15900 | Using selector: SelectSelector
+2023-07-19 21:10:31,602 | DEBUG | asyncio | selector_events | 17304 | 23788 | Using selector: SelectSelector
+2023-07-19 21:10:34,759 | DEBUG | asyncio | selector_events | 20428 | 19628 | Using selector: SelectSelector
+2023-07-19 21:10:36,576 | INFO | django.utils.autoreload | autoreload | 20428 | 19628 | Watching for file changes with StatReloader
+2023-07-19 21:10:38,654 | INFO | daphne.server | server | 20428 | 17972 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-19 21:10:38,657 | INFO | daphne.server | server | 20428 | 17972 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-19 21:10:38,660 | INFO | daphne.server | server | 20428 | 17972 | Listening on TCP address 127.0.0.1:8000
+2023-07-19 21:10:41,095 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53145]
+2023-07-19 21:10:41,140 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:10:41,190 | WARNING | django.request | log | 20428 | 19392 | Not Found: /
+2023-07-19 21:10:41,194 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 404 response started for ['127.0.0.1', 53145]
+2023-07-19 21:10:41,197 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53145]
+2023-07-19 21:10:41,199 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53145]
+2023-07-19 21:10:41,199 | WARNING | django.channels.server | runserver | 20428 | 17972 | [33mHTTP GET / 404 [0.10, 127.0.0.1:53145][0m
+2023-07-19 21:10:42,339 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53145]
+2023-07-19 21:10:42,343 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:10:42,356 | WARNING | django.request | log | 20428 | 19392 | Not Found: /favicon.ico
+2023-07-19 21:10:42,357 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 404 response started for ['127.0.0.1', 53145]
+2023-07-19 21:10:42,358 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53145]
+2023-07-19 21:10:42,359 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53145]
+2023-07-19 21:10:42,360 | WARNING | django.channels.server | runserver | 20428 | 17972 | [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:53145][0m
+2023-07-19 21:10:46,422 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,430 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 301 response started for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,434 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,435 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,436 | INFO | django.channels.server | runserver | 20428 | 17972 | [32mHTTP GET /babla 301 [0.01, 127.0.0.1:53159][0m
+2023-07-19 21:10:46,442 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,453 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:10:46,692 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 302 response started for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,693 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,693 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,693 | INFO | django.channels.server | runserver | 20428 | 17972 | [32mHTTP GET /babla/ 302 [0.25, 127.0.0.1:53159][0m
+2023-07-19 21:10:46,707 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,710 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:10:46,938 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 200 response started for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,939 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,939 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53159]
+2023-07-19 21:10:46,939 | INFO | django.channels.server | runserver | 20428 | 17972 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.23, 127.0.0.1:53159][0m
+2023-07-19 21:11:17,411 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'POST' request for ['127.0.0.1', 53189]
+2023-07-19 21:11:17,420 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:11:18,327 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 302 response started for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,329 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,329 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,331 | INFO | django.channels.server | runserver | 20428 | 17972 | [32mHTTP POST /babla/login/?next=/babla/ 302 [0.92, 127.0.0.1:53189][0m
+2023-07-19 21:11:18,341 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,341 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:11:18,494 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 200 response started for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,495 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,495 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53189]
+2023-07-19 21:11:18,498 | INFO | django.channels.server | runserver | 20428 | 17972 | [mHTTP GET /babla/ 200 [0.16, 127.0.0.1:53189][0m
+2023-07-19 21:11:25,958 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53211]
+2023-07-19 21:11:25,966 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:11:26,310 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 200 response started for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,310 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,310 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,310 | INFO | django.channels.server | runserver | 20428 | 17972 | [mHTTP GET /babla/core/user/ 200 [0.35, 127.0.0.1:53211][0m
+2023-07-19 21:11:26,426 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,432 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:11:26,460 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 200 response started for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,461 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,462 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53211]
+2023-07-19 21:11:26,462 | INFO | django.channels.server | runserver | 20428 | 17972 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:53211][0m
+2023-07-19 21:11:34,071 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP b'GET' request for ['127.0.0.1', 53231]
+2023-07-19 21:11:34,079 | DEBUG | asyncio | selector_events | 20428 | 23272 | Using selector: SelectSelector
+2023-07-19 21:11:34,116 | ERROR | django.request | log | 20428 | 17792 | Internal Server Error: /babla/chat/privatechat/
+Traceback (most recent call last):
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: chat_privatechat
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\asgiref\sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\core\handlers\base.py", line 233, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\asgiref\sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Users\pc\AppData\Local\Programs\Python\Python38-32\lib\asyncio\tasks.py", line 455, in wait_for
+    return await fut
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\asgiref\current_thread_executor.py", line 22, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\asgiref\sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\options.py", line 1697, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\options.py", line 736, in get_changelist_instance
+    return ChangeList(
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\views\main.py", line 100, in __init__
+    self.get_results(request)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\contrib\admin\views\main.py", line 235, in get_results
+    result_count = paginator.count
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\core\paginator.py", line 97, in count
+    return c()
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\models\query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\models\sql\query.py", line 519, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\models\sql\query.py", line 504, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: chat_privatechat
+2023-07-19 21:11:34,809 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP 500 response started for ['127.0.0.1', 53231]
+2023-07-19 21:11:34,810 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP close for ['127.0.0.1', 53231]
+2023-07-19 21:11:34,812 | DEBUG | daphne.http_protocol | http_protocol | 20428 | 17972 | HTTP response complete for ['127.0.0.1', 53231]
+2023-07-19 21:11:34,814 | ERROR | django.channels.server | runserver | 20428 | 17972 | [35;1mHTTP GET /babla/chat/privatechat/ 500 [0.74, 127.0.0.1:53231][0m
+2023-07-20 10:21:26,099 | DEBUG | asyncio | selector_events | 20428 | 19628 | Using selector: SelectSelector
+2023-07-20 10:21:26,331 | DEBUG | asyncio | selector_events | 17304 | 23788 | Using selector: SelectSelector
+2023-07-20 15:32:25,450 | DEBUG | asyncio | selector_events | 16236 | 14928 | Using selector: SelectSelector
+2023-07-20 15:32:31,759 | DEBUG | asyncio | selector_events | 16236 | 14928 | Using selector: SelectSelector
+2023-07-20 15:33:08,789 | DEBUG | asyncio | selector_events | 11400 | 9664 | Using selector: SelectSelector
+2023-07-20 15:33:12,435 | DEBUG | asyncio | selector_events | 11400 | 9664 | Using selector: SelectSelector
+2023-07-20 15:33:40,349 | DEBUG | asyncio | selector_events | 23348 | 23428 | Using selector: SelectSelector
+2023-07-20 15:33:43,969 | DEBUG | asyncio | selector_events | 23348 | 23428 | Using selector: SelectSelector
+2023-07-20 15:34:33,987 | DEBUG | asyncio | selector_events | 21760 | 14880 | Using selector: SelectSelector
+2023-07-20 15:34:37,492 | DEBUG | asyncio | selector_events | 21760 | 14880 | Using selector: SelectSelector
+2023-07-20 15:35:32,395 | DEBUG | asyncio | selector_events | 17564 | 23472 | Using selector: SelectSelector
+2023-07-20 15:35:35,697 | DEBUG | asyncio | selector_events | 17564 | 23472 | Using selector: SelectSelector
+2023-07-20 15:36:21,317 | DEBUG | asyncio | selector_events | 9820 | 22168 | Using selector: SelectSelector
+2023-07-20 15:36:24,472 | DEBUG | asyncio | selector_events | 17716 | 23228 | Using selector: SelectSelector
+2023-07-20 15:36:25,965 | INFO | django.utils.autoreload | autoreload | 17716 | 23228 | Watching for file changes with StatReloader
+2023-07-20 15:36:28,167 | INFO | daphne.server | server | 17716 | 12312 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 15:36:28,170 | INFO | daphne.server | server | 17716 | 12312 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 15:36:28,175 | INFO | daphne.server | server | 17716 | 12312 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 15:36:30,467 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63136]
+2023-07-20 15:36:30,657 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:30,826 | WARNING | django.request | log | 17716 | 13504 | Not Found: /
+2023-07-20 15:36:30,840 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 404 response started for ['127.0.0.1', 63136]
+2023-07-20 15:36:30,842 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63136]
+2023-07-20 15:36:30,843 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63136]
+2023-07-20 15:36:30,843 | WARNING | django.channels.server | runserver | 17716 | 12312 | [33mHTTP GET / 404 [0.38, 127.0.0.1:63136][0m
+2023-07-20 15:36:32,275 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63136]
+2023-07-20 15:36:32,279 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:32,305 | WARNING | django.request | log | 17716 | 13504 | Not Found: /favicon.ico
+2023-07-20 15:36:32,307 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 404 response started for ['127.0.0.1', 63136]
+2023-07-20 15:36:32,308 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63136]
+2023-07-20 15:36:32,309 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63136]
+2023-07-20 15:36:32,310 | WARNING | django.channels.server | runserver | 17716 | 12312 | [33mHTTP GET /favicon.ico 404 [0.03, 127.0.0.1:63136][0m
+2023-07-20 15:36:36,964 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63136]
+2023-07-20 15:36:36,970 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 301 response started for ['127.0.0.1', 63136]
+2023-07-20 15:36:36,971 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63136]
+2023-07-20 15:36:36,972 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63136]
+2023-07-20 15:36:36,973 | INFO | django.channels.server | runserver | 17716 | 12312 | [32mHTTP GET /babla 301 [0.01, 127.0.0.1:63136][0m
+2023-07-20 15:36:36,989 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63136]
+2023-07-20 15:36:36,993 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:37,095 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 302 response started for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,097 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,097 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,098 | INFO | django.channels.server | runserver | 17716 | 12312 | [32mHTTP GET /babla/ 302 [0.11, 127.0.0.1:63136][0m
+2023-07-20 15:36:37,104 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,106 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:37,193 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,194 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,196 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63136]
+2023-07-20 15:36:37,196 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.09, 127.0.0.1:63136][0m
+2023-07-20 15:36:49,880 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'POST' request for ['127.0.0.1', 63160]
+2023-07-20 15:36:49,885 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:50,433 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 302 response started for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,435 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,436 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,436 | INFO | django.channels.server | runserver | 17716 | 12312 | [32mHTTP POST /babla/login/?next=/babla/ 302 [0.56, 127.0.0.1:63160][0m
+2023-07-20 15:36:50,445 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,448 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:36:50,533 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,534 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,535 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63160]
+2023-07-20 15:36:50,536 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/ 200 [0.09, 127.0.0.1:63160][0m
+2023-07-20 15:37:04,810 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63179]
+2023-07-20 15:37:04,821 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:05,022 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,023 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,024 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,025 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/core/user/ 200 [0.22, 127.0.0.1:63179][0m
+2023-07-20 15:37:05,058 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,065 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:05,090 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,091 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,092 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63179]
+2023-07-20 15:37:05,093 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63179][0m
+2023-07-20 15:37:24,705 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,711 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:24,773 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,775 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,776 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,777 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/ 200 [0.07, 127.0.0.1:63202][0m
+2023-07-20 15:37:24,807 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,816 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:24,834 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,835 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,836 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63202]
+2023-07-20 15:37:24,837 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63202][0m
+2023-07-20 15:37:54,808 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63226]
+2023-07-20 15:37:54,815 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:55,016 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,017 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,018 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,019 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/add/ 200 [0.21, 127.0.0.1:63226][0m
+2023-07-20 15:37:55,050 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,056 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:37:55,081 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,083 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,084 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63226]
+2023-07-20 15:37:55,085 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:63226][0m
+2023-07-20 15:38:48,231 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'POST' request for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,238 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:38:48,278 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 302 response started for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,279 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,280 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,281 | INFO | django.channels.server | runserver | 17716 | 12312 | [32mHTTP POST /babla/chat/privatechat/add/ 302 [0.05, 127.0.0.1:63254][0m
+2023-07-20 15:38:48,287 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,290 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:38:48,381 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,382 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,383 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,384 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/ 200 [0.10, 127.0.0.1:63254][0m
+2023-07-20 15:38:48,415 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,422 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 15:38:48,442 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,443 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,444 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63254]
+2023-07-20 15:38:48,445 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63254][0m
+2023-07-20 16:00:24,025 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,038 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:24,179 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,181 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,182 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,183 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/1/change/ 200 [0.16, 127.0.0.1:63678][0m
+2023-07-20 16:00:24,226 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,230 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:24,256 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,256 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,257 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:24,258 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63678][0m
+2023-07-20 16:00:40,442 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'POST' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,449 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:40,495 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 302 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,496 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,497 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,498 | INFO | django.channels.server | runserver | 17716 | 12312 | [32mHTTP POST /babla/chat/privatechat/1/change/ 302 [0.06, 127.0.0.1:63678][0m
+2023-07-20 16:00:40,504 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,508 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:40,564 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,565 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,566 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,567 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/ 200 [0.06, 127.0.0.1:63678][0m
+2023-07-20 16:00:40,600 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,607 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:40,630 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,631 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,632 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:40,633 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63678][0m
+2023-07-20 16:00:44,329 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,333 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:44,421 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,422 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,423 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,424 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/1/change/ 200 [0.09, 127.0.0.1:63678][0m
+2023-07-20 16:00:44,448 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,452 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:00:44,468 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,469 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,470 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63678]
+2023-07-20 16:00:44,471 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.02, 127.0.0.1:63678][0m
+2023-07-20 16:01:58,996 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,008 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:01:59,080 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,082 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,083 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,083 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/chat/privatechat/ 200 [0.09, 127.0.0.1:63736][0m
+2023-07-20 16:01:59,115 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP b'GET' request for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,124 | DEBUG | asyncio | selector_events | 17716 | 19632 | Using selector: SelectSelector
+2023-07-20 16:01:59,141 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP 200 response started for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,142 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP close for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,143 | DEBUG | daphne.http_protocol | http_protocol | 17716 | 12312 | HTTP response complete for ['127.0.0.1', 63736]
+2023-07-20 16:01:59,144 | INFO | django.channels.server | runserver | 17716 | 12312 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:63736][0m
+2023-07-20 18:50:54,527 | INFO | django.utils.autoreload | autoreload | 17716 | 23228 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\models.py changed, reloading.
+2023-07-20 18:50:54,559 | DEBUG | asyncio | selector_events | 17716 | 23228 | Using selector: SelectSelector
+2023-07-20 18:50:57,904 | DEBUG | asyncio | selector_events | 10916 | 1120 | Using selector: SelectSelector
+2023-07-20 18:51:01,603 | INFO | django.utils.autoreload | autoreload | 10916 | 1120 | Watching for file changes with StatReloader
+2023-07-20 18:51:04,492 | INFO | daphne.server | server | 10916 | 18160 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 18:51:04,493 | INFO | daphne.server | server | 10916 | 18160 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 18:51:04,496 | INFO | daphne.server | server | 10916 | 18160 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:12:30,421 | INFO | django.utils.autoreload | autoreload | 10916 | 1120 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\models.py changed, reloading.
+2023-07-20 19:12:30,424 | DEBUG | asyncio | selector_events | 10916 | 1120 | Using selector: SelectSelector
+2023-07-20 19:12:32,646 | DEBUG | asyncio | selector_events | 22264 | 22036 | Using selector: SelectSelector
+2023-07-20 19:12:34,745 | INFO | django.utils.autoreload | autoreload | 22264 | 22036 | Watching for file changes with StatReloader
+2023-07-20 19:12:38,399 | INFO | daphne.server | server | 22264 | 10340 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:12:38,399 | INFO | daphne.server | server | 22264 | 10340 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:12:38,401 | INFO | daphne.server | server | 22264 | 10340 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:15:40,605 | DEBUG | asyncio | selector_events | 18868 | 5600 | Using selector: SelectSelector
+2023-07-20 19:15:43,302 | DEBUG | asyncio | selector_events | 18868 | 5600 | Using selector: SelectSelector
+2023-07-20 19:16:07,685 | DEBUG | asyncio | selector_events | 880 | 2500 | Using selector: SelectSelector
+2023-07-20 19:16:10,771 | DEBUG | asyncio | selector_events | 880 | 2500 | Using selector: SelectSelector
+2023-07-20 19:16:42,647 | INFO | django.utils.autoreload | autoreload | 22264 | 22036 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\models.py changed, reloading.
+2023-07-20 19:16:42,648 | DEBUG | asyncio | selector_events | 22264 | 22036 | Using selector: SelectSelector
+2023-07-20 19:16:44,961 | DEBUG | asyncio | selector_events | 13708 | 3132 | Using selector: SelectSelector
+2023-07-20 19:16:46,465 | INFO | django.utils.autoreload | autoreload | 13708 | 3132 | Watching for file changes with StatReloader
+2023-07-20 19:16:48,412 | INFO | daphne.server | server | 13708 | 18464 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:16:48,413 | INFO | daphne.server | server | 13708 | 18464 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:16:48,415 | INFO | daphne.server | server | 13708 | 18464 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:16:58,656 | DEBUG | asyncio | selector_events | 15716 | 14680 | Using selector: SelectSelector
+2023-07-20 19:17:01,736 | DEBUG | asyncio | selector_events | 15716 | 14680 | Using selector: SelectSelector
+2023-07-20 19:21:14,540 | DEBUG | asyncio | selector_events | 17732 | 13984 | Using selector: SelectSelector
+2023-07-20 19:21:17,745 | DEBUG | asyncio | selector_events | 17732 | 13984 | Using selector: SelectSelector
+2023-07-20 19:21:19,400 | INFO | django.utils.autoreload | autoreload | 13708 | 3132 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\migrations\0001_initial.py changed, reloading.
+2023-07-20 19:21:19,414 | DEBUG | asyncio | selector_events | 13708 | 3132 | Using selector: SelectSelector
+2023-07-20 19:21:25,672 | DEBUG | asyncio | selector_events | 22740 | 22052 | Using selector: SelectSelector
+2023-07-20 19:21:28,481 | INFO | django.utils.autoreload | autoreload | 22740 | 22052 | Watching for file changes with StatReloader
+2023-07-20 19:21:31,498 | INFO | daphne.server | server | 22740 | 7284 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:21:31,500 | INFO | daphne.server | server | 22740 | 7284 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:21:31,503 | INFO | daphne.server | server | 22740 | 7284 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:21:41,068 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'POST' request for ['127.0.0.1', 52264]
+2023-07-20 19:21:41,089 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:21:41,341 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52264]
+2023-07-20 19:21:41,342 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52264]
+2023-07-20 19:21:41,343 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52264]
+2023-07-20 19:21:41,344 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP POST /babla/chat/privatechat/ 200 [0.28, 127.0.0.1:52264][0m
+2023-07-20 19:21:43,002 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'POST' request for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,007 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:21:43,065 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 302 response started for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,067 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,068 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,069 | INFO | django.channels.server | runserver | 22740 | 7284 | [32mHTTP POST /babla/chat/privatechat/ 302 [0.07, 127.0.0.1:52264][0m
+2023-07-20 19:21:43,074 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,077 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:21:43,152 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,154 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,155 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,156 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/chat/privatechat/ 200 [0.08, 127.0.0.1:52264][0m
+2023-07-20 19:21:43,195 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,209 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:21:43,239 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,240 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,240 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52264]
+2023-07-20 19:21:43,241 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:52264][0m
+2023-07-20 19:21:57,102 | DEBUG | asyncio | selector_events | 8236 | 5800 | Using selector: SelectSelector
+2023-07-20 19:22:00,637 | DEBUG | asyncio | selector_events | 8236 | 5800 | Using selector: SelectSelector
+2023-07-20 19:25:16,915 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52330]
+2023-07-20 19:25:16,923 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:25:17,043 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,044 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,045 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,046 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/chat/privatechat/add/ 200 [0.13, 127.0.0.1:52330][0m
+2023-07-20 19:25:17,079 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,086 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:25:17,111 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,112 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,113 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52330]
+2023-07-20 19:25:17,114 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52330][0m
+2023-07-20 19:25:24,113 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,124 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:25:24,195 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,196 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,197 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,198 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/chat/privatechat/ 200 [0.09, 127.0.0.1:52340][0m
+2023-07-20 19:25:24,242 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP b'GET' request for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,250 | DEBUG | asyncio | selector_events | 22740 | 21832 | Using selector: SelectSelector
+2023-07-20 19:25:24,271 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP 200 response started for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,272 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP close for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,273 | DEBUG | daphne.http_protocol | http_protocol | 22740 | 7284 | HTTP response complete for ['127.0.0.1', 52340]
+2023-07-20 19:25:24,274 | INFO | django.channels.server | runserver | 22740 | 7284 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52340][0m
+2023-07-20 19:28:38,406 | INFO | django.utils.autoreload | autoreload | 22740 | 22052 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\admin.py changed, reloading.
+2023-07-20 19:28:38,408 | DEBUG | asyncio | selector_events | 22740 | 22052 | Using selector: SelectSelector
+2023-07-20 19:28:41,070 | DEBUG | asyncio | selector_events | 23244 | 22508 | Using selector: SelectSelector
+2023-07-20 19:28:42,811 | INFO | django.utils.autoreload | autoreload | 23244 | 22508 | Watching for file changes with StatReloader
+2023-07-20 19:28:50,146 | DEBUG | asyncio | selector_events | 22924 | 15144 | Using selector: SelectSelector
+2023-07-20 19:28:52,911 | DEBUG | asyncio | selector_events | 22924 | 15144 | Using selector: SelectSelector
+2023-07-20 19:29:09,719 | INFO | django.utils.autoreload | autoreload | 23244 | 22508 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\admin.py changed, reloading.
+2023-07-20 19:29:09,721 | DEBUG | asyncio | selector_events | 23244 | 22508 | Using selector: SelectSelector
+2023-07-20 19:29:12,175 | DEBUG | asyncio | selector_events | 17052 | 23516 | Using selector: SelectSelector
+2023-07-20 19:29:13,950 | INFO | django.utils.autoreload | autoreload | 17052 | 23516 | Watching for file changes with StatReloader
+2023-07-20 19:29:16,550 | INFO | daphne.server | server | 17052 | 16044 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:29:16,552 | INFO | daphne.server | server | 17052 | 16044 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:29:16,555 | INFO | daphne.server | server | 17052 | 16044 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:29:20,918 | DEBUG | asyncio | selector_events | 18348 | 3688 | Using selector: SelectSelector
+2023-07-20 19:29:24,225 | DEBUG | asyncio | selector_events | 18348 | 3688 | Using selector: SelectSelector
+2023-07-20 19:29:42,091 | DEBUG | asyncio | selector_events | 17052 | 23516 | Using selector: SelectSelector
+2023-07-20 19:29:42,372 | DEBUG | asyncio | selector_events | 9820 | 22168 | Using selector: SelectSelector
+2023-07-20 19:30:31,636 | DEBUG | asyncio | selector_events | 12444 | 7960 | Using selector: SelectSelector
+2023-07-20 19:30:34,321 | DEBUG | asyncio | selector_events | 12444 | 7960 | Using selector: SelectSelector
+2023-07-20 19:30:46,854 | DEBUG | asyncio | selector_events | 2696 | 5820 | Using selector: SelectSelector
+2023-07-20 19:30:49,785 | DEBUG | asyncio | selector_events | 2696 | 5820 | Using selector: SelectSelector
+2023-07-20 19:32:03,742 | DEBUG | asyncio | selector_events | 9780 | 14408 | Using selector: SelectSelector
+2023-07-20 19:32:06,377 | DEBUG | asyncio | selector_events | 9780 | 14408 | Using selector: SelectSelector
+2023-07-20 19:32:52,902 | DEBUG | asyncio | selector_events | 23716 | 17288 | Using selector: SelectSelector
+2023-07-20 19:32:55,598 | DEBUG | asyncio | selector_events | 23716 | 17288 | Using selector: SelectSelector
+2023-07-20 19:33:42,087 | DEBUG | asyncio | selector_events | 1536 | 11260 | Using selector: SelectSelector
+2023-07-20 19:33:45,183 | DEBUG | asyncio | selector_events | 16120 | 20364 | Using selector: SelectSelector
+2023-07-20 19:33:46,583 | INFO | django.utils.autoreload | autoreload | 16120 | 20364 | Watching for file changes with StatReloader
+2023-07-20 19:33:48,673 | INFO | daphne.server | server | 16120 | 14288 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:33:48,674 | INFO | daphne.server | server | 16120 | 14288 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:33:48,677 | INFO | daphne.server | server | 16120 | 14288 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:33:53,700 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:33:53,862 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:33:53,960 | WARNING | django.request | log | 16120 | 21616 | Not Found: /
+2023-07-20 19:33:53,962 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 404 response started for ['127.0.0.1', 52523]
+2023-07-20 19:33:53,963 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:33:53,964 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:33:53,965 | WARNING | django.channels.server | runserver | 16120 | 14288 | [33mHTTP GET / 404 [0.27, 127.0.0.1:52523][0m
+2023-07-20 19:33:59,352 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,359 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 301 response started for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,365 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,369 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,370 | INFO | django.channels.server | runserver | 16120 | 14288 | [32mHTTP GET /babla 301 [0.02, 127.0.0.1:52523][0m
+2023-07-20 19:33:59,376 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,379 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:33:59,535 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 302 response started for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,536 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,537 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,537 | INFO | django.channels.server | runserver | 16120 | 14288 | [32mHTTP GET /babla/ 302 [0.16, 127.0.0.1:52523][0m
+2023-07-20 19:33:59,546 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,550 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:33:59,620 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,621 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,622 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:33:59,623 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.08, 127.0.0.1:52523][0m
+2023-07-20 19:34:06,253 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'POST' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,257 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:06,698 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 302 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,699 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,700 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,701 | INFO | django.channels.server | runserver | 16120 | 14288 | [32mHTTP POST /babla/login/?next=/babla/ 302 [0.45, 127.0.0.1:52523][0m
+2023-07-20 19:34:06,709 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,712 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:06,783 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,784 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,784 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:06,785 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/ 200 [0.08, 127.0.0.1:52523][0m
+2023-07-20 19:34:14,636 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,643 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:14,769 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,770 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,771 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,771 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/core/user/ 200 [0.13, 127.0.0.1:52523][0m
+2023-07-20 19:34:14,818 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,820 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:14,846 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,848 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,849 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:14,851 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52523][0m
+2023-07-20 19:34:20,980 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:20,984 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:21,079 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,080 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,081 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,082 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/message/ 200 [0.10, 127.0.0.1:52523][0m
+2023-07-20 19:34:21,113 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,117 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:21,143 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,146 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,147 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:21,147 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52523][0m
+2023-07-20 19:34:24,857 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,861 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:24,916 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,917 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,918 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,919 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/privatechat/ 200 [0.06, 127.0.0.1:52523][0m
+2023-07-20 19:34:24,951 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,959 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:24,988 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,990 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,991 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:24,993 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52523][0m
+2023-07-20 19:34:26,951 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:26,957 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:27,072 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,073 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,074 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,075 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/privatechat/add/ 200 [0.12, 127.0.0.1:52523][0m
+2023-07-20 19:34:27,117 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,125 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:27,155 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,158 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,160 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:27,161 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52523][0m
+2023-07-20 19:34:39,588 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'POST' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,591 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:39,642 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 302 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,643 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,644 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,645 | INFO | django.channels.server | runserver | 16120 | 14288 | [32mHTTP POST /babla/chat/privatechat/add/ 302 [0.06, 127.0.0.1:52523][0m
+2023-07-20 19:34:39,652 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,655 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:39,725 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,726 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,727 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,728 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/privatechat/ 200 [0.08, 127.0.0.1:52523][0m
+2023-07-20 19:34:39,761 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,773 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:39,802 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,803 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,804 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:39,805 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52523][0m
+2023-07-20 19:34:44,760 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,766 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:44,827 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,828 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,829 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,830 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/message/ 200 [0.07, 127.0.0.1:52523][0m
+2023-07-20 19:34:44,859 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,867 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:44,887 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,888 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,889 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:44,890 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52523][0m
+2023-07-20 19:34:47,880 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:47,887 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:48,132 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,133 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,134 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,134 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/message/add/ 200 [0.25, 127.0.0.1:52523][0m
+2023-07-20 19:34:48,173 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,181 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:34:48,202 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,203 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,204 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:34:48,205 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52523][0m
+2023-07-20 19:35:01,143 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'POST' request for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,147 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:35:01,209 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 302 response started for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,211 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,212 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,212 | INFO | django.channels.server | runserver | 16120 | 14288 | [32mHTTP POST /babla/chat/message/add/ 302 [0.07, 127.0.0.1:52523][0m
+2023-07-20 19:35:01,220 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,224 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:35:01,286 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,288 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,289 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,295 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/chat/message/ 200 [0.07, 127.0.0.1:52523][0m
+2023-07-20 19:35:01,341 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP b'GET' request for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,349 | DEBUG | asyncio | selector_events | 16120 | 6396 | Using selector: SelectSelector
+2023-07-20 19:35:01,375 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP 200 response started for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,376 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP close for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,378 | DEBUG | daphne.http_protocol | http_protocol | 16120 | 14288 | HTTP response complete for ['127.0.0.1', 52523]
+2023-07-20 19:35:01,380 | INFO | django.channels.server | runserver | 16120 | 14288 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:52523][0m
+2023-07-20 19:35:40,609 | INFO | django.utils.autoreload | autoreload | 16120 | 20364 | C:\Users\pc\Documents\One\Pyramid\backend\backend-prod\chat\admin.py changed, reloading.
+2023-07-20 19:35:40,611 | DEBUG | asyncio | selector_events | 16120 | 20364 | Using selector: SelectSelector
+2023-07-20 19:35:42,876 | DEBUG | asyncio | selector_events | 7720 | 22028 | Using selector: SelectSelector
+2023-07-20 19:35:44,395 | INFO | django.utils.autoreload | autoreload | 7720 | 22028 | Watching for file changes with StatReloader
+2023-07-20 19:35:46,347 | INFO | daphne.server | server | 7720 | 21592 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 19:35:46,348 | INFO | daphne.server | server | 7720 | 21592 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 19:35:46,355 | INFO | daphne.server | server | 7720 | 21592 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 19:35:49,986 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP b'GET' request for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,018 | DEBUG | asyncio | selector_events | 7720 | 2616 | Using selector: SelectSelector
+2023-07-20 19:35:50,230 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP 200 response started for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,232 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP close for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,234 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP response complete for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,234 | INFO | django.channels.server | runserver | 7720 | 21592 | [mHTTP GET /babla/chat/message/ 200 [0.25, 127.0.0.1:52629][0m
+2023-07-20 19:35:50,267 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP b'GET' request for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,272 | DEBUG | asyncio | selector_events | 7720 | 2616 | Using selector: SelectSelector
+2023-07-20 19:35:50,296 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP 200 response started for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,297 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP close for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,300 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP response complete for ['127.0.0.1', 52629]
+2023-07-20 19:35:50,301 | INFO | django.channels.server | runserver | 7720 | 21592 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52629][0m
+2023-07-20 19:43:34,574 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP b'GET' request for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,578 | DEBUG | asyncio | selector_events | 7720 | 2616 | Using selector: SelectSelector
+2023-07-20 19:43:34,644 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP 200 response started for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,644 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP close for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,645 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP response complete for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,646 | INFO | django.channels.server | runserver | 7720 | 21592 | [mHTTP GET /babla/chat/message/ 200 [0.07, 127.0.0.1:52673][0m
+2023-07-20 19:43:34,680 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP b'GET' request for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,684 | DEBUG | asyncio | selector_events | 7720 | 2616 | Using selector: SelectSelector
+2023-07-20 19:43:34,702 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP 200 response started for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,703 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP close for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,706 | DEBUG | daphne.http_protocol | http_protocol | 7720 | 21592 | HTTP response complete for ['127.0.0.1', 52673]
+2023-07-20 19:43:34,707 | INFO | django.channels.server | runserver | 7720 | 21592 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:52673][0m
+2023-07-20 19:44:14,445 | DEBUG | asyncio | selector_events | 7720 | 22028 | Using selector: SelectSelector
+2023-07-20 19:44:14,730 | DEBUG | asyncio | selector_events | 1536 | 11260 | Using selector: SelectSelector
+2023-07-20 23:12:38,679 | DEBUG | asyncio | selector_events | 23216 | 12812 | Using selector: SelectSelector
+2023-07-20 23:12:44,351 | DEBUG | asyncio | selector_events | 23216 | 12812 | Using selector: SelectSelector
+2023-07-20 23:13:51,727 | DEBUG | asyncio | selector_events | 16540 | 20904 | Using selector: SelectSelector
+2023-07-20 23:13:54,698 | DEBUG | asyncio | selector_events | 16540 | 20904 | Using selector: SelectSelector
+2023-07-20 23:14:27,392 | DEBUG | asyncio | selector_events | 17956 | 21396 | Using selector: SelectSelector
+2023-07-20 23:14:47,405 | DEBUG | asyncio | selector_events | 5896 | 20204 | Using selector: SelectSelector
+2023-07-20 23:14:50,241 | DEBUG | asyncio | selector_events | 5896 | 20204 | Using selector: SelectSelector
+2023-07-20 23:15:32,826 | DEBUG | asyncio | selector_events | 19872 | 2440 | Using selector: SelectSelector
+2023-07-20 23:15:35,600 | DEBUG | asyncio | selector_events | 19872 | 2440 | Using selector: SelectSelector
+2023-07-20 23:16:21,794 | DEBUG | asyncio | selector_events | 9192 | 2024 | Using selector: SelectSelector
+2023-07-20 23:16:25,759 | DEBUG | asyncio | selector_events | 14128 | 23520 | Using selector: SelectSelector
+2023-07-20 23:16:27,449 | INFO | django.utils.autoreload | autoreload | 14128 | 23520 | Watching for file changes with StatReloader
+2023-07-20 23:16:30,273 | INFO | daphne.server | server | 14128 | 18620 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-20 23:16:30,276 | INFO | daphne.server | server | 14128 | 18620 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-20 23:16:30,278 | INFO | daphne.server | server | 14128 | 18620 | Listening on TCP address 127.0.0.1:8000
+2023-07-20 23:16:41,652 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49173]
+2023-07-20 23:16:41,743 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:16:41,905 | WARNING | django.request | log | 14128 | 16548 | Not Found: /
+2023-07-20 23:16:41,908 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 404 response started for ['127.0.0.1', 49173]
+2023-07-20 23:16:41,911 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49173]
+2023-07-20 23:16:41,913 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49173]
+2023-07-20 23:16:41,915 | WARNING | django.channels.server | runserver | 14128 | 18620 | [33mHTTP GET / 404 [0.26, 127.0.0.1:49173][0m
+2023-07-20 23:16:48,138 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,144 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:16:48,268 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 302 response started for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,269 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,270 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,271 | INFO | django.channels.server | runserver | 14128 | 18620 | [32mHTTP GET /babla/ 302 [0.13, 127.0.0.1:49187][0m
+2023-07-20 23:16:48,283 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,286 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:16:48,593 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,594 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,595 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49187]
+2023-07-20 23:16:48,596 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.31, 127.0.0.1:49187][0m
+2023-07-20 23:17:21,742 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49212]
+2023-07-20 23:17:21,750 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:21,831 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49212]
+2023-07-20 23:17:21,833 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49212]
+2023-07-20 23:17:21,834 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49212]
+2023-07-20 23:17:21,842 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/login/?next=/babla/ 200 [0.10, 127.0.0.1:49212][0m
+2023-07-20 23:17:24,323 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'POST' request for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,329 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:24,770 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 302 response started for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,771 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,773 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,775 | INFO | django.channels.server | runserver | 14128 | 18620 | [32mHTTP POST /babla/login/?next=/babla/ 302 [0.45, 127.0.0.1:49212][0m
+2023-07-20 23:17:24,784 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,787 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:24,896 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,897 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,898 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49212]
+2023-07-20 23:17:24,898 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/ 200 [0.11, 127.0.0.1:49212][0m
+2023-07-20 23:17:31,828 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49212]
+2023-07-20 23:17:31,833 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:32,006 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,007 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,008 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,009 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.18, 127.0.0.1:49212][0m
+2023-07-20 23:17:32,058 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,063 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:32,099 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,100 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,101 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49212]
+2023-07-20 23:17:32,102 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49212][0m
+2023-07-20 23:17:35,024 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,029 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:35,244 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,246 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,247 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,247 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/add/ 200 [0.22, 127.0.0.1:49234][0m
+2023-07-20 23:17:35,291 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,296 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:35,316 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,317 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,318 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:35,318 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:49234][0m
+2023-07-20 23:17:40,161 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,164 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:40,241 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,242 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,244 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,244 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/privatechat/ 200 [0.08, 127.0.0.1:49234][0m
+2023-07-20 23:17:40,279 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,282 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:40,310 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,311 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,312 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:40,313 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49234][0m
+2023-07-20 23:17:41,785 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,791 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:41,876 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,877 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,878 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,879 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/privatechat/add/ 200 [0.09, 127.0.0.1:49234][0m
+2023-07-20 23:17:41,927 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,935 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:41,963 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,964 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,965 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49234]
+2023-07-20 23:17:41,966 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49234][0m
+2023-07-20 23:17:52,169 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'POST' request for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,175 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:52,226 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 302 response started for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,228 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,230 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,230 | INFO | django.channels.server | runserver | 14128 | 18620 | [32mHTTP POST /babla/chat/privatechat/add/ 302 [0.06, 127.0.0.1:49263][0m
+2023-07-20 23:17:52,237 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,240 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:52,342 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,343 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,344 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,345 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/privatechat/ 200 [0.11, 127.0.0.1:49263][0m
+2023-07-20 23:17:52,380 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,389 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:52,420 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,421 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,422 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49263]
+2023-07-20 23:17:52,423 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49263][0m
+2023-07-20 23:17:54,981 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49275]
+2023-07-20 23:17:54,988 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:55,065 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,067 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,068 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,068 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.09, 127.0.0.1:49275][0m
+2023-07-20 23:17:55,112 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,117 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:55,139 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,141 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,141 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49275]
+2023-07-20 23:17:55,142 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:49275][0m
+2023-07-20 23:17:58,268 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,271 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:58,371 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,373 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,374 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,374 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/add/ 200 [0.11, 127.0.0.1:49275][0m
+2023-07-20 23:17:58,417 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,421 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:17:58,455 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,456 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,457 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49275]
+2023-07-20 23:17:58,458 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49275][0m
+2023-07-20 23:18:09,808 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'POST' request for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,818 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:09,879 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 302 response started for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,880 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,881 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,882 | INFO | django.channels.server | runserver | 14128 | 18620 | [32mHTTP POST /babla/chat/message/add/ 302 [0.07, 127.0.0.1:49296][0m
+2023-07-20 23:18:09,890 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,893 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:09,957 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,958 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,959 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49296]
+2023-07-20 23:18:09,960 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.07, 127.0.0.1:49296][0m
+2023-07-20 23:18:10,005 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49296]
+2023-07-20 23:18:10,010 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:10,036 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49296]
+2023-07-20 23:18:10,038 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49296]
+2023-07-20 23:18:10,039 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49296]
+2023-07-20 23:18:10,040 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49296][0m
+2023-07-20 23:18:29,147 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,158 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:29,270 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,271 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,271 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,272 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/1/change/ 200 [0.13, 127.0.0.1:49311][0m
+2023-07-20 23:18:29,307 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,314 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:29,349 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,351 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,352 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49311]
+2023-07-20 23:18:29,353 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:49311][0m
+2023-07-20 23:18:35,813 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49319]
+2023-07-20 23:18:35,817 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:35,901 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49319]
+2023-07-20 23:18:35,902 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49319]
+2023-07-20 23:18:35,903 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49319]
+2023-07-20 23:18:35,904 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.09, 127.0.0.1:49319][0m
+2023-07-20 23:18:38,593 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,596 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:38,681 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,683 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,684 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,685 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/1/change/ 200 [0.09, 127.0.0.1:49319][0m
+2023-07-20 23:18:38,736 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,745 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:38,774 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,776 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,777 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49319]
+2023-07-20 23:18:38,778 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49319][0m
+2023-07-20 23:18:52,304 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49336]
+2023-07-20 23:18:52,310 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:52,381 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49336]
+2023-07-20 23:18:52,383 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49336]
+2023-07-20 23:18:52,384 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49336]
+2023-07-20 23:18:52,385 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.08, 127.0.0.1:49336][0m
+2023-07-20 23:18:55,292 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,295 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:55,356 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,357 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,358 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,359 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/privatechat/ 200 [0.07, 127.0.0.1:49344][0m
+2023-07-20 23:18:55,394 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,405 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:55,427 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,428 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,429 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:18:55,430 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:49344][0m
+2023-07-20 23:18:58,522 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,527 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:58,612 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,613 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,614 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,615 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/privatechat/1/change/ 200 [0.09, 127.0.0.1:49344][0m
+2023-07-20 23:18:58,661 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,670 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:18:58,693 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,694 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,695 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:18:58,695 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:49344][0m
+2023-07-20 23:19:04,224 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,228 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:19:04,307 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,308 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,309 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,310 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/chat/message/ 200 [0.09, 127.0.0.1:49344][0m
+2023-07-20 23:19:04,338 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP b'GET' request for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,342 | DEBUG | asyncio | selector_events | 14128 | 23056 | Using selector: SelectSelector
+2023-07-20 23:19:04,360 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP 200 response started for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,361 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP close for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,363 | DEBUG | daphne.http_protocol | http_protocol | 14128 | 18620 | HTTP response complete for ['127.0.0.1', 49344]
+2023-07-20 23:19:04,364 | INFO | django.channels.server | runserver | 14128 | 18620 | [mHTTP GET /babla/jsi18n/ 200 [0.02, 127.0.0.1:49344][0m
+2023-07-20 23:19:13,443 | DEBUG | asyncio | selector_events | 14128 | 23520 | Using selector: SelectSelector
+2023-07-20 23:19:13,661 | DEBUG | asyncio | selector_events | 9192 | 2024 | Using selector: SelectSelector
+2023-07-24 06:48:53,461 | DEBUG | asyncio | selector_events | 7952 | 1632 | Using selector: SelectSelector
+2023-07-24 06:49:09,480 | DEBUG | asyncio | selector_events | 7952 | 1632 | Using selector: SelectSelector
+2023-07-24 06:49:31,443 | DEBUG | asyncio | selector_events | 11000 | 10016 | Using selector: SelectSelector
+2023-07-24 06:49:38,557 | DEBUG | asyncio | selector_events | 11000 | 10016 | Using selector: SelectSelector
+2023-07-24 06:50:12,529 | DEBUG | asyncio | selector_events | 5560 | 2968 | Using selector: SelectSelector
+2023-07-24 06:50:21,335 | DEBUG | asyncio | selector_events | 14480 | 5788 | Using selector: SelectSelector
+2023-07-24 06:50:25,358 | INFO | django.utils.autoreload | autoreload | 14480 | 5788 | Watching for file changes with StatReloader
+2023-07-24 06:50:31,635 | INFO | daphne.server | server | 14480 | 11292 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-07-24 06:50:31,646 | INFO | daphne.server | server | 14480 | 11292 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-07-24 06:50:31,650 | INFO | daphne.server | server | 14480 | 11292 | Listening on TCP address 127.0.0.1:8000
+2023-07-24 06:52:14,731 | DEBUG | asyncio | selector_events | 13696 | 11076 | Using selector: SelectSelector
+2023-07-24 06:52:23,896 | DEBUG | asyncio | selector_events | 13696 | 11076 | Using selector: SelectSelector
+2023-07-24 06:54:22,743 | DEBUG | asyncio | selector_events | 2932 | 4404 | Using selector: SelectSelector
+2023-07-24 06:54:31,572 | DEBUG | asyncio | selector_events | 2932 | 4404 | Using selector: SelectSelector
+2023-07-24 06:55:31,887 | DEBUG | asyncio | selector_events | 8168 | 14012 | Using selector: SelectSelector
+2023-07-24 06:55:40,395 | DEBUG | asyncio | selector_events | 8168 | 14012 | Using selector: SelectSelector
+2023-07-24 06:56:45,058 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62340]
+2023-07-24 06:56:45,511 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 06:56:46,290 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62340]
+2023-07-24 06:56:46,294 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62340]
+2023-07-24 06:56:46,296 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62340]
+2023-07-24 06:56:46,298 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/login/?next=/babla/ 200 [1.25, 127.0.0.1:62340][0m
+2023-07-24 06:56:49,130 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62340]
+2023-07-24 06:56:49,137 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 06:56:49,194 | WARNING | django.request | log | 14480 | 9576 | Not Found: /favicon.ico
+2023-07-24 06:56:49,199 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 404 response started for ['127.0.0.1', 62340]
+2023-07-24 06:56:49,202 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62340]
+2023-07-24 06:56:49,204 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62340]
+2023-07-24 06:56:49,206 | WARNING | django.channels.server | runserver | 14480 | 11292 | [33mHTTP GET /favicon.ico 404 [0.08, 127.0.0.1:62340][0m
+2023-07-24 06:56:50,645 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'POST' request for ['127.0.0.1', 62340]
+2023-07-24 06:56:50,659 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 06:56:51,764 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 302 response started for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,765 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,767 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,768 | INFO | django.channels.server | runserver | 14480 | 11292 | [32mHTTP POST /babla/login/?next=/babla/ 302 [1.12, 127.0.0.1:62340][0m
+2023-07-24 06:56:51,778 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,781 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 06:56:51,936 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,937 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,938 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62340]
+2023-07-24 06:56:51,939 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/ 200 [0.16, 127.0.0.1:62340][0m
+2023-07-24 07:01:08,808 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62484]
+2023-07-24 07:01:08,814 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:09,083 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,084 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,086 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,087 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/ 200 [0.28, 127.0.0.1:62484][0m
+2023-07-24 07:01:09,141 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,145 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:09,182 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,188 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,189 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62484]
+2023-07-24 07:01:09,190 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:62484][0m
+2023-07-24 07:01:14,103 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,106 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:14,389 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,391 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,392 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,393 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/add/ 200 [0.29, 127.0.0.1:62500][0m
+2023-07-24 07:01:14,459 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,463 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:14,502 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,506 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,507 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:14,509 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:62500][0m
+2023-07-24 07:01:19,267 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,272 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:19,355 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,356 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,357 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,358 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/privatechat/ 200 [0.09, 127.0.0.1:62500][0m
+2023-07-24 07:01:19,398 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,403 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:19,427 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,430 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,432 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:19,433 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.03, 127.0.0.1:62500][0m
+2023-07-24 07:01:21,405 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,408 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:21,508 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,509 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,512 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,512 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/privatechat/add/ 200 [0.11, 127.0.0.1:62500][0m
+2023-07-24 07:01:21,553 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,557 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:21,588 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,590 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,591 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:21,592 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:62500][0m
+2023-07-24 07:01:31,346 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'POST' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,352 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:31,424 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 302 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,426 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,427 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,428 | INFO | django.channels.server | runserver | 14480 | 11292 | [32mHTTP POST /babla/chat/privatechat/add/ 302 [0.08, 127.0.0.1:62500][0m
+2023-07-24 07:01:31,434 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,438 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:31,600 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,602 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,603 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,604 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/privatechat/ 200 [0.17, 127.0.0.1:62500][0m
+2023-07-24 07:01:31,645 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,650 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:31,686 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,687 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,688 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:31,691 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.05, 127.0.0.1:62500][0m
+2023-07-24 07:01:34,246 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,257 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:34,350 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,351 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,353 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,354 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/ 200 [0.11, 127.0.0.1:62500][0m
+2023-07-24 07:01:34,402 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,412 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:34,442 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,444 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,446 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:34,447 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.04, 127.0.0.1:62500][0m
+2023-07-24 07:01:36,415 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,421 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:36,559 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,561 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,562 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,563 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/add/ 200 [0.15, 127.0.0.1:62500][0m
+2023-07-24 07:01:36,628 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,635 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:36,681 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,682 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,683 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62500]
+2023-07-24 07:01:36,684 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.06, 127.0.0.1:62500][0m
+2023-07-24 07:01:48,330 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'POST' request for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,343 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:48,430 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 302 response started for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,432 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,433 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,434 | INFO | django.channels.server | runserver | 14480 | 11292 | [32mHTTP POST /babla/chat/message/add/ 302 [0.11, 127.0.0.1:62567][0m
+2023-07-24 07:01:48,441 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,444 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:48,524 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,525 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,526 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,527 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/ 200 [0.09, 127.0.0.1:62567][0m
+2023-07-24 07:01:48,572 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,575 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:01:48,623 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,626 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,626 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62567]
+2023-07-24 07:01:48,627 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.06, 127.0.0.1:62567][0m
+2023-07-24 07:02:19,140 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,149 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:02:19,307 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,309 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,310 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,310 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/ 200 [0.17, 127.0.0.1:62588][0m
+2023-07-24 07:02:19,350 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,358 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:02:19,399 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,406 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,407 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62588]
+2023-07-24 07:02:19,408 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.06, 127.0.0.1:62588][0m
+2023-07-24 07:02:24,597 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,606 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:02:24,732 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,735 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,738 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,740 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/chat/message/ 200 [0.14, 127.0.0.1:62601][0m
+2023-07-24 07:02:24,810 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP b'GET' request for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,821 | DEBUG | asyncio | selector_events | 14480 | 11112 | Using selector: SelectSelector
+2023-07-24 07:02:24,871 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP 200 response started for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,874 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP close for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,875 | DEBUG | daphne.http_protocol | http_protocol | 14480 | 11292 | HTTP response complete for ['127.0.0.1', 62601]
+2023-07-24 07:02:24,877 | INFO | django.channels.server | runserver | 14480 | 11292 | [mHTTP GET /babla/jsi18n/ 200 [0.07, 127.0.0.1:62601][0m
+2023-07-24 07:02:30,508 | DEBUG | asyncio | selector_events | 14480 | 5788 | Using selector: SelectSelector
+2023-07-24 07:02:30,887 | DEBUG | asyncio | selector_events | 5560 | 2968 | Using selector: SelectSelector
