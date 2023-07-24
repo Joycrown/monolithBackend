@@ -260,6 +260,7 @@ class CreateRuleView(CreateAPIView):
     permission_classes = (AllowAny,)
     renderer_classes = (JSONRenderer,)
     serializer_class = RuleSerializer
+    parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
         name = request.data.get("name")
@@ -306,6 +307,25 @@ class ListBlocksUserIsModerator(ListAPIView):
             else:
                 return Response(
                     {"there are no blocks user is moderator of"},
+                    status=status.HTTP_200_OK,
+                )
+
+
+class ListBlocksUserIsJoined(ListAPIView):
+    permission_classes = (AllowAny,)
+    pagination_class = PageNumberPagination
+    serializer_class = BlockSerializer
+
+    def get(self, request, username):
+        blocks = Block.objects.all()
+        user = get_object_or_404(User, username=username)
+        for block in blocks:
+            if user in block.subscribers.all():
+                serializer = self.serializer_class(block, many=True)
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
+            else:
+                return Response(
+                    {"there are no blocks user is subscriber of"},
                     status=status.HTTP_200_OK,
                 )
 
@@ -413,44 +433,6 @@ class PostCreateView(CreateAPIView):
             )
         d = PostSerializer(post).data
         return Response(d, status=status.HTTP_201_CREATED)
-
-
-class PostCreateView(UpdateAPIView):
-    permission_classes = (AllowAny,)
-    parser_classes = (FormParser, MultiPartParser)
-    serializer_class = PostSerializer
-
-    def update(self, request, *args, **kwargs):
-        title = request.data.get("title")
-        pk = request.data.get("pk")
-        id = request.data.get("id")
-        attachment = request.data.get("attachment")
-        username = request.data.get("username")
-        video = request.data.get("video")
-        link = request.data.get("link")
-        text = request.data.get("text")
-        post_type = request.data.get("post_type")
-        post = get_object_or_404(Post, id=id)
-        block = get_object_or_404(Block, id=pk)
-        author = get_object_or_404(User, username=username)
-
-        with transaction.atomic():
-            if post:    
-                post = Post.objects.update(
-                    title=title,
-                    attachment=attachment,
-                    video=video,
-                    link=link,
-                    text=text,
-                    author=author,
-                    block=block,
-                    post_type=post_type,
-                )
-                d = PostSerializer(post).data
-                return Response(d, status=status.HTTP_201_CREATED)
-            else:
-                return Response({"there are no posts from user"}, status=status.HTTP_200_OK)
-
 
 
 class PostUpdateView(UpdateAPIView):
