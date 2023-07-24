@@ -13,7 +13,6 @@ from utils.utils import get_random_code
 from utils.utils import MONTH as month
 
 from core.models import User
-
 # TODO Add more details to block, posts, comments
 
 
