@@ -11,7 +11,6 @@ from notifications.models import Notification
 
 
 @api_view(['GET'])
-@permission_classes((IsAuthenticated,))
 def return_chat_messages(request, username):
     print('username is ', username)
     u2 = User.objects.get(username=username)
