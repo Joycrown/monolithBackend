@@ -212,7 +212,7 @@ class FeaturedUsers(ListAPIView):
     """
     Returns all 3 latest users.
     """
-    queryset = User.objects.all()[:3]
+    queryset = User.objects.all()[:5]
     serializer_class = ListUserSerializer
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination    
