@@ -207,12 +207,39 @@ class SearchUsers(ListAPIView):
     search_fields = ("username", "name", "bio")
 
 
+# PEOPLE
+class FeaturedUsers(ListAPIView):
+    """
+    Returns all 3 latest users.
+    """
+    queryset = User.objects.all()[:3]
+    serializer_class = ListUserSerializer
+    permission_classes = (AllowAny,)
+    pagination_class = PageNumberPagination    
+    filter_backends = (SearchFilter,)
+    search_fields = ("username", "name", "bio")
+
+
+
+# PEOPLE
+class RecommendedUsers(ListAPIView):
+    """
+    Returns all 10 latest users.
+    """
+    queryset = User.objects.all()[:10]
+    serializer_class = ListUserSerializer
+    permission_classes = (AllowAny,)
+    pagination_class = PageNumberPagination    
+    filter_backends = (SearchFilter,)
+    search_fields = ("username", "name", "bio")
+
+
 # BLOCKS
 class FeaturedBlocks(ListAPIView):
     """
-    Returns all 10 latest blocks.
+    Returns all 6 latest blocks.
     """
-    queryset = Block.objects.all()[:10]
+    queryset = Block.objects.all()[:6]
     serializer_class = BlockDetailSerializer
     permission_classes = (AllowAny,)
     pagination_class = PageNumberPagination    

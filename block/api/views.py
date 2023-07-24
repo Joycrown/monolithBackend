@@ -435,7 +435,6 @@ class PostCreateView(CreateAPIView):
         return Response(d, status=status.HTTP_201_CREATED)
 
 
-
 class PostUpdateView(UpdateAPIView):
     lookup_field = "id"
     permission_classes = (AllowAny,)

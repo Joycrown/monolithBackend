@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import GetBusinessNews, FeaturedBlocks, SearchLatest, GetCategoryNews, GetStockNews, GetCryptoNews, GetStockQuoteData, GetCompanySecondProfile, GetCryptoProfileBySymbol, GetCompanyFinancials, GetCompanyProfile, SearchStocks, GetStocksByThemes, GetCryptoPriceData, GetStockPriceData, GetAllCryptoAssets, GetAllStocks, GetLogo, GetClock, GetAllCryptoAssets, GetAsset, SearchUsers, SearchBlocks, SearchPosts, BlockCategory, ListAllPosts
+from .views import GetBusinessNews, FeaturedBlocks, RecommendedUsers, FeaturedUsers, SearchLatest, GetCategoryNews, GetStockNews, GetCryptoNews, GetStockQuoteData, GetCompanySecondProfile, GetCryptoProfileBySymbol, GetCompanyFinancials, GetCompanyProfile, SearchStocks, GetStocksByThemes, GetCryptoPriceData, GetStockPriceData, GetAllCryptoAssets, GetAllStocks, GetLogo, GetClock, GetAllCryptoAssets, GetAsset, SearchUsers, SearchBlocks, SearchPosts, BlockCategory, ListAllPosts
 
 urlpatterns = [
     #SPOTLIGHT
@@ -8,6 +8,8 @@ urlpatterns = [
     path('latest', SearchLatest.as_view(), name='latest'),
     #PEOPLE
     path('users', SearchUsers.as_view(), name='users'),
+    path('featured-users', FeaturedUsers.as_view(), name='featured-users'),
+    path('recommended-users', RecommendedUsers.as_view(), name='recommended-users'),
     #BLOCKS
     path('featured-blocks', FeaturedBlocks.as_view(), name='featured-blocks'),
     path('block-category', BlockCategory.as_view(), name='block-category'),    

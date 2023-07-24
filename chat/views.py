@@ -1,36 +1,47 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from rest_framework.decorators import api_view, permission_classes
+from .models import PrivateChat, Message
+from core.models import User
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from rest_framework import viewsets
-from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
-from .models import Chatroom, Message
-from .serializers import ChatroomSerializer, ChatMessageSerializer
-import json
-
-#TODO Add ability to block a user which prevents them from chatting
-
-class ChatroomViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
-    queryset = Chatroom.objects.all()
-    serializer_class = ChatroomSerializer
-
-    @action(methods=['get'], detail=True, url_path='chat-history')
-    def get_chatroom_chat_history(self, request):
-        user = request.user
-        chatroom = self.get_object()
-        data = ChatroomSerializer(chatroom).data 
-        return Response({'message': 'success', 'history': data})
-
-    @action(methods=['patch'], detail=True, url_path='exit')
-    def exit_chatroom(self, request, pk=None): 
-        chatroom = self.get_object()   
-
-        user = request.user
-        return Response({}) 
+from django.db.models import Q
+from .serializers import MessageSerializer, PrivateRoomSerializer
+from mainproject.pagination import CustomPagination
+from notifications.models import Notification
 
 
-class MessageViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
-    queryset = Message.objects.all()
-    serializer_class = ChatMessageSerializer
+@api_view(['GET'])
+@permission_classes((IsAuthenticated,))
+def return_chat_messages(request, username):
+    print('username is ', username)
+    u2 = User.objects.get(username=username)
+    u1 = request.user
+    room = PrivateChat.objects.filter(
+        Q(user1=u1, user2=u2) | Q(user1=u2, user2=u1)).first()
+    messages = Message.objects.by_room(room)
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(messages,request)
+
+    serializer = MessageSerializer(result_page, many=True)
+    return paginator.get_paginated_response(serializer.data)
+
+
+@api_view(['GET','POST'])
+def get_rooms(request):
+    u1 = request.user
+    if request.method=="GET":
+        rooms = PrivateChat.objects.filter(Q(user1=u1) | Q(user2=u1))
+        Notification.objects.filter(
+            Q(notification_type='M',
+              to_user=request.user,
+              ) 
+        ).delete()
+    if request.method=="POST":
+        other_user = request.data.get("other_user", None)
+        rooms = PrivateChat.objects.filter(
+            Q(user1__username__icontains=other_user, user2=u1) |
+            Q(user1=u1, user2__username__icontains=other_user
+              ))
+    serializer = PrivateRoomSerializer(rooms, many=True)
+    return Response(serializer.data)
 

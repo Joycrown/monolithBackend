@@ -1,38 +1,28 @@
-from .models import Chatroom, Message, Request
 from rest_framework import serializers
-from core.models import User
+from .models import Message, PrivateChat
+from core.api.serializers import UserLessInfoSerializer
 
 
-class UserMessageSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = ['id', 'username', 'avatar', 'name']
-
-
-class ChatroomSerializer(serializers.ModelSerializer):
+class PrivateRoomSerializer(serializers.ModelSerializer):
+    user1 = UserLessInfoSerializer(read_only=True)
+    user2 = UserLessInfoSerializer(read_only=True)
+    latest_msg = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
-        model = Chatroom
-        fields = ['id', 'name', 'users']
+        model = PrivateChat
+        fields = ("id", "user1", "user2","latest_msg")
     
-    def to_representation(self, instance):
-        
-        data = super(ChatroomSerializer, self).to_representation(instance)
-        return data#['name'] 
+    def get_latest_msg(self,obj):
+        msg = obj.last_msg()
+        serializer =  MessageSerializer(msg)
+        return serializer.data
 
 
-class RequestSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = Request
-        fields = '__all__'
-    
 
-class ChatMessageSerializer(serializers.ModelSerializer):
-    chatroom = ChatroomSerializer(read_only=True)
-    user = UserMessageSerializer(read_only=True)
- 
+class MessageSerializer(serializers.ModelSerializer):
+    sender = UserLessInfoSerializer(read_only=True)
+
     class Meta:
         model = Message
-        fields = ['id', 'chatroom', 'user', 'body', 'created_at']
+        fields = ("id", "sender", "text", "created_at", "created_time", "created_day")
