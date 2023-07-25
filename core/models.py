@@ -2,6 +2,8 @@ import uuid
 
 from utils.utils import get_random_code
 from utils.utils import MONTH as month
+from block.models import Block
+
 from django.db import models
 from django.utils import timezone
 from django.template.defaultfilters import slugify
@@ -128,7 +130,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def following_count(self):
         return self.following.all().count()
- 
+
+    @property
+    def is_block_member(self):
+        return Block.objects.filter(subscribers=self)
+
+    @property
+    def is_block_moderator(self):
+        return Block.objects.filter(moderators=self)
+    
     class Meta:
         ordering = ("-created_at",)
 
