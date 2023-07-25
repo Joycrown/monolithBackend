@@ -11,8 +11,6 @@ from datetime import date
 from guardian.shortcuts import assign_perm
 from utils.utils import get_random_code
 from utils.utils import MONTH as month
-
-from core.models import User
 # TODO Add more details to block, posts, comments
 
 
@@ -89,9 +87,6 @@ def time_ago(dt):
 
 
 def edited(model):
-    # The text object is created first so if the comment/post is unedited
-    # the last_modified will be before the created
-    # Maybe created should be an attribute of the text model
     td = model.text.last_modified - model.created
     return td.days > -1 and td.seconds > 60 * 5
 
@@ -130,12 +125,12 @@ class Block(models.Model):
     category = models.CharField(max_length=1000, null=True, blank=True)
     block_type = models.CharField(max_length=100, null=True, blank=True)
     subscribers = models.ManyToManyField(
-        User, related_name="subscribers", blank=True, default=None
+        'core.User', related_name="subscribers", blank=True, default=None
     )
     moderators = models.ManyToManyField(
-        User, related_name="moderators", blank=True, default=None
+        'core.User', related_name="moderators", blank=True, default=None
     )
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="creator")
+    creator = models.ForeignKey('core.User', on_delete=models.CASCADE, related_name="creator")
     created = models.DateTimeField(auto_now_add=True)
     day = models.CharField(max_length=1000, null=True, blank=True)
     month = models.CharField(max_length=1000, null=True, blank=True)
@@ -220,13 +215,13 @@ class Post(models.Model):
         "self", blank=True, null=True, on_delete=models.CASCADE, related_name="alt"
     )
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="post_author"
+        'core.User', on_delete=models.CASCADE, related_name="post_author"
     )
     report = models.ManyToManyField(
-        User, related_name="post_report", blank=True, default=None
+        'core.User', related_name="post_report", blank=True, default=None
     )
     saved = models.ManyToManyField(
-        User, related_name="post_saved", blank=True, default=None
+        'core.User', related_name="post_saved", blank=True, default=None
     )
     share_count = models.IntegerField(blank=True, null=True, default=0)
     saved_count = models.IntegerField(blank=True, null=True, default=0)
@@ -235,7 +230,7 @@ class Post(models.Model):
     is_repost = models.BooleanField(default=False)
     is_reviewed = models.BooleanField(default=True)
     voters = models.ManyToManyField(
-        User,
+        'core.User',
         through="Vote",
         through_fields=("post", "voter"),
         related_name="post_voters",
@@ -286,16 +281,16 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True, blank=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="comment_author"
+        'core.User', on_delete=models.CASCADE, related_name="comment_author"
     )
     parent_comment = models.ForeignKey(
         "self", null=True, on_delete=models.CASCADE, blank=True
     )
     report = models.ManyToManyField(
-        User, related_name="comment_report", blank=True, default=None
+        'core.User', related_name="comment_report", blank=True, default=None
     )
     saved = models.ManyToManyField(
-        User, related_name="comment_saved", blank=True, default=None
+        'core.User', related_name="comment_saved", blank=True, default=None
     )
     created = models.DateTimeField(auto_now_add=True)
     text = models.TextField(blank=True, null=True)
@@ -304,7 +299,7 @@ class Comment(models.Model):
     report_count = models.IntegerField(blank=True, null=True, default=0)
     share_count = models.IntegerField(blank=True, null=True, default=0)
     voters = models.ManyToManyField(
-        User,
+        'core.User',
         through="Vote",
         through_fields=("comment", "voter"),
         related_name="comment_voters",
@@ -362,7 +357,7 @@ class VoteManager(models.Manager):
 
 
 class Vote(models.Model):
-    voter = models.ForeignKey(User, related_name="voter", on_delete=models.CASCADE)
+    voter = models.ForeignKey('core.User', related_name="voter", on_delete=models.CASCADE)
     value = models.IntegerField()  # should be -1 or 1
     is_post = models.BooleanField()
     is_comment = models.BooleanField()
