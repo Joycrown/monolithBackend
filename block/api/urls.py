@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostUpdateView, PostDeleteView, PostCreateView, ListBlocksUserIsJoined, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
+from .views import CommentUpdateView, CommentDeleteView, PostUpdateView, PostDeleteView, PostCreateView, ListBlocksUserIsJoined, ListBlocksUserIsModerator, ListBlocksUserJoined, RetrievePost, user_voted_comment, user_voted_post, user_saved_comment, user_reported_comment, RuleDeleteView, LinkDeleteView, CreateRuleView, CreateLinkView, ListRulesOfBlock, ListLinksOfBlock, user_joined_block, user_reported_post, user_saved_post, BlockDeleteView, BlockUpdateView, BlockDetailView, ListSavedPostsOfUser, ListSavedCommentsOfUser, CreateBlockView, ListBlocksOfUser, Block, join_block, CreatePostView, VoteOnPost, RePostView, report_post, save_post, ListPostsOfUser, ListPostsOfBlock, DetailPostOfUser, DetailPostOfBlock, CreateCommentView, VoteOnComment, report_comment, save_comment, ListCommentsOfUser, DetailCommentsOfUser, ListPopularCommentsOfPost, ListOldCommentsOfPost, ListNewCommentsOfPost, DetailCommentsOfPost
 
 
 urlpatterns = [
@@ -40,6 +40,8 @@ urlpatterns = [
     path('b/<str:b_name>/posts/<int:p_id>/', DetailPostOfBlock.as_view(), name='blocks_post_detail'),
     # COMMENT VIEWS
     path('create-comment/', CreateCommentView.as_view(), name='create_comment'),
+    path('comment-delete/', CommentDeleteView.as_view(), name='comment_delete'),
+    path('comment/<int:id>/update/', CommentUpdateView.as_view(), name='comment_update'),
     path('comment/vote/', VoteOnComment, name='vote_comment'),
     path('u/voted/comment/', user_voted_comment, name='user_voted_comment'),
     path("report/comment/", report_comment, name="report_comment"),
