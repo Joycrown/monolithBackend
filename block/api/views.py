@@ -762,6 +762,24 @@ class CreateCommentView(CreateAPIView):
         return Response(d, status=status.HTTP_201_CREATED)
 
 
+class CommentUpdateView(UpdateAPIView):
+    lookup_field = "id"
+    permission_classes = (AllowAny,)
+    parser_classes = (FormParser, MultiPartParser)
+    serializer_class = CommentSerializer
+    queryset = Comment.objects.all()
+
+
+class CommentDeleteView(APIView):
+    permission_classes = (AllowAny, )
+
+    def post(self,request):
+        data = request.data
+        comment = get_object_or_404(Comment,id=data.get('comment_id'))
+        if comment.author == request.user:
+            comment.delete()
+            return Response({"post_deleted": True})
+
     
 @api_view(["POST"])
 @permission_classes((AllowAny,))
