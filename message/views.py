@@ -1,13 +1,15 @@
 from django.shortcuts import render, get_object_or_404
 from rest_framework.decorators import api_view, permission_classes
-from .models import PrivateChat, Message
-from core.models import User
+
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from django.db.models import Q
+
 from .serializers import MessageSerializer, PrivateRoomSerializer
-from mainproject.pagination import CustomPagination
+from utils.pagination import CustomPagination
 from notifications.models import Notification
+from .models import PrivateChat, Message
+from core.models import User
 
 
 @api_view(['GET'])

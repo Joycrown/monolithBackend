@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # apps
-    "chat",
+    "message",
     "block.apps.BlockConfig",
     "core.apps.CoreConfig",
     "notifications",
