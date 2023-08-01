@@ -28,6 +28,7 @@ def time_ago(dt):
     return pluralize(t.days//365, 'yr')
 
 
+
 class Notification(models.Model):
 
     TYPE_CHOICES = (
