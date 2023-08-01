@@ -38,7 +38,7 @@ class Notification(models.Model):
         ('VC', 'vote_comment'),#votes on your comment*
         ('F', 'follow'),#when someone follows you*
         ('UF', 'unfollow'),#when someone unfollows you*
-        ('M', 'Mssage'),#when someone messages you
+        ('M', 'Message'),#when someone messages you
     )
 
     from_user = models.ForeignKey(
