@@ -47,6 +47,7 @@ class NotificationSeen(APIView):
         notification = get_object_or_404(Notification,id=data.get('notify_id'))
         if notification.to_user == request.user:
             notification.user_has_seen =  True
+            notification.delete()
             return Response({"notification_deleted": True})
     
 class NotificationDelete(APIView):
