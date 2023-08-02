@@ -40,24 +40,22 @@ def add_user_util(instance):
         instance.created = date(day=now.day, month=now.month, year=now.year)
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, username, phone, password=None):
+    def create_user(self, email, username, password=None):
         if not email:
             raise ValueError("Users must have an email address")
         if not password:
-            raise ValueError("Users must have a password")
-        if not phone:
-            raise ValueError("Users must have a phone number")        
+            raise ValueError("Users must have a password")     
 
         email = self.normalize_email(email)
-        user = self.model(email=email, username=username, phone=phone)
+        user = self.model(email=email, username=username)
 
         user.set_password(password)
         user.save()
 
         return user
 
-    def create_superuser(self, email, username, phone, password=None):
-        user = self.create_user(email, username, phone, password)
+    def create_superuser(self, email, username, password=None):
+        user = self.create_user(email, username, password)
 
         user.is_superuser = True
         user.is_staff = True

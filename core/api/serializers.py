@@ -29,12 +29,11 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["email", "username", "phone", "password"]
+        fields = ["email", "username", "password"]
 
     def validate(self, attrs):
         email = attrs.get("email", "")
         username = attrs.get("username", "")
-        phone = attrs.get("phone", "")
 
         if not username.isalnum():
             raise serializers.ValidationError(self.default_error_messages)
