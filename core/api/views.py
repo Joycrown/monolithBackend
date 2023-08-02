@@ -81,13 +81,14 @@ class RegisterView(generics.GenericAPIView):
             #user.month = now.month
             user.year = now.year
             call_code = request.data.get("call_code")
+            phone = request.data.get("phone")
+            user.phone = phone
             user.call_code = call_code
             user.is_active = True
             user.tos = True
 
             user_data["email"] = user.email
             user_data["username"] = user.username
-            user_data["phone"] = user.phone
             html_tpl_path = "email_templates/welcome.html"
             html_intro_path = "email_templates/intro.html"
             context_data = {"name": user.username, "code": user.otp}
