@@ -408,8 +408,6 @@ class ListUserSerializer(serializers.ModelSerializer):
             "followers",
             "following_count",
             "following",
-            "is_block_member",
-            "is_block_moderator",
             "is_verified",
             "is_active",
             "active",
