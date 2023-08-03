@@ -291,7 +291,7 @@ class ListBlocksUserIsModerator(ListAPIView):
     def get_queryset(self):
         user = self.request.user
         blocks = Block.objects.filter(moderators=user)
-        return queryset
+        return blocks
 
 
 class ListBlocksUserIsJoined(ListAPIView):
@@ -303,7 +303,7 @@ class ListBlocksUserIsJoined(ListAPIView):
     def get_queryset(self):
         user = self.request.user
         blocks = Block.objects.filter(subscribers=user)
-        return queryset
+        return blocks
 
 
 @api_view(["POST"])
