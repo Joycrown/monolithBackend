@@ -286,7 +286,6 @@ class ListBlocksUserIsModerator(ListAPIView):
     queryset=Block.objects.all()
     serializer_class=BlockSerializer
     permission_classes=(AllowAny,)
-    pagination_class = PageNumberPagination
 
     def get_queryset(self):
         user = self.request.user
@@ -298,7 +297,6 @@ class ListBlocksUserIsJoined(ListAPIView):
     queryset=Block.objects.all()
     serializer_class=BlockSerializer
     permission_classes=(AllowAny,)
-    pagination_class = PageNumberPagination
 
     def get_queryset(self):
         user = self.request.user
