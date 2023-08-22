@@ -29,7 +29,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # apps
+    "events",
+    "chamber",
     "message",
+    "newsletters.apps.NewslettersConfig",
     "block.apps.BlockConfig",
     "core.apps.CoreConfig",
     "notifications",

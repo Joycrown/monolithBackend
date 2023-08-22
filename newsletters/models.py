@@ -1,14 +1,18 @@
 from django.db import models
+from django.utils.translation import ugettext as _
+
 from datetime import date, datetime
 from django.utils import timezone
 from utils.utils import MONTH as month
 from core.models import User
-from django.db.models import Q
-
 
 
 def file_to(instance, filename):
-    return "message/{0}/{1}".format(instance.sender.username, filename)
+    return "newsletter/{0}/{1}".format(instance.name, filename)
+
+
+def post_to(instance, filename):
+    return "article/{0}/{1}/{2}".format(instance.newsletter.name, instance.name, filename)
 
 
 def time_n_day_ago(instance):
@@ -69,74 +73,49 @@ def time_n_day_ago(instance):
         instance.time = f'12:{current_minutes} AM'
 
 
-class MessageManager(models.Manager):
-    def by_room(self, room):
-        messages = Message.objects.filter(room=room).order_by("-created_at")
-        return messages
-
-
-class PrivateChatManager(models.Manager):
-    def create_room_if_none(self,u1,u2):
-        has_room = PrivateChat.objects.filter(Q(user1=u1 ,user2=u2)| Q(user1=u2,user2=u1)).first()
-        if not has_room:
-            print('not found so creating one ')
-            PrivateChat.objects.create(user1=u1,user2=u2)
-        return has_room  
-
-
-class BaseModel(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        abstract = True
-
-
-class PrivateChat(BaseModel):
-    user1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user1")
-    user2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user2")
-    connected_users = models.ManyToManyField(
-        User, blank=True, related_name="connected_users")
-    is_active = models.BooleanField(default=False)
-    objects = PrivateChatManager()
-
-
-    def connect(self,user):
-        is_added = False
-        if not user in self.connected_users.all():
-            self.connected_users.add(user)
-            is_added = True
-        return is_added
-    
-    def disconnect(self,user):
-        is_removed = False
-        if not user in self.connected_users.all():
-            self.connected_users.remove(user)
-            is_removed = True
-        return is_removed
-    
-    def last_msg(self):
-        return self.message_set.all().last()
-    
-    def __str__(self) -> str:
-        return f'Chat : {self.user1} - {self.user2}'
-    
-
-class Message(BaseModel):
-    room = models.ForeignKey(PrivateChat, on_delete=models.CASCADE)
-    sender = models.ForeignKey(User, on_delete=models.CASCADE)
-    file = models.FileField(upload_to=file_to, blank=True, null=True, max_length=1000000)
-    text = models.TextField(blank=False, null=False)
+class Newsletter(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    cover = models.ImageField(
+        upload_to=file_to, blank=True, null=True, max_length=1000000
+    )
+    target = models.ManyToManyField(User, related_name='news_target', blank=True)
+    frequency = models.CharField(max_length=50, null=True)
+    creation_date = models.DateTimeField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='news_likes', blank=True)
+    owner = models.ForeignKey(User, related_name='news_owner', on_delete=models.CASCADE, null=True)
+    subscribers = models.ManyToManyField(User, related_name='news_subscribers', blank=True)
+    category = models.CharField(max_length=3, null=True, blank=True)
     created = models.DateTimeField(default=timezone.now)
     day = models.CharField(max_length=3, null=True, blank=True)
     month = models.CharField(max_length=15, null=True, blank=True)
     year = models.CharField(max_length=7, null=True, blank=True)
     time = models.CharField(max_length=15, null=True, blank=True)
-    objects = MessageManager()
 
-    def __str__(self) -> str:
-        return f'From <Room - {self.room}>'
+    def __str__(self):
+        return self.name
     
     def save(self, *args, **kwargs):
         time_n_day_ago(self)
         super().save(*args, **kwargs)
+
+
+class Article(models.Model):
+    name = models.CharField(max_length=100)
+    content = models.TextField()
+    cover = models.ImageField(
+        upload_to=post_to, blank=True, null=True, max_length=1000000
+    )
+    newsletter = models.ForeignKey(Newsletter, on_delete=models.CASCADE, related_name='newsletter')
+    created = models.DateTimeField(default=timezone.now)
+    day = models.CharField(max_length=3, null=True, blank=True)
+    month = models.CharField(max_length=15, null=True, blank=True)
+    year = models.CharField(max_length=7, null=True, blank=True)
+    time = models.CharField(max_length=15, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+    
+    def save(self, *args, **kwargs):
+        time_n_day_ago(self)
+        super().save(*args, **kwargs)        
