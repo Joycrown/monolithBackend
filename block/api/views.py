@@ -195,16 +195,6 @@ class ListBlocksUserJoined(ListAPIView):
                 status=status.HTTP_200_OK,
             )
 
-        # for block in blocks:
-        #     if user in block.subscribers.all():
-        #         serializer = self.serializer_class(block, many=True)
-        #         return Response(data=serializer.data, status=status.HTTP_200_OK)
-        #     else:
-        #         return Response(
-        #             {"message": "there are no blocks user joined"},
-        #             status=status.HTTP_200_OK,
-        #         )
-
 
 class ListLinksOfBlock(ListAPIView):
     permission_classes = (AllowAny,)
@@ -293,41 +283,25 @@ class ListBlocksOfUser(ListAPIView):
 
 
 class ListBlocksUserIsModerator(ListAPIView):
-    permission_classes = (AllowAny,)
-    pagination_class = PageNumberPagination
-    serializer_class = BlockSerializer
+    queryset=Block.objects.all()
+    serializer_class=BlockSerializer
+    permission_classes=(AllowAny,)
 
-    def get(self, request, username):
-        blocks = Block.objects.all()
-        user = get_object_or_404(User, username=username)
-        for block in blocks:
-            if user in block.moderators.all():
-                serializer = self.serializer_class(block, many=True)
-                return Response(data=serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response(
-                    {"there are no blocks user is moderator of"},
-                    status=status.HTTP_200_OK,
-                )
+    def get_queryset(self):
+        user = self.request.user
+        blocks = Block.objects.filter(moderators=user)
+        return blocks
 
 
 class ListBlocksUserIsJoined(ListAPIView):
-    permission_classes = (AllowAny,)
-    pagination_class = PageNumberPagination
-    serializer_class = BlockSerializer
+    queryset=Block.objects.all()
+    serializer_class=BlockSerializer
+    permission_classes=(AllowAny,)
 
-    def get(self, request, username):
-        blocks = Block.objects.all()
-        user = get_object_or_404(User, username=username)
-        for block in blocks:
-            if user in block.subscribers.all():
-                serializer = self.serializer_class(block, many=True)
-                return Response(data=serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response(
-                    {"there are no blocks user is subscriber of"},
-                    status=status.HTTP_200_OK,
-                )
+    def get_queryset(self):
+        user = self.request.user
+        blocks = Block.objects.filter(subscribers=user)
+        return blocks
 
 
 @api_view(["POST"])

@@ -18,8 +18,8 @@ urlpatterns = [
     path('u/joined/block/', user_joined_block, name='user_joined_block'),
     #path('u/<str:username>/joined/blocks/', ListBlocksUserJoined.as_view(), name='joined_blocks'),
     path('u/<str:username>/creator/blocks/', ListBlocksOfUser.as_view(), name='creator_blocks'),
-    path('u/<str:username>/moderator/blocks/', ListBlocksUserIsModerator.as_view(), name='moderator_blocks'),
-    path('u/<str:username>/joined/blocks/', ListBlocksUserIsJoined.as_view(), name='joined_blocks'),
+    path('u/moderator/blocks/', ListBlocksUserIsModerator.as_view(), name='moderator_blocks'),
+    path('u/joined/blocks/', ListBlocksUserIsJoined.as_view(), name='joined_blocks'),
     # POST VIEWS    
     path('create-post/', CreatePostView.as_view(), name='create_post'),
     path('post-create/', PostCreateView.as_view(), name='post_create'),
