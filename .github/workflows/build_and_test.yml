@@ -6,6 +6,21 @@ on:
   pull_request:
     branches: [main]
 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python Environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
 deploy:
     needs: [test]
@@ -30,4 +45,4 @@ deploy:
         
         version_label: 1
         region: "us-east-1"
-        deployment_package: deploy.zip    
+        deployment_package: deploy.zip
