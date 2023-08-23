@@ -7,7 +7,7 @@ from notifications.models import Notification
 from django.db.models import Q
 
 
-class ChatConsumer(AsyncJsonWebsocketConsumer):
+class MessageConsumer(AsyncJsonWebsocketConsumer):
     
     async def connect(self):
         self.me = self.scope.get('user')
@@ -33,11 +33,13 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         command = content.get("command", None)
         if command == "private_chat":
             message = content.get("message", None)
+            file = content.get("file", None)
 
             self.newmsg = await sync_to_async(Message.objects.create)(
                 room=self.private_room,
                 sender=self.me,
-                text=message
+                text=message,
+                file=file
             )
             await self.message_notice()
             await self.channel_layer.group_send(
@@ -45,6 +47,7 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
                 {
                     "type": "websocket_message",
                     "text": message,
+                    "file": file,
                     "id": self.newmsg.id,
                     "username": self.newmsg.sender.username,
                     "avatar": self.newmsg.sender.avatar.url,

@@ -11,10 +11,10 @@ urlpatterns = [
     path("core/", include("core.api.urls")),
     path("chat/", include("message.urls")),
     path("search/", include("search.api.urls")),
+    path("chamber/", include("chamber.chat.urls")),
+    path("events/", include("events.urls")),
+    path("newsletters/", include("newsletters.urls")),
     path("notifications/", include("notifications.urls")),
-    #path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    #path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    #path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
