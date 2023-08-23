@@ -227,7 +227,6 @@ class ListAllPosts(ListAPIView):
     filter_backends = (SearchFilter,)
     search_fields = ("title", "block__name", "author__name", "author__username")
 
-
 # CRYPTO
 class GetCryptoPriceData(GenericAPIView):
     permission_classes = (AllowAny,)
