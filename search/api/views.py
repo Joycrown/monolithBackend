@@ -38,29 +38,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django_filters.rest_framework import DjangoFilterBackend
 
-from alpaca.data.requests import CryptoBarsRequest
-from alpaca.data.timeframe import TimeFrame
-from alpaca.data.historical import CryptoHistoricalDataClient, StockHistoricalDataClient
-from alpaca.broker.models import Contact, Identity, Disclosures, Agreement
-from alpaca.broker.requests import (
-    CreateAccountRequest,
-    CreatePlaidRelationshipRequest,
-    CreateACHTransferRequest,
-    CreateJournalRequest,
-    CreateBatchJournalRequest,
-    MarketOrderRequest,
-    LimitOrderRequest,
-)
-from alpaca.broker.enums import (
-    TaxIdType,
-    FundingSource,
-    AgreementType,
-    TransferDirection,
-    TransferTiming,
-)
-from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import GetAssetsRequest
-from alpaca.trading.enums import AssetClass
 from newsdataapi import NewsDataApiClient
 
 from utils.utils import Util
@@ -83,49 +60,6 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.response import Response
-
-# TODO Add more company / crypto market details /Upgrade the search functionality
-
-
-def get_broker_client():
-    BROKER_API_KEY = config("BROKER_API_KEY")
-    BROKER_SECRET_KEY = config("BROKER_SECRET_KEY")
-
-    broker_client = BrokerClient(
-        api_key=BROKER_API_KEY,
-        secret_key=BROKER_SECRET_KEY,
-        sandbox=True,
-    )
-    return broker_client
-
-
-def get_trading_client():
-    BROKER_API_KEY = config("BROKER_API_KEY")
-    BROKER_SECRET_KEY = config("BROKER_SECRET_KEY")
-
-    trading_client = TradingClient(api_key=BROKER_API_KEY, secret_key=BROKER_SECRET_KEY)
-    return trading_client
-
-
-def get_stock_historical_data_client():
-    BROKER_API_KEY = config("BROKER_API_KEY")
-    BROKER_SECRET_KEY = config("BROKER_SECRET_KEY")
-
-    stock_historical_data_client = StockHistoricalDataClient(
-        api_key=BROKER_API_KEY,
-        secret_key=BROKER_SECRET_KEY,
-    )
-    return stock_historical_data_client
-
-
-def get_crypto_historical_data_client():
-    BROKER_API_KEY = config("BROKER_API_KEY")
-    BROKER_SECRET_KEY = config("BROKER_SECRET_KEY")
-
-    crypto_historical_data_client = CryptoHistoricalDataClient()
-
-    return crypto_historical_data_client
-
 
 # SPOTLIGHT
 """
@@ -294,18 +228,6 @@ class ListAllPosts(ListAPIView):
     search_fields = ("title", "block__name", "author__name", "author__username")
 
 
-# ASSET#
-class GetAsset(GenericAPIView):
-    permission_classes = (AllowAny,)
-
-    def post(self, request):
-        trading_client = get_trading_client()
-        specific = request.data.get("symbol")
-
-        asset = trading_client.get_asset(specific)
-        return Response({"status": True, "data": asset}, status.HTTP_200_OK)
-
-
 # CRYPTO
 class GetCryptoPriceData(GenericAPIView):
     permission_classes = (AllowAny,)
@@ -378,24 +300,6 @@ class GetCryptoProfileBySymbol(GenericAPIView):
             },
             status=status.HTTP_200_OK,
         )
-
-
-class GetAllCryptoAssets(GenericAPIView):
-    permission_classes = (AllowAny,)
-
-    def get(self, request):
-        trading_client = get_trading_client()
-        # search for crypto assets
-        search_params = GetAssetsRequest(asset_class=AssetClass.CRYPTO)
-
-        cryptos = trading_client.get_all_assets(search_params)
-        return Response(
-            {
-                "data": cryptos,
-            },
-            status=status.HTTP_200_OK,
-        )
-
 
 # STOCKS
 class GetStockPriceData(GenericAPIView):
@@ -538,23 +442,6 @@ class GetStockQuoteData(GenericAPIView):
         )
 
 
-class GetAllStocks(GenericAPIView):
-    permission_classes = (AllowAny,)
-
-    def get(self, request):
-        trading_client = get_trading_client()
-        # search for stock assets
-        search_params = GetAssetsRequest(asset_class=AssetClass.US_EQUITY)
-
-        stocks = trading_client.get_all_assets(search_params)
-        return Response(
-            {
-                "data": stocks,
-            },
-            status=status.HTTP_200_OK,
-        )
-
-
 class GetStocksByThemes(GenericAPIView):
     permission_classes = (AllowAny,)
 
@@ -643,40 +530,3 @@ class GetBusinessNews(GenericAPIView):
             },
             status=status.HTTP_200_OK,
         )    
-
-# LOGO
-
-
-class GetLogo(GenericAPIView):
-    permission_classes = (AllowAny,)
-
-    def get_logo(self, request, requests):
-        sym = request.data.get("symbol")
-        url = "https://data.alpaca.markets/v1beta1/logos/{sym}"
-        auth = OAuth1(BROKER_API_KEY, BROKER_SECRET_KEY)
-        logo = requests.get(url, auth=auth)
-
-        return Response(
-            {
-                "data": logo,
-            },
-            status=status.HTTP_200_OK,
-        )
-
-
-# CLOCK
-
-
-class GetClock(GenericAPIView):
-    permission_classes = (AllowAny,)
-
-    def get(self, request):
-        trading_client = get_trading_client()
-
-        clock = trading_client.get_clock()
-        return Response(
-            {
-                "data": clock,
-            },
-            status=status.HTTP_200_OK,
-        )
