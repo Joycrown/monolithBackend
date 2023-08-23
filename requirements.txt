@@ -78,7 +78,7 @@ Pygments==2.15.1
 PyJWT==1.7.1
 pyOpenSSL==22.1.0
 pyparsing==3.0.9
-pypiwin32==223
+pypiwin32==300
 pyrsistent==0.18.1
 python-dateutil==2.8.2
 python-decouple==3.6
