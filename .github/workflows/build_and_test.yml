@@ -43,6 +43,6 @@ jobs:
           application_name: pyramid-test
           environment_name: pyramid-test-env
           
-          version_label: "8"
+          version_label: "9"
           region: "us-east-1"
           deployment_package: deploy.zip
