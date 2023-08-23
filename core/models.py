@@ -158,34 +158,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         add_user_util(self)
         super().save(*args, **kwargs)
 
-
-class Investor(models.Model):
-
-    watchlist_id = models.CharField(max_length=1000, null=True, blank=True)
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="investor", editable=False
-    )
-    name = models.CharField(max_length=1000, blank=True)
-    account_id = models.CharField(max_length=1000, blank=True, null=True)
-    middle_name = models.CharField(max_length=1000, blank=True, null=True)
-    given_name = models.CharField(max_length=1000, blank=True, null=True)
-    professional_status = models.CharField(max_length=1000, blank=True)
-    professional_cat = models.CharField(max_length=1000, null=True, blank=True)
-    professional_subcat = models.CharField(max_length=1000, null=True, blank=True)
-    income = models.CharField(max_length=1000, null=True, blank=True)
-    experience = models.CharField(max_length=1000, null=True, blank=True)
-    created_at = models.DateTimeField(default=timezone.now)
-
-    def slug(self):
-        return self.user.slug
-
-    class Meta:
-        ordering = ("-created_at",)
-
-    def __str__(self):
-        return f"{self.user} has investor profile {self.name}"
-
-
 class Feedback(models.Model):
     title = models.CharField(max_length=10000, blank=True, null=True)
     text = models.TextField(max_length=10000)
@@ -194,25 +166,3 @@ class Feedback(models.Model):
 
     def __str__(self):
         return f"{self.user} gave feedback {self.title}"
-
-
-# Users proof of identity
-class Poi(models.Model):
-    id_type = models.CharField(max_length=30000)
-    content = models.TextField(blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
-    created_on = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return f"{self.user}'s proof of identity {self.id_type}"
-
-
-# Users Legal documents
-class Document(models.Model):
-    file = models.FileField(upload_to=document_to, blank=True, null=True)
-    doc_type = models.CharField(max_length=30000)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
-    created_on = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return f"{self.user}'s legal documents {self.doc_type}"

@@ -3,8 +3,8 @@ from rest_framework import serializers
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
- 
-from core.models import User, Feedback, Investor, Poi, Document
+
+from core.models import User, Feedback
 from django.contrib import auth
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.encoding import (
@@ -274,40 +274,6 @@ class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
         fields = ("id", "title", "text", "user", "created_on")
-
-
-class PoiSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Poi
-        fields = ("id", "user", "id_type", "content", "created_on")
-
-
-class DocumentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Document
-        fields = ("id", "user", "file", "doc_type", "created_on")
-
-
-class InvestorSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField()
-    account_id = serializers.ReadOnlyField()
-
-    class Meta:
-        model = Investor
-        fields = (
-            "id",
-            "user",
-            "account_id",
-            "name",
-            "watchlist_id",
-            "professional_status",
-            "professional_cat",
-            "professional_subcat",
-            "income",
-            "slug",
-            "experience",
-            "created_at",
-        )
 
 
 class UserProfileSerializer(serializers.ModelSerializer):

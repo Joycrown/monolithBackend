@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Feedback, Investor, Poi, Document
+from .models import User, Feedback
 
  
 class UserAdmin(admin.ModelAdmin):
@@ -41,18 +41,6 @@ class FeedbackAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 
-class PoiAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'id_type', 'content', 'created_on')
-    search_fields = ['user']
-
-
-class DocumentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'file', 'doc_type', 'created_on')
-    search_fields = ['user']
-
 
 admin.site.register(User, UserAdmin)
-admin.site.register(Investor)
 admin.site.register(Feedback, FeedbackAdmin)
-admin.site.register(Poi, PoiAdmin)
-admin.site.register(Document, DocumentAdmin)

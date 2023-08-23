@@ -18,20 +18,11 @@ from .views import (
     UserFollowing,
     user_followed_user,
     ChangePassword,
-    PoiCreateView,
-    DocumentCreateView,
     FeedbackCreateView,
-    InvestorDeleteView,
-    InvestorUpdateView,
-    InvestorCreateView,
-    InvestorDetailView,
     UserUpdateView,
     UserDetailView,
     UserDeleteView,
     UpdateUserView,
-    BrokerAccountDetailView,
-    BrokerAccountUpdateView,
-    BrokerAccountDeleteView,
 )
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -56,17 +47,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),    
-    path("poi/create/", PoiCreateView.as_view(), name="poi-create"),
-    path("document/create/", DocumentCreateView.as_view(), name="document-create"),
     path("feedback/create/", FeedbackCreateView.as_view(), name="feedback-create"),
-    path("investor/create/", InvestorCreateView.as_view(), name="investor-create"),
-    path(
-        "investor/update/", InvestorUpdateView.as_view(), name="investor-update"
-    ),
-    path(
-        "investor/delete/", InvestorDeleteView.as_view(), name="investor-delete"
-    ),
-    path("investor/retrieve/", InvestorDetailView.as_view(), name="investor-detail"),
     path(
         "user/update/<username>/", UserUpdateView.as_view(), name="user-update"
     ),
@@ -80,19 +61,4 @@ urlpatterns = [
     path("following/<username>/", UserFollowing.as_view(), name="user_following"),
     path("user/followed/user/", user_followed_user, name="user_followed_user"),
     path("password/<username>/", ChangePassword.as_view(), name="change"),
-    path(
-        "broker_account/detail/",
-        BrokerAccountDetailView.as_view(),
-        name="broker_account-detail",
-    ),
-    path(
-        "broker_account/update/",
-        BrokerAccountUpdateView.as_view(),
-        name="broker_account-update",
-    ),
-    path(
-        "broker_account/delete/",
-        BrokerAccountDeleteView.as_view(),
-        name="broker_account-delete",
-    ),
 ]

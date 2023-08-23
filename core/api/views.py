@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 from django.template.loader import get_template
  
 from utils.utils import Util
-from core.models import User, Feedback, Investor, Poi, Document
+from core.models import User, Feedback, Poi, Document
 from .serializers import (
     ListUserSerializer,
     UserProfileSerializer,
@@ -21,14 +21,10 @@ from .serializers import (
     VerifyOTPResetSerializer,
     ResendEmailSerializer,
     FeedbackSerializer,
-    InvestorSerializer,
-    PoiSerializer,
-    DocumentSerializer,
     SetNewPasswordSerializer,
     ResetPasswordSerializer,
 )
 from core.emails import *
-from core.utils import create_broker_account, create_user_watchlist
 from notifications.models import Notification
 
 from rest_framework import generics, status, permissions
@@ -47,7 +43,6 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.status import HTTP_200_OK
 from rest_framework_simplejwt.tokens import RefreshToken
-from core.utils import create_broker_account, get_broker_client
 from django.http import HttpResponsePermanentRedirect
 
 
@@ -403,24 +398,6 @@ class LogoutAPIView(generics.GenericAPIView):
         return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
 
 
-class PoiCreateView(CreateAPIView):
-    permission_classes = (AllowAny,)
-    serializer_class = PoiSerializer
-    queryset = Poi.objects.all()
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-
-class DocumentCreateView(CreateAPIView):
-    permission_classes = (AllowAny,)
-    serializer_class = DocumentSerializer
-    queryset = Document.objects.all()
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-
 class FeedbackCreateView(CreateAPIView):
     permission_classes = (AllowAny,)
     renderer_classes = (JSONRenderer,)
@@ -436,100 +413,6 @@ class FeedbackCreateView(CreateAPIView):
             feedback = Feedback.objects.create(title=title, text=text, user=author)
         d = FeedbackSerializer(feedback).data
         return Response(d, status=status.HTTP_201_CREATED)
-
-
-class InvestorDetailView(RetrieveAPIView):
-    queryset = Investor.objects.all()
-    permission_classes = (AllowAny,)
-    serializer_class = InvestorSerializer
-
-    def get_object(self):
-        try:
-            investor = Investor.objects.get(user=self.request.user)
-            return investor
-        except ObjectDoesNotExist:
-            raise Http404("You do not have any active investor profile")
-
-
-class InvestorCreateView(GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-    serializer_class = InvestorSerializer
-
-    def post(self, request):
-        data = request.data
-        serializer = InvestorSerializer(data=data)
-        if serializer.is_valid():
-            account = create_broker_account(data, request.user, request)
-            account_id = account["id"]
-            watchlist = create_user_watchlist(account_id)
-            serializer.save(
-                user=request.user, account_id=account_id, watchlist_id=watchlist["id"]
-            )
-            return Response({"data": serializer.data}, status.HTTP_200_OK)
-        else:
-
-            return Response({"status":False,"message": serializer.error}, status.HTTP_400_BAD_REQUEST)
-
-
-class InvestorUpdateView(UpdateAPIView):
-    queryset = Investor.objects.all()
-    permission_classes = (IsAuthenticated,)
-    serializer_class = InvestorSerializer
-
-    def get_object(self):
-        try:
-            investor = Investor.objects.get(user=self.request.user)
-            return investor
-        except ObjectDoesNotExist:
-            raise Http404("You do not have any active investor profile")
-
-
-class InvestorDeleteView(DestroyAPIView):
-    permission_classes = (IsAuthenticated,)
-    serializer_class = InvestorSerializer
-    queryset = Investor.objects.all()
-
-    def get_object(self):
-        try:
-            investor = Investor.objects.get(user=self.request.user)
-            return investor
-        except ObjectDoesNotExist:
-            raise Http404("You do not have any active investor profile")
-
-
-class BrokerAccountDetailView(GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-
-    def get(self, request):
-        acc_id = request.user.investor.account_id
-        broker_client = get_broker_client()
-
-        account = broker_client.get_account_by_id(acc_id)
-        return Response({"status": True, "data": account}, status.HTTP_200_OK)
-
-
-class BrokerAccountUpdateView(GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-
-    def put(self, request):
-        acc_id = request.user.investor.account_id
-        data = request.data
-        broker_client = get_broker_client()
-
-        account = broker_client.update_account(acc_id, data)
-        return Response({"status": True, "data": account}, status.HTTP_200_OK)
-
-
-class BrokerAccountDeleteView(GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-
-    def destroy(self, request):
-        acc_id = request.user.investor.account_id
-        data = request.data
-        broker_client = get_broker_client()
-
-        account = broker_client.delete_account(acc_id)
-        return Response({"status": True, "data": account}, status.HTTP_200_OK)
 
 
 class UserFollowers(APIView):
