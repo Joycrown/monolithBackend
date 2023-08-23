@@ -4,7 +4,6 @@ attrs==22.1.0
 autobahn==22.7.1
 Automat==20.2.0
 autopep8==1.5.7
-awsebcli==3.20.8
 backports.zoneinfo==0.2.1
 boto3==1.26.36
 botocore==1.29.36
@@ -84,7 +83,6 @@ python-dateutil==2.8.2
 python-decouple==3.6
 pytz==2021.1
 pytzdata==2020.1
-pywin32==306
 PyYAML==6.0
 rave-python==1.2.16
 redis==4.3.4
