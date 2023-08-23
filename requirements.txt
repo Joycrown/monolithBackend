@@ -4,7 +4,6 @@ attrs==22.1.0
 autobahn==22.7.1
 Automat==20.2.0
 autopep8==1.5.7
-awsebcli==3.20.8
 backports.zoneinfo==0.2.1
 boto3==1.26.36
 botocore==1.29.36
@@ -78,7 +77,6 @@ Pygments==2.15.1
 PyJWT==1.7.1
 pyOpenSSL==22.1.0
 pyparsing==3.0.9
-pypiwin32==300
 pyrsistent==0.18.1
 python-dateutil==2.8.2
 python-decouple==3.6
