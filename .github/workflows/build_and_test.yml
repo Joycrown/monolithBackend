@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python Environment
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9'
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
@@ -40,8 +40,8 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           
-          application_name: django-github-actions-aws
-          environment_name: django-github-actions-aws
+          application_name: pyramid-test
+          environment_name: pyramid-test-env
           
           version_label: 1
           region: "us-east-1"
