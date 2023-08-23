@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 from django.template.loader import get_template
  
 from utils.utils import Util
-from core.models import User, Feedback, Poi, Document
+from core.models import User, Feedback
 from .serializers import (
     ListUserSerializer,
     UserProfileSerializer,
