@@ -95,6 +95,7 @@ DATABASES = {
         'HOST': 'pyramid-test-server.postgres.database.azure.com',
     }
 }
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
