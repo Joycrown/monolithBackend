@@ -72,7 +72,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     avatar = models.ImageField(upload_to=upload_to, blank=True, null=True)
     cover = models.ImageField(upload_to=upload_for, blank=True, null=True)
     email = models.EmailField(max_length=255, unique=True)
-    phone = models.CharField(max_length=255, blank=True)
+    phone = models.CharField(max_length=255, blank=True, null=True)
     username = models.CharField(max_length=255, unique=True)
     name = models.CharField(max_length=1000, blank=True)
     bio = models.TextField(blank=True, null=True)
