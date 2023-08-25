@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "storages",
     # apps
     "events",
     "chamber",
@@ -46,7 +47,6 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "django_filters",
     "guardian",
-    "storages",
 ]
 
 MIDDLEWARE = [
