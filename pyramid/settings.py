@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "storages",
     # apps
     "events",
     "chamber",
@@ -47,7 +48,6 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "django_filters",
     "guardian",
-    "storages",
 ]
 
 MIDDLEWARE = [
@@ -89,7 +89,7 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramid-test-server',
+        'NAME': 'pyramid-test-database',
         'USER': 'byxdpnicyx',
         'PASSWORD': '43874KO6Y573NEEW$',
         'HOST': 'pyramid-test-server.postgres.database.azure.com',
