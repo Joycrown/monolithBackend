@@ -11,7 +11,7 @@ def finance_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Finance"
       username = "pyramid"
-      pk = 1
+      pk = 11
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -64,8 +64,8 @@ def finance_post():
 def crypto_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Cryptocurrency"
-      username = "benlo"
-      pk = 2
+      username = "lesleyasah3"
+      pk = 1
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -118,8 +118,8 @@ def crypto_post():
 def stock_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Stocks"
-      username = "lumba"
-      pk = 3
+      username = "davidandefikir1"
+      pk = 7
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -172,7 +172,7 @@ def stock_post():
 def real_estate_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Real estate"
-      username = "roland"
+      username = "pyramid"
       pk = 4
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
@@ -226,8 +226,8 @@ def real_estate_post():
 def forex_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Forex"
-      username = "Bobuin"
-      pk = 5
+      username = "lesleyasah3"
+      pk = 12
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -281,7 +281,7 @@ def economy_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "World Economy"
       username = "pyramid"
-      pk = 1
+      pk = 11
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
