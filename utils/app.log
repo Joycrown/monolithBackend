@@ -2431,3 +2431,6 @@ django.db.utils.OperationalError: no such table: chat_privatechat
 2023-08-25 15:36:10,455 | DEBUG | asyncio | selector_events | 16376 | 16076 | Using selector: SelectSelector
 2023-08-25 23:58:36,398 | DEBUG | asyncio | selector_events | 17100 | 14944 | Using selector: SelectSelector
 2023-08-25 23:58:39,810 | DEBUG | asyncio | selector_events | 17100 | 14944 | Using selector: SelectSelector
+2023-08-26 19:41:57,925 | DEBUG | asyncio | selector_events | 14720 | 14364 | Using selector: SelectSelector
+2023-08-26 19:41:59,644 | DEBUG | asyncio | selector_events | 14720 | 14364 | Using selector: SelectSelector
+2023-08-26 19:42:00,271 | DEBUG | asyncio | selector_events | 14012 | 15196 | Using selector: SelectSelector

@@ -65,7 +65,7 @@ from rest_framework.generics import (
 
 class CreateBlockView(CreateAPIView):
     permission_classes = (AllowAny,)
-    serializer_class = BlockDetailSerializer
+    serializer_class = BlockSerializer
     parser_classes = (FormParser, MultiPartParser)
 
     def create(self, request, *args, **kwargs):
@@ -90,7 +90,7 @@ class CreateBlockView(CreateAPIView):
                 desc=desc, 
                 about=about
             )
-        d = BlockDetailSerializer(block).data
+        d = BlockSerializer(block).data
         return Response(d, status=status.HTTP_201_CREATED)
 
 
@@ -104,7 +104,7 @@ class BlockDetailView(RetrieveAPIView):
 class BlockUpdateView(UpdateAPIView):
     lookup_field = "name"
     permission_classes = (AllowAny,)
-    serializer_class = BlockDetailSerializer
+    serializer_class = BlockSerializer
     queryset = Block.objects.all()
     parser_classes = (FormParser, MultiPartParser)
 
