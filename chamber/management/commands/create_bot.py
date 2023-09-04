@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from chat.models import Bot
+from models import Bot
 from core.models import User 
 from django.conf import settings
 

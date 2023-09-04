@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view, permission_classes
 
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.generics import ListAPIView
 from django.db.models import Q
 
 from .serializers import MessageSerializer, PrivateRoomSerializer
@@ -10,6 +11,22 @@ from utils.pagination import CustomPagination
 from notifications.models import Notification
 from .models import PrivateChat, Message
 from core.models import User
+
+
+@api_view(['GET'])
+def return_users_chats(request):
+    u1 = request.user
+    rooms = PrivateChat.objects.filter(Q(user1=u1) | Q(user2=u1))
+    Notification.objects.filter(
+            Q(notification_type='M',
+              to_user=request.user,
+              ) 
+        ).delete()
+    paginator = CustomPagination()
+    result_page = paginator.paginate_queryset(rooms,request)
+
+    serializer = PrivateRoomSerializer(result_page, many=True)
+    return paginator.get_paginated_response(serializer.data)
 
 
 @api_view(['GET'])
@@ -45,4 +62,3 @@ def get_rooms(request):
               ))
     serializer = PrivateRoomSerializer(rooms, many=True)
     return Response(serializer.data)
-
