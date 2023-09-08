@@ -11,7 +11,7 @@ urlpatterns = [
     path("core/", include("core.api.urls")),
     path("chat/", include("message.urls")),
     path("search/", include("search.api.urls")),
-    path("chamber/", include("chamber.chat.urls")),
+    path("chamber/", include("chamber.urls")),
     path("events/", include("events.urls")),
     path("newsletters/", include("newsletters.urls")),
     path("notifications/", include("notifications.urls")),
