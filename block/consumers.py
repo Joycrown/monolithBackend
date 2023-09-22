@@ -6,7 +6,6 @@ from block.models import Post, Block, Comment
 from core.models import User
 from core.api.serializers import UserCountSerializer
 
-  
 
 def get_posts_data(postId):
     posts = Post.objects.filter(id__in=postId)
