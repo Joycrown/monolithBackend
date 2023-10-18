@@ -88,10 +88,10 @@ WSGI_APPLICATION = "pyramid.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pyramid-testing-database',
-        'USER': 'aeaxcyqwbb',
-        'PASSWORD': '7QHQMBME818AY0N5$',
-        'HOST': 'pyramid-testing-server.postgres.database.azure.com',
+        'NAME': 'monolith-test-database',
+        'USER': 'duczphqnnp',
+        'PASSWORD': '4DQ4J08TS6F70TE2$',
+        'HOST': 'monolith-test-server.postgres.database.azure.com',
     }
 }
 
