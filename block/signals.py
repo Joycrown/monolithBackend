@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404
 
 from .models import Block, Post
 from core.models import User
-#from .cop import crypto_post, finance_post, real_estate_post, stock_post, economy_post, forex_post
+from .cop import crypto_post, finance_post, real_estate_post, stock_post, economy_post, forex_post
 
 
 @receiver(post_save, sender=Block)
@@ -63,9 +63,9 @@ def update_user(sender, instance, created, **kwargs):
         block.year = now.year
         block.save()
 
-#economy_post()
-#forex_post()
-#real_estate_post()
-#stock_post()
-#crypto_post()
-#finance_post()
+economy_post()
+forex_post()
+real_estate_post()
+stock_post()
+crypto_post()
+finance_post()
