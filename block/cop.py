@@ -10,8 +10,8 @@ from core.models import User
 def finance_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Finance"
-      username = "ashley"
-      pk = 6
+      username = "lele"
+      pk = 5
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -118,8 +118,8 @@ def crypto_post():
 def stock_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Stocks"
-      username = "johnson"
-      pk = 4
+      username = "gerald"
+      pk = 2
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -172,8 +172,8 @@ def stock_post():
 def real_estate_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Real estate"
-      username = "ashley"
-      pk = 2
+      username = "lele"
+      pk = 3
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -226,8 +226,8 @@ def real_estate_post():
 def forex_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "Forex"
-      username = "ashley"
-      pk = 5
+      username = "gerald"
+      pk = 4
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
@@ -280,8 +280,8 @@ def forex_post():
 def economy_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
       query = "World Economy"
-      username = "ashley"
-      pk = 6
+      username = "lele"
+      pk = 5
       news = api.news_api(q=query, language="en")
       block = get_object_or_404(Block, id=pk)
       author = get_object_or_404(User, username=username)
