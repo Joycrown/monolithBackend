@@ -17,7 +17,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.shortcuts import render, get_object_or_404
 
-from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
+# from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -45,15 +45,15 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class VerifyOTPRegisterSerializer(serializers.Serializer):
     email = serializers.EmailField()
-    otp = serializers.IntegerField(write_only=True)
+    # otp = serializers.IntegerField(write_only=True)
 
     class Meta:
         model = User
-        fields = ["id", "email", "otp", "tokens", "username", "slug" ]
+        fields = ["id", "email", "tokens", "username", "slug" ]
 
     def validate(self, attrs):
         email = attrs.get("email", "")
-        otp = attrs.get("otp", "")
+        # otp = attrs.get("otp", "")
 
         user = User.objects.filter(email=email).first()
         refresh = RefreshToken.for_user(user=user)
@@ -62,8 +62,8 @@ class VerifyOTPRegisterSerializer(serializers.Serializer):
 
         if not user.is_active:
             raise AuthenticationFailed("Account has been disabled")   
-        if user.otp != otp:
-            raise AuthenticationFailed("The OTP Code is invalid")                             
+        # if user.otp != otp:
+        #     raise AuthenticationFailed("The OTP Code is invalid")                             
 
         return {"id": user.id, "email": user.email, "username":user.username, "slug": user.slug, "tokens": user.tokens, "refresh_token": refresh_token, "access_token": access_token}
 

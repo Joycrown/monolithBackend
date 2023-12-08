@@ -2,7 +2,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.db import database_sync_to_async
 from .models import Chat , Chamber , Visitor
 from core.models import User
-from bots import BotHandler
+from .bots import BotHandler
 from datetime import datetime
 
 from asgiref.sync import sync_to_async

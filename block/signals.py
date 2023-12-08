@@ -15,7 +15,7 @@ from .cop import crypto_post, finance_post, real_estate_post, stock_post, econom
 
 
 @receiver(post_save, sender=Block)
-def post_save_block(sender, created, instance, **kwargs):    
+def post_save_block(sender, created, instance, **kwargs):
 
     if created:
         block = instance
@@ -24,8 +24,7 @@ def post_save_block(sender, created, instance, **kwargs):
         block.subscribers.add(creator)
         block.subscriber_count =+ 1
         block.save()
-       
-        
+
 @receiver(post_save, sender=Block)
 def update_user(sender, instance, created, **kwargs):
     block = instance
@@ -63,9 +62,9 @@ def update_user(sender, instance, created, **kwargs):
         block.year = now.year
         block.save()
 
-economy_post()
-forex_post()
-real_estate_post()
-stock_post()
-crypto_post()
-finance_post()
+# economy_post()
+# forex_post()
+# real_estate_post()
+# stock_post()
+# crypto_post()
+# finance_post()

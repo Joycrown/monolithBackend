@@ -32,7 +32,7 @@ def NotificationView(request):
     """
     if noti_count == 0:
         noti_count  = None  
-    serializer = NotificationSerializer(result_page, many=True, context={
+    serializer = NotificationSerializer(notify_list, many=True, context={
                                         
                                         'request': request
                                         })

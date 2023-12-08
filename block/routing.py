@@ -1,7 +1,7 @@
 from block.consumers import TimelineConsumer
 from django.urls import re_path, path 
 from message.consumers import MessageConsumer
-from chamber.chat.consumer import ChatConsumer, NotifConsumer
+from chamber.consumer import ChatConsumer, NotifConsumer
 
 from django.conf.urls import url  
 

@@ -2,13 +2,14 @@ import datetime
 from newsdataapi import NewsDataApiClient
 from django.shortcuts import get_object_or_404
 
-from block.models import *
+from block.models import Block, Post
 from core.models import User
 
 
 
 def finance_post():
       api = NewsDataApiClient(apikey="pub_14763965a946ce477ec7b9d12746e1e0c5adf")
+      api = NewsDataApiClient(apikey=env.str('COP_API_KEY'))
       query = "Finance"
       username = "lele"
       pk = 5

@@ -28,7 +28,7 @@ def get_user_data(username):
     if user.exists():
         serializer = UserCountSerializer(user, many=True)
         return serializer.data
-    return 
+    return
 
 class TimelineConsumer(WebsocketConsumer):
 

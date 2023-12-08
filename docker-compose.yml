@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  pyramid:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: pyramid.settings
+      # Additional environment variables specific to your application
+     

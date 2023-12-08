@@ -3,6 +3,35 @@ from decouple import config
 from pathlib import Path
 from datetime import timedelta
 
+
+import os
+
+
+# Load environment variables from .env file
+# load_dotenv()
+
+DB_ENGINE_DEV = os.getenv('DB_ENGINE_DEV')
+DB_NAME_DEV = os.getenv('DB_NAME_DEV')
+DB_USER_DEV = os.getenv('DB_USER_DEV')
+DB_PASSWORD_DEV = os.getenv('DB_PASSWORD_DEV')
+DB_HOST_DEV = os.getenv('DB_HOST_DEV')
+DB_PORT_DEV = os.getenv('DB_PORT_DEV')
+
+DB_ENGINE_PROD = os.getenv('DB_ENGINE_PROD')
+DB_NAME_PROD = os.getenv('DB_NAME_PROD')
+DB_USER_PROD = os.getenv('DB_USER_PROD')
+DB_PASSWORD_PROD = os.getenv('DB_PASSWORD_PROD')
+DB_HOST_PROD = os.getenv('DB_HOST_PROD')
+DB_PORT_PROD = os.getenv('DB_PORT_PROD')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL =os.getenv('DEFAULT_FROM_EMAIL')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -46,6 +75,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "django_filters",
     "guardian",
+    'drf_yasg' ,
 ]
 
 MIDDLEWARE = [
@@ -80,26 +110,40 @@ TEMPLATES = [
 ]
 ASGI_APPLICATION = "pyramid.routing.application"
 WSGI_APPLICATION = "pyramid.wsgi.application"
-
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+if os.environ.get('ENVIRONMENT') == 'DEV':
+    DB_ENGINE = DB_ENGINE_DEV
+    DB_NAME = DB_NAME_DEV
+    DB_USER = DB_USER_DEV
+    DB_PASSWORD = DB_PASSWORD_DEV
+    DB_HOST = DB_HOST_DEV
+    DB_PORT = DB_PORT_DEV
+else:
+    DB_ENGINE = DB_ENGINE_PROD
+    DB_NAME = DB_NAME_PROD
+    DB_USER = DB_USER_PROD
+    DB_PASSWORD = DB_PASSWORD_PROD
+    DB_HOST = DB_HOST_PROD
+    DB_PORT = DB_PORT_PROD
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'monolith-test-database',
-        'USER': 'duczphqnnp',
-        'PASSWORD': '4DQ4J08TS6F70TE2$',
-        'HOST': 'monolith-test-server.postgres.database.azure.com',
+        'ENGINE': DB_ENGINE,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT
     }
 }
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
-#}
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -155,12 +199,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "core.User"
 
-# email settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "pyramid2047@gmail.com"
-EMAIL_HOST_PASSWORD = "pivblgnuvfnttluj"
 
 
 
@@ -253,13 +291,13 @@ AUTHENTICATION_BACKENDS = (
     "guardian.backends.ObjectPermissionBackend",
 )
 
-DEFAULT_FILE_STORAGE = 'pyramid.custom_azure.AzureMediaStorage'
-STATICFILES_STORAGE = 'pyramid.custom_azure.AzureStaticStorage'
+DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE')
+STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE')
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
 
-AZURE_ACCOUNT_NAME = "monolithteststorage"
+AZURE_ACCOUNT_NAME = os.environ.get('AZURE_ACCOUNT_NAME')
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'

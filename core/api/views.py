@@ -168,7 +168,7 @@ class VerifyEmail(generics.GenericAPIView):
             user.is_verified = True
             user.is_active = True
             user.active = True
-            user.otp = 0
+            # user.otp = 0
             user.save()
             return Response(
                 {
@@ -210,7 +210,7 @@ class LoginAPIView(generics.GenericAPIView):
                 "email_subject": "Pyramid login verification",
             }
 
-            Util.send_email(data)
+            # Util.send_email(data)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response({"status":False, "message":"User is not active"}, status=status.HTTP_400_BAD_REQUEST)
