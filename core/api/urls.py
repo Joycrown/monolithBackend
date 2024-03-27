@@ -30,7 +30,6 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView
 )
 
-
 urlpatterns = [
     path("user-id/", UserIDView.as_view(), name="user-id"),
     path("register/", RegisterView.as_view(), name="register"),

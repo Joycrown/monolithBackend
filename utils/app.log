@@ -7154,3 +7154,87 @@ django.core.exceptions.ValidationError: ['“AnonymousUser” is not a valid UUID.']
 2023-12-08 20:06:06,451 | INFO | daphne.server | server | 12896 | 20628 | Listening on TCP address 127.0.0.1:8000
 2023-12-08 20:07:12,781 | DEBUG | asyncio | selector_events | 12896 | 7636 | Using selector: SelectSelector
 2023-12-08 20:07:13,223 | DEBUG | asyncio | selector_events | 20796 | 20744 | Using selector: SelectSelector
+2023-12-09 17:49:32,995 | DEBUG | asyncio | selector_events | 8916 | 9956 | Using selector: SelectSelector
+2023-12-09 17:49:37,302 | DEBUG | asyncio | selector_events | 20108 | 8576 | Using selector: SelectSelector
+2023-12-09 17:49:38,768 | INFO | django.utils.autoreload | autoreload | 20108 | 8576 | Watching for file changes with StatReloader
+2023-12-09 17:49:40,523 | INFO | daphne.server | server | 20108 | 16544 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2023-12-09 17:49:40,525 | INFO | daphne.server | server | 20108 | 16544 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2023-12-09 17:49:40,526 | INFO | daphne.server | server | 20108 | 16544 | Listening on TCP address 127.0.0.1:8000
+2023-12-09 17:49:49,810 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP b'GET' request for ['127.0.0.1', 59306]
+2023-12-09 17:49:49,842 | DEBUG | asyncio | selector_events | 20108 | 3228 | Using selector: SelectSelector
+2023-12-09 17:49:50,292 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP 200 response started for ['127.0.0.1', 59306]
+2023-12-09 17:49:50,295 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP close for ['127.0.0.1', 59306]
+2023-12-09 17:49:50,295 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP response complete for ['127.0.0.1', 59306]
+2023-12-09 17:49:50,296 | INFO | django.channels.server | runserver | 20108 | 16544 | [mHTTP GET /core/user/retrieve/joycrown/ 200 [0.49, 127.0.0.1:59306][0m
+2023-12-09 17:49:53,971 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP b'GET' request for ['127.0.0.1', 59306]
+2023-12-09 17:49:53,974 | DEBUG | asyncio | selector_events | 20108 | 3228 | Using selector: SelectSelector
+2023-12-09 17:49:53,983 | WARNING | django.request | log | 20108 | 14496 | Not Found: /favicon.ico
+2023-12-09 17:49:53,984 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP 404 response started for ['127.0.0.1', 59306]
+2023-12-09 17:49:53,985 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP close for ['127.0.0.1', 59306]
+2023-12-09 17:49:53,986 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP response complete for ['127.0.0.1', 59306]
+2023-12-09 17:49:53,987 | WARNING | django.channels.server | runserver | 20108 | 16544 | [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:59306][0m
+2023-12-09 17:49:57,786 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP b'GET' request for ['127.0.0.1', 59306]
+2023-12-09 17:49:57,790 | DEBUG | asyncio | selector_events | 20108 | 3228 | Using selector: SelectSelector
+2023-12-09 17:49:57,967 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP 200 response started for ['127.0.0.1', 59306]
+2023-12-09 17:49:57,968 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP close for ['127.0.0.1', 59306]
+2023-12-09 17:49:57,969 | DEBUG | daphne.http_protocol | http_protocol | 20108 | 16544 | HTTP response complete for ['127.0.0.1', 59306]
+2023-12-09 17:49:57,969 | INFO | django.channels.server | runserver | 20108 | 16544 | [mHTTP GET /core/user/retrieve/joycrown/ 200 [0.18, 127.0.0.1:59306][0m
+2023-12-09 17:54:57,859 | DEBUG | asyncio | selector_events | 20108 | 8576 | Using selector: SelectSelector
+2023-12-09 17:54:58,267 | DEBUG | asyncio | selector_events | 8916 | 9956 | Using selector: SelectSelector
+2024-03-27 15:40:35,651 | DEBUG | asyncio | selector_events | 22756 | 8048 | Using selector: SelectSelector
+2024-03-27 15:40:42,203 | DEBUG | asyncio | selector_events | 19256 | 12484 | Using selector: SelectSelector
+2024-03-27 15:40:43,852 | INFO | django.utils.autoreload | autoreload | 19256 | 12484 | Watching for file changes with StatReloader
+2024-03-27 15:53:12,518 | DEBUG | asyncio | selector_events | 19256 | 12484 | Using selector: SelectSelector
+2024-03-27 15:53:13,091 | DEBUG | asyncio | selector_events | 22756 | 8048 | Using selector: SelectSelector
+2024-03-27 15:59:02,673 | DEBUG | asyncio | selector_events | 21084 | 2572 | Using selector: SelectSelector
+2024-03-27 15:59:05,194 | DEBUG | asyncio | selector_events | 21084 | 2572 | Using selector: SelectSelector
+2024-03-27 15:59:43,741 | DEBUG | asyncio | selector_events | 23352 | 23424 | Using selector: SelectSelector
+2024-03-27 15:59:46,038 | DEBUG | asyncio | selector_events | 23352 | 23424 | Using selector: SelectSelector
+2024-03-27 16:10:42,739 | DEBUG | asyncio | selector_events | 10768 | 13124 | Using selector: SelectSelector
+2024-03-27 16:10:46,782 | DEBUG | asyncio | selector_events | 18176 | 5056 | Using selector: SelectSelector
+2024-03-27 16:10:48,402 | INFO | django.utils.autoreload | autoreload | 18176 | 5056 | Watching for file changes with StatReloader
+2024-03-27 16:11:39,651 | INFO | django.utils.autoreload | autoreload | 18176 | 5056 | C:\Joycrown\backend-prod\core\api\urls.py changed, reloading.
+2024-03-27 16:11:39,659 | DEBUG | asyncio | selector_events | 18176 | 5056 | Using selector: SelectSelector
+2024-03-27 16:11:43,109 | DEBUG | asyncio | selector_events | 9052 | 21540 | Using selector: SelectSelector
+2024-03-27 16:11:45,542 | INFO | django.utils.autoreload | autoreload | 9052 | 21540 | Watching for file changes with StatReloader
+2024-03-27 16:11:55,818 | INFO | django.utils.autoreload | autoreload | 9052 | 21540 | C:\Joycrown\backend-prod\core\api\urls.py changed, reloading.
+2024-03-27 16:11:55,827 | DEBUG | asyncio | selector_events | 9052 | 21540 | Using selector: SelectSelector
+2024-03-27 16:12:00,322 | DEBUG | asyncio | selector_events | 8264 | 13428 | Using selector: SelectSelector
+2024-03-27 16:12:02,328 | INFO | django.utils.autoreload | autoreload | 8264 | 13428 | Watching for file changes with StatReloader
+2024-03-27 16:13:04,618 | DEBUG | asyncio | selector_events | 8264 | 13428 | Using selector: SelectSelector
+2024-03-27 16:13:05,375 | DEBUG | asyncio | selector_events | 10768 | 13124 | Using selector: SelectSelector
+2024-03-27 16:13:32,111 | DEBUG | asyncio | selector_events | 21216 | 11372 | Using selector: SelectSelector
+2024-03-27 16:13:35,748 | DEBUG | asyncio | selector_events | 23312 | 10732 | Using selector: SelectSelector
+2024-03-27 16:13:37,700 | INFO | django.utils.autoreload | autoreload | 23312 | 10732 | Watching for file changes with StatReloader
+2024-03-27 16:14:06,791 | INFO | django.utils.autoreload | autoreload | 23312 | 10732 | C:\Joycrown\backend-prod\pyramid\settings.py changed, reloading.
+2024-03-27 16:14:06,794 | DEBUG | asyncio | selector_events | 23312 | 10732 | Using selector: SelectSelector
+2024-03-27 16:14:09,824 | DEBUG | asyncio | selector_events | 21328 | 21640 | Using selector: SelectSelector
+2024-03-27 16:14:11,509 | INFO | django.utils.autoreload | autoreload | 21328 | 21640 | Watching for file changes with StatReloader
+2024-03-27 16:14:34,702 | INFO | django.utils.autoreload | autoreload | 21328 | 21640 | C:\Joycrown\backend-prod\pyramid\settings.py changed, reloading.
+2024-03-27 16:14:34,703 | DEBUG | asyncio | selector_events | 21328 | 21640 | Using selector: SelectSelector
+2024-03-27 16:14:38,644 | DEBUG | asyncio | selector_events | 7936 | 21372 | Using selector: SelectSelector
+2024-03-27 16:14:40,645 | INFO | django.utils.autoreload | autoreload | 7936 | 21372 | Watching for file changes with StatReloader
+2024-03-27 16:15:08,213 | INFO | django.utils.autoreload | autoreload | 7936 | 21372 | C:\Joycrown\backend-prod\core\api\urls.py changed, reloading.
+2024-03-27 16:15:08,215 | DEBUG | asyncio | selector_events | 7936 | 21372 | Using selector: SelectSelector
+2024-03-27 16:15:17,510 | DEBUG | asyncio | selector_events | 22844 | 15732 | Using selector: SelectSelector
+2024-03-27 16:15:20,454 | DEBUG | asyncio | selector_events | 21216 | 11372 | Using selector: SelectSelector
+2024-03-27 16:16:14,357 | DEBUG | asyncio | selector_events | 22604 | 10320 | Using selector: SelectSelector
+2024-03-27 16:16:18,040 | DEBUG | asyncio | selector_events | 2852 | 14908 | Using selector: SelectSelector
+2024-03-27 16:16:19,842 | INFO | django.utils.autoreload | autoreload | 2852 | 14908 | Watching for file changes with StatReloader
+2024-03-27 16:16:24,230 | INFO | daphne.server | server | 2852 | 15288 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2024-03-27 16:16:24,231 | INFO | daphne.server | server | 2852 | 15288 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2024-03-27 16:16:24,233 | INFO | daphne.server | server | 2852 | 15288 | Listening on TCP address 127.0.0.1:8000
+2024-03-27 16:16:41,077 | DEBUG | asyncio | selector_events | 2852 | 14908 | Using selector: SelectSelector
+2024-03-27 16:16:41,644 | DEBUG | asyncio | selector_events | 22604 | 10320 | Using selector: SelectSelector
+2024-03-27 16:16:48,686 | DEBUG | asyncio | selector_events | 19128 | 16644 | Using selector: SelectSelector
+2024-03-27 16:16:51,170 | DEBUG | asyncio | selector_events | 19128 | 16644 | Using selector: SelectSelector
+2024-03-27 16:17:05,976 | DEBUG | asyncio | selector_events | 4772 | 12828 | Using selector: SelectSelector
+2024-03-27 16:17:08,101 | DEBUG | asyncio | selector_events | 4772 | 12828 | Using selector: SelectSelector
+2024-03-27 16:22:20,086 | DEBUG | asyncio | selector_events | 14800 | 11696 | Using selector: SelectSelector
+2024-03-27 16:22:23,843 | DEBUG | asyncio | selector_events | 23312 | 23208 | Using selector: SelectSelector
+2024-03-27 16:22:25,446 | INFO | django.utils.autoreload | autoreload | 23312 | 23208 | Watching for file changes with StatReloader
+2024-03-27 16:22:31,076 | INFO | daphne.server | server | 23312 | 23140 | HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2024-03-27 16:22:31,079 | INFO | daphne.server | server | 23312 | 23140 | Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2024-03-27 16:22:31,080 | INFO | daphne.server | server | 23312 | 23140 | Listening on TCP address 127.0.0.1:8000
+2024-03-27 16:24:43,165 | DEBUG | asyncio | selector_events | 23312 | 23208 | Using selector: SelectSelector
+2024-03-27 16:24:43,837 | DEBUG | asyncio | selector_events | 14800 | 11696 | Using selector: SelectSelector

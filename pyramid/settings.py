@@ -292,7 +292,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE')
-STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE')
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
